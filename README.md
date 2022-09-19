@@ -1,3 +1,3 @@
-# Upmark
+# Axess
 
-Upmark is a developer friendly CSS toolkit.
+Axess is a design system for web apps.
