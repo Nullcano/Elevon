@@ -4,7 +4,7 @@
   let tags = HTMLTags.sort()
 </script>
 
-<h1>All modified HTML Tags</h1>
+<h1>Axess Semantic HTML</h1>
 
 <p class="wide-small">Explore all HTML tags that has been modified by Axess and see how it looks semantically with Axess default styling and with simple examples using Axess utility classes.</p>
 

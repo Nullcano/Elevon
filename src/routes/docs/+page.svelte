@@ -2,9 +2,10 @@
 
 <div class="display-grid auto-fit-medium gap-medium">
   <a class="hover-reset-underline" href="/docs/start">
-    <div class="padding-all-medium display-flex border-all border-dark-lighten hover-background-dark animate">
+    <div class="padding-all-medium display-flex justify-space-between border-all border-dark-lighten hover-background-dark animate">
       <div>
         <h3>Get Started</h3>
+        <div class="short-small"></div>
         <p>Instructions on how to get started designing with Axess.</p>  
       </div>
       <div class="short-small display-flex align-items-center gap-medium cursor-pointer" on:click={() => goto("/docs/tags")}>
@@ -14,11 +15,12 @@
       </div>
     </div>
   </a>
-  <a class="hover-reset-underline" href="/docs/start">
-    <div class="padding-all-medium display-flex border-all border-dark-lighten hover-background-dark animate">
+  <a class="hover-reset-underline" href="/docs/tags">
+    <div class="padding-all-medium display-flex justify-space-between border-all border-dark-lighten hover-background-dark animate">
       <div>
-        <h3>Get Started</h3>
-        <p>Instructions on how to get started designing with Axess.</p>  
+        <h3>Modern HTML Elements</h3>
+        <div class="short-small"></div>
+        <p>Look and feel how semantic HTML elements behave with Axess.</p>  
       </div>
       <div class="short-small display-flex align-items-center gap-medium cursor-pointer" on:click={() => goto("/docs/tags")}>
         <svg class="parent-height" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">

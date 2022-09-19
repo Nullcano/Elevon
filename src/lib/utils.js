@@ -4,3 +4,9 @@ export const slugify = (str) => {
   const newStr = str.split('').map((letter, i) => letter.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i)))
   return newStr.toString().toLowerCase().trim().replace(/\s+/g, '-').replace(/&/g, '-y-').replace(/[^\w-]+/g, '').replace(/--+/g, '-')
 }
+
+export const encode = (str) => { 
+  return str.replace(/[\u00A0-\u9999<>\&]/g, function(i) {
+    return '&#'+i.charCodeAt(0)+';';
+  })
+}

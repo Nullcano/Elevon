@@ -1,7 +1,9 @@
 export const HTMLTags = [
   {
     'tag': '<a>',
-    'desc': 'hyperlink'
+    'desc': 'hyperlink',
+    'semantic': 'This is the semantic <a href="/docs/tags/a">hyperlink</a>.',
+    'example': 'This is a styled <a class="padding-all-small background-dark text-light-darken hover-text-light hover-reset-underline animate" href="/docs/tags/a">hyperlink</a> example.'
   }, {
     'tag': '<abbr>',
     'desc': 'abbreviation or acronym'
