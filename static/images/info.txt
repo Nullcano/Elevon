@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: Montserrat-Medium
+font link: https://fonts.google.com/specimen/Montserrat
+font author: Julieta Ulanovsky
+font author site: http://www.zkysky.com.ar/
+
+
+icon designer: Pyetro
+icon designer link: /Pyetro
+        
+{"bg":"#351B4E","icon":"#33D0F4","font":"#FFFFFF","slogan":"#ffffff"}
+      
