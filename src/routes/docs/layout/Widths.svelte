@@ -10,39 +10,39 @@
 <div class="display-list gap-medium">
   <div>
     <ComponentPreview>
-      <div class="reset-width background-dark-lighten">
-        <div class="padding-all-small">Reset Width</div>
+      <div class="width-0 background-dark-lighten">
+        <div class="padding-3">Width 0</div>
       </div>
     </ComponentPreview>
     <ComponentCode>&#x3C;div class=&#x22;reset-width&#x22;&#x3E;Reset Width&#x3C;/div&#x3E;</ComponentCode>
-    <div class="padding-all-small background-dark-lighten">Resets element width to 0.</div>
+    <div class="padding-3 background-dark-lighten">Resets element width to 0.</div>
   </div>
   <div>
     <ComponentPreview>
       <div class="half-width background-dark-lighten">
-        <div class="padding-all-small">Half Width</div>
+        <div class="padding-3">Half Width</div>
       </div>
     </ComponentPreview>
     <ComponentCode>&#x3C;div class=&#x22;half-width&#x22;&#x3E;Half Width&#x3C;/div&#x3E;</ComponentCode>
-    <div class="padding-all-small background-dark-lighten">Sets element width to 50%.</div>
+    <div class="padding-3 background-dark-lighten">Sets element width to 50%.</div>
   </div>
   <div>
     <ComponentPreview>
       <div class="parent-width background-dark-lighten">
-        <div class="padding-all-small">Parent Width</div>
+        <div class="padding-3">Parent Width</div>
       </div>
     </ComponentPreview>
     <ComponentCode>&#x3C;div class=&#x22;parent-width&#x22;&#x3E;Parent Width&#x3C;/div&#x3E;</ComponentCode>
-    <div class="padding-all-small background-dark-lighten">Sets element width to 100%.</div>
+    <div class="padding-3 background-dark-lighten">Sets element width to 100%.</div>
   </div>
   <div>
     <ComponentPreview>
       <div class="device-width background-dark-lighten">
-        <div class="padding-all-small">Device Width</div>
+        <div class="padding-3">Device Width</div>
       </div>
     </ComponentPreview>
     <ComponentCode>&#x3C;div class=&#x22;device-width&#x22;&#x3E;Device Width&#x3C;/div&#x3E;</ComponentCode>
-    <div class="padding-all-small background-dark-lighten">Sets element width to 100vw.</div>
+    <div class="padding-3 background-dark-lighten">Sets element width to 100vw.</div>
   </div>
 </div>
 

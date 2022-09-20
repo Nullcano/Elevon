@@ -25,6 +25,7 @@
   --light-darken: hsl(250,15%,60%);
   --light: hsl(250,15%,85%);
   --light-lighten: hsl(250,15%,100%);
+  --aqua: hsl(190, 60%, 50%);
 
   --size-0: 0;
   --size-1: .25rem;
@@ -57,6 +58,9 @@ h6 { font-size: var(--size-4) }
 pre { display: block; overflow-x: auto }
 code { display: inline; white-space: normal; max-width: 100%; word-break: break-all; word-wrap: break-word }
 pre code { white-space: unset }
+
+input { outline: .16rem solid transparent }
+input:focus { font-size: var(--size-5); outline: .16rem solid var(--aqua) }
 
 table { font-family: inherit; border-collapse: collapse; width: 100% }
 td, th { border: 0; text-align: left; padding: var(--size-2) }
@@ -121,7 +125,7 @@ a:hover, .text-decoration-underline { text-decoration: underline }
 .background-light-lighten { background-color: var(--light-lighten) }
 
 /* animation */
-.animate { transition: all .2s linear }
+.animate, input { transition: all .2s linear }
 
 /* borders */
 .reset-border { border-width: 0 }

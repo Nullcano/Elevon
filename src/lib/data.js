@@ -15,9 +15,6 @@ export const HTMLTags = [
     tag: '<address>',
     desc: 'document contact information'
   }, {
-    tag: '<area>',
-    desc: 'image map area'
-  }, {
     tag: '<article>',
     desc: 'article'
   }, {
@@ -29,9 +26,6 @@ export const HTMLTags = [
   }, {
     tag: '<b>',
     desc: 'bold text'
-  }, {
-    tag: '<base>',
-    desc: 'relative base document URL/target'
   }, {
     tag: '<bdi>',
     desc: 'text direction isolation'
@@ -45,15 +39,6 @@ export const HTMLTags = [
     tag: '<body>',
     desc: ''
   }, {
-    tag: '<br>',
-    desc: ''
-  }, {
-    tag: '<button>',
-    desc: ''
-  }, {
-    tag: '<br>',
-    desc: ''
-  }, {
     tag: '<button>',
     desc: ''
   }, {
@@ -64,7 +49,13 @@ export const HTMLTags = [
     desc: ''
   }, {
     tag: '<cite>',
-    desc: ''
+    desc: 'cite',
+    previews: [
+      {
+        semantic: '<cite>Cite</cite>',
+        example: '<cite>Cite</cite>'  
+      }
+    ]
   }, {
     tag: '<h1> - <h6>',
     desc: 'headings',
