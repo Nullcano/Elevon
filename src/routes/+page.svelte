@@ -1,33 +1,31 @@
-<div class="padding-all-extra-large">
-  <svg class="short-medium" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 396 102">
-    <path d="m173.742 79.865-6.467-14.67h-31.137l-6.468 14.67h-8.622l26.527-58.682h8.323l26.647 58.682h-8.803Zm-34.67-21.377h25.27l-12.636-28.743-12.634 28.743Zm98.742 21.377h-9.64l-17.605-24.191-17.366 24.191h-9.64l22.036-30.06-20.719-28.622h9.58l16.408 22.574 16.287-22.574h9.162L215.6 49.506l22.215 30.36Zm18.264-7.305h34.191v7.305h-42.575V21.183h41.438v7.305h-33.054v18.024h29.4v7.126h-29.4V72.56Zm64.91 7.964q-6.647 0-12.815-2.036-6.167-2.036-9.7-5.33l3.114-6.526q3.353 2.994 8.622 4.91 5.21 1.856 10.779 1.856 7.245 0 10.898-2.455 3.593-2.455 3.593-6.587 0-2.994-1.976-4.91-1.976-1.856-4.85-2.874-2.935-1.018-8.204-2.276-6.587-1.557-10.659-3.173-4.072-1.617-6.946-4.91-2.934-3.294-2.934-8.923 0-4.67 2.515-8.443 2.455-3.772 7.485-6.048 5.03-2.275 12.455-2.275 5.21 0 10.24 1.317 5.03 1.377 8.622 3.892l-2.754 6.707q-3.653-2.335-7.844-3.593-4.192-1.197-8.264-1.197-7.126 0-10.659 2.574-3.592 2.635-3.592 6.707 0 3.054 2.035 4.91 2.036 1.916 4.97 2.934 2.995 1.078 8.084 2.216 6.647 1.617 10.66 3.233 4.011 1.557 6.945 4.85 2.874 3.234 2.874 8.803 0 4.61-2.515 8.443-2.515 3.773-7.604 5.988-5.15 2.216-12.575 2.216Zm52.036 0q-6.647 0-12.755-2.036-6.167-2.036-9.7-5.33l3.113-6.526q3.354 2.994 8.563 4.91 5.27 1.856 10.779 1.856 7.305 0 10.898-2.455t3.593-6.587q0-2.994-1.976-4.91-1.976-1.856-4.85-2.874-2.875-1.018-8.144-2.276-6.647-1.557-10.719-3.173-4.072-1.617-6.946-4.91-2.874-3.294-2.874-8.923 0-4.67 2.455-8.443 2.455-3.772 7.485-6.048 5.03-2.275 12.515-2.275 5.21 0 10.24 1.317 5.03 1.377 8.622 3.892l-2.754 6.707q-3.713-2.335-7.905-3.593-4.191-1.197-8.203-1.197-7.126 0-10.719 2.574-3.533 2.635-3.533 6.707 0 3.054 1.976 4.91 2.036 1.916 5.03 2.934 2.935 1.078 8.084 2.216 6.587 1.617 10.659 3.233 4.012 1.557 6.886 4.85 2.874 3.234 2.874 8.803 0 4.61-2.515 8.443-2.515 3.773-7.604 5.988-5.09 2.216-12.575 2.216ZM51.318 101.842C23.459 101.842.794 79.177.794 51.318S23.46.794 51.318.794s50.524 22.665 50.524 50.524-22.665 50.524-50.524 50.524zm0-93.419c-23.652 0-42.895 19.243-42.895 42.895 0 23.651 19.243 42.894 42.895 42.894s42.894-19.243 42.894-42.894c0-23.652-19.242-42.895-42.894-42.895zm33.972 26.23c-1.613 4.345-5.795 7.44-10.7 7.44-6.301 0-11.41-5.108-11.41-11.41 0-4.905 3.096-9.086 7.44-10.698a23.33 23.33 0 0 0-7.467-1.22c-12.899 0-23.355 10.456-23.355 23.355s10.456 23.354 23.355 23.354S86.507 55.02 86.507 42.12a23.298 23.298 0 0 0-1.217-7.466z"/>
-  </svg>
-  <p class="wide-small text-medium">A verbose, mobile-first and accessibility-focused design system for web applications.</p>
-</div>
-
-<div class="padding-all-extra-large">
-  <h2 class="text-medium text-uppercase text-bold">How would you like to start?</h2>
-  <div class="padding-all-medium display-grid auto-fit-medium gap-medium">
+<section data-layout="contained">
+  <div class="padding-vertical-8">
+    <p class="text-large text-uppercase text-bold">A mobile-first and accessibility-focused design system for web applications.</p>
+  </div>
+</section>
+<section>
+  <h2 class="text-medium">How would you like to start?</h2>
+  <div class="display-grid auto-fit-medium gap-medium">
     <a class="hover-reset-underline" href="/themes">
-      <div class="padding-all-medium background-dark">
+      <div class="padding-6 background-dark">
         <h3>Download Themes</h3>
-        <div class="short-small"></div>
-        <p>Browse <span class="text-light-lighten">Axess Themes</span> and download/modify pre-built application layouts.</p>
+        <div class="height-4"></div>
+        <p>Browse <span class="text-light-lighten">Meter Themes</span> and download/modify pre-built application layouts.</p>
       </div>
     </a>
     <a class="hover-reset-underline" href="/components">
-      <div class="padding-all-medium background-dark">
+      <div class="padding-6 background-dark">
         <h3>Copy Components</h3>
-        <div class="short-small"></div>
-        <p>Browse <span class="text-light-lighten">Axess Components</span> and copy/modify pre-built components.</p>
+        <div class="height-4"></div>
+        <p>Browse <span class="text-light-lighten">Meter Components</span> and copy/modify pre-built components.</p>
       </div>
     </a>
     <a class="hover-reset-underline" href="/docs">
-      <div class="padding-all-medium background-dark">
+      <div class="padding-6 background-dark">
         <h3>Do It Yourself</h3>
-        <div class="short-small"></div>
-        <p>Browse <span class="text-light-lighten">Axess CSS</span> utility classes and build your own layouts and components.</p>
+        <div class="height-4"></div>
+        <p>Browse <span class="text-light-lighten">Meter CSS</span> utility classes and build your own layouts and components.</p>
       </div>
     </a>
   </div>
-</div>
+</section>

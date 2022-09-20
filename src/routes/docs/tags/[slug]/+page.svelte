@@ -20,23 +20,27 @@
 
 <div class="display-flex align-items-center justify-space-between">
 	<h1>{item.tag}</h1>
-	<div class="short-small display-flex align-items-center gap-medium cursor-pointer" on:click={() => goto("/docs/tags")}>
-		<svg class="parent-height flip-y--180" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+	<div class="display-flex align-items-center gap-medium cursor-pointer" on:click={() => goto("/docs/tags")}>
+		<svg class="width-7 height-7 flip-y--180" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
 			<path d="M15.268 4.21a.75.75 0 0 0-1.04 1.08l8.275 7.96H3.75a.75.75 0 0 0 0 1.5h18.752l-8.273 7.959a.75.75 0 0 0 1.04 1.08l9.428-9.069a1 1 0 0 0 0-1.441l-9.428-9.07Z" fill="currentColor" fill-rule="nonzero"/>
 		</svg>
 		<span>Return to tags</span>
 	</div>
 </div>
 
-<p class="margin-top-small padding-all-medium background-dark">{itemDesc}</p>
+<p class="padding-4 background-dark">{itemDesc}</p>
 
-<h2 class="padding-top-medium">Semantic Design</h2>
-<div class="padding-all-medium">
-	{@html item.semantic}
-</div>
-<pre class="padding-all-medium background-dark overflow-horizontal-auto"><code>{item.semantic}</code></pre>
-<h2 class="padding-top-medium">Example Design</h2>
-<div class="padding-all-medium">
-	{@html item.example}
-</div>
-<pre class="padding-all-medium background-dark overflow-horizontal-auto"><code>{item.example}</code></pre>
+{#each item.previews as preview}
+	<div class="display-flex gap-large">
+		<h2 class="padding-top-medium">Semantic Design</h2>
+		<div class="padding-4">
+			{@html preview.semantic}
+		</div>
+		<pre class="padding-4 background-dark overflow-horizontal-auto"><code>{preview.semantic}</code></pre>	
+	</div>
+	<h2 class="padding-top-medium">Example Design</h2>
+	<div class="padding-4">
+		{@html preview.example}
+	</div>
+	<pre class="padding-4 background-dark overflow-horizontal-auto"><code>{preview.example}</code></pre>
+{/each}
