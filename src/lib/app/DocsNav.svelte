@@ -18,9 +18,6 @@
 		<a class="light hover-light-lighten" href="/docs/palettes">
 			<div class="padding-vertical-4 padding-horizontal-6">Palettes</div>
 		</a>
-		<a class="light hover-light-lighten" href="/docs/utilities">
-			<div class="padding-vertical-4 padding-horizontal-6">Utilities</div>
-		</a>
 		<a class="light hover-light-lighten" href="/docs/short-hands">
 			<div class="padding-vertical-4 padding-horizontal-6">Short Hands</div>
 		</a>

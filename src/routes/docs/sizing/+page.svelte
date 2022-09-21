@@ -72,7 +72,7 @@
   <h1>Sizing Guide</h1>
 </div>
 
-<div class="padding-4 margin-bottom-medium">
+<div class="padding-4 margin-bottom-medium" data-content="text">
   <p>An important factor in accessibility is proper sizing rules.</p>
   <p>Meter got 12 pre-defined and reusable sizes for all purposes to keep a uniform and clear interface.</p>  
 </div>
