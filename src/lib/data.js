@@ -1,19 +1,33 @@
 export const HTMLTags = [
   {
     tag: '<a>',
-    desc: 'hyperlink',
-    previews: [
-      {
-        semantic: 'This is the semantic <a href="/docs/tags/a">hyperlink</a>.',
-        example: 'This is a styled <a class="padding-all-small background-dark text-light-darken hover-text-light hover-reset-underline animate" href="/docs/tags/a">hyperlink</a> example.'  
-      }
-    ]
+    desc: 'Anchor or Hyperlink',
+    previews: [{
+      semantic: '<a href="/docs/tags/a">hyperlink</a>',
+      example: '<a class="padding-all-small background-dark text-light-darken hover-text-light hover-reset-underline animate" href="/docs/tags/a">hyperlink</a>'
+    }]
   }, {
     tag: '<abbr>',
-    desc: 'abbreviation or acronym'
+    desc: 'Abbreviation or Acronym',
+    previews: [{
+      semantic: '<abbr>abbreviation</abbr>',
+      example: '<abbr class="padding-all-small background-dark text-light-darken hover-text-light">abbreviation</abbr>'
+    }]
   }, {
     tag: '<address>',
-    desc: 'document contact information'
+    desc: 'Contact Address',
+    previews: [{
+      semantic: `<address>
+  Email: <a href="mailto:name@example.com">name@example.com</a>
+  <hr>
+  Phone: <a href="tel:+15555555555">(555) 555-5555</a>
+</address>`,
+      example: `<address>
+  <a href="mailto:name@example.com" data-emoji>name@example.com</a>
+  <hr>
+  <a href="tel:+15555555555" data-emoji>(555) 555-5555</a>
+</address>`
+    }]
   }, {
     tag: '<article>',
     desc: 'article'
@@ -22,13 +36,13 @@ export const HTMLTags = [
     desc: 'aside content'
   }, {
     tag: '<audio>',
-    desc: 'embedded sound content'
+    desc: 'Embedded Audio'
   }, {
     tag: '<b>',
-    desc: 'bold text'
+    desc: 'Bring Attention'
   }, {
     tag: '<bdi>',
-    desc: 'text direction isolation'
+    desc: 'Bidirectional Isolation'
   }, {
     tag: '<bdo>',
     desc: 'text direction overriding'

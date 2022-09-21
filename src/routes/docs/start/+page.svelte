@@ -1,4 +1,6 @@
-<h1>Quickstart</h1>
+<div class="padding-vertical-4">
+  <h1>Quickstart</h1>
+</div>
 
 <div class="padding-4">
   <p>Below is a recommeded HTML document for using Meter.</p>

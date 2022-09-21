@@ -4,6 +4,6 @@
 
 <DocsNav />
 
-<section class="position-relative margin-left-10 overflow-vertical-auto">
+<section class="position-relative margin-left-10">
 	<slot />
 </section>

@@ -68,25 +68,28 @@
   ]
 </script>
 
-<h1 class="margin-bottom-small text-uppercase cursor-default">
-  Sizing
-</h1>
+<div class="padding-vertical-4">
+  <h1>Sizing Guide</h1>
+</div>
 
-<div class="padding-all-medium margin-bottom-medium">
+<div class="padding-4 margin-bottom-medium">
   <p>An important factor in accessibility is proper sizing rules.</p>
   <p>Meter got 12 pre-defined and reusable sizes for all purposes to keep a uniform and clear interface.</p>  
 </div>
 
-<section class="display-grid auto-fit-medium gap-medium">
+<section class="display-grid auto-fit-large gap-medium">
   {#each sizing as item}
-    <article class="padding-all-medium display-flex flex-direction-column gap-medium background-dark">
+    <article class="padding-3 display-flex flex-direction-column gap-medium background-dark">
       <header class="display-flex justify-space-between">
         <div>ID: {item.id}</div>
         <div>Variable: <code>--sizing-{item.id}</code></div>
       </header>
-      <div class="padding-all-medium background-dark-lighten">
-        {@html item.preview}
-        <div class="width-{item.id} height-{item.id} backgroud-dark-darken"></div>
+      <div class="padding-3 background-dark-lighten">
+        {#if item.id >= 1 && item.id <= 12}
+          <div class="margin-2 width-{item.id} height-{item.id} background-dark-darken"></div>
+          {:else}
+          {@html item.preview}
+        {/if}
       </div>
       <footer class="display-flex justify-space-between">
         <div>Class: <code>.sizing-{item.id}</code></div>
@@ -96,6 +99,6 @@
   {/each}
 </section>
 
-<div class="padding-all-medium margin-bottom-medium">
+<div class="padding-4 margin-bottom-medium">
   <p>The ID's of each size are also reflected in attributes that handle sizing.</p>
 </div>
