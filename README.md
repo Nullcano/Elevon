@@ -1,3 +1,3 @@
-# Axess
+# Meter
 
-Axess is a design system for web apps.
+A mobile-first and accessibility-focused design system for web applications.
