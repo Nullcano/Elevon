@@ -31,25 +31,29 @@
 <p class="padding-4 background-dark">{itemDesc}</p>
 
 {#each item.previews as preview}
-	<div class="margin-top-7 display-grid gap-large" style="grid-template-columns: 1fr 1fr">
-		<div>
+	<div class="width-parent margin-top-7 display-flex gap-medium">
+		<div class="width-half">
 			<h2>Semantic Design</h2>
 			<div class="padding-5">
 				{@html preview.semantic}
 			</div>
 			<div>
 				<div class="padding-vertical-2 padding-horizontal-3 text-3 border-all border-regular border-dark">HTML</div>
-				<pre class="margin-0 padding-4 background-dark overflow-horizontal-auto"><code>{preview.semantic}</code></pre>	
+				<div>
+					<pre class="background-dark overflow-horizontal-auto"><code class="padding-4">{preview.semantic}</code></pre>	
+				</div>
 			</div>
 		</div>
-		<div>
+		<div class="width-half">
 			<h2>Example Design</h2>
 			<div class="padding-5">
 				{@html preview.example}
 			</div>
 			<div>
 				<div class="padding-vertical-2 padding-horizontal-3 text-3 border-all border-regular border-dark">HTML</div>
-				<pre class="margin-0 padding-4 background-dark overflow-horizontal-auto"><code>{preview.example}</code></pre>
+				<div>
+					<pre class="background-dark overflow-horizontal-auto"><code class="padding-4">{preview.example}</code></pre>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -4,14 +4,14 @@ export const HTMLTags = [
     desc: 'Anchor or Hyperlink',
     previews: [{
       semantic: '<a href="/docs/tags/a">hyperlink</a>',
-      example: '<a class="padding-all-small background-dark text-light-darken hover-text-light hover-reset-underline animate" href="/docs/tags/a">hyperlink</a>'
+      example: '<a class="padding-2 background-dark text-light-darken hover-text-light hover-reset-underline animate" href="/docs/tags/a">hyperlink</a>'
     }]
   }, {
     tag: '<abbr>',
     desc: 'Abbreviation or Acronym',
     previews: [{
       semantic: '<abbr>abbreviation</abbr>',
-      example: '<abbr class="padding-all-small background-dark text-light-darken hover-text-light">abbreviation</abbr>'
+      example: '<abbr class="padding-2 background-dark text-light-darken hover-text-light">abbreviation</abbr>'
     }]
   }, {
     tag: '<address>',
@@ -30,37 +30,81 @@ export const HTMLTags = [
     }]
   }, {
     tag: '<article>',
-    desc: 'article'
+    desc: 'Article Contents',
+    previews: [{
+      semantic: '<article>Placeholder text</article>',
+      example: '<article>Placeholder text</article>'
+    }]
   }, {
     tag: '<aside>',
-    desc: 'aside content'
+    desc: 'Aside',
+    previews: [{
+      semantic: '<aside>Placeholder text</aside>',
+      example: '<aside>Placeholder text</aside>'
+    }]
   }, {
     tag: '<audio>',
-    desc: 'Embedded Audio'
+    desc: 'Embedded Audio',
+    previews: [{
+      semantic: '<audio>Placeholder text</audio>',
+      example: '<audio>Placeholder text</audio>'
+    }]
   }, {
     tag: '<b>',
-    desc: 'Bring Attention'
+    desc: 'Bring Attention',
+    previews: [{
+      semantic: '<b>Placeholder text</b>',
+      example: '<b>Placeholder text</b>'
+    }]
   }, {
     tag: '<bdi>',
-    desc: 'Bidirectional Isolation'
+    desc: 'Bidirectional Isolation',
+    previews: [{
+      semantic: '<bdi>Placeholder text</bdi>',
+      example: '<bdi>Placeholder text</bdi>'
+    }]
   }, {
     tag: '<bdo>',
-    desc: 'text direction overriding'
+    desc: 'text direction overriding',
+    previews: [{
+      semantic: '<bdo>Placeholder text</bdo>',
+      example: '<bdo>Placeholder text</bdo>'
+    }]
   }, {
     tag: '<blockquote>',
-    desc: ''
+    desc: '',
+    previews: [{
+      semantic: '<blockquote>Placeholder text</blockquote>',
+      example: '<blockquote class="padding-3 background-dark">placeholder text</blockquote>'
+    }]
   }, {
     tag: '<body>',
-    desc: ''
+    desc: '',
+    previews: [{
+      semantic: '<body>Placeholder text</body>',
+      example: '<body>Placeholder text</body>'
+    }]
   }, {
     tag: '<button>',
-    desc: ''
+    desc: '',
+    previews: [{
+      semantic: '<button>Placeholder text</button>',
+      example: '<button class="padding-2 background-dark hover-background-dark-lighten text-light-lighten animate reset-border">Placeholder text</button>'
+    }]
   }, {
     tag: '<canvas>',
-    desc: ''
+    desc: '',
+    previews: [{
+      semantic: '<canvas>Placeholder text</canvas>',
+      example: '<canvas>Placeholder text</canvas>'
+    }]
   }, {
     tag: '<caption>',
-    desc: ''
+    desc: '',
+    previews: [{
+      semantic: '<caption>Placeholder text</caption>',
+      example: '<caption>Placeholder text</caption>'
+    }]
   }, {
     tag: '<cite>',
     desc: 'cite',

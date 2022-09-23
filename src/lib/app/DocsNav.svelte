@@ -1,5 +1,5 @@
-<aside class="position-fixed pull-top pull-left height-device display-flex align-items-center overflow-vertical-auto">
-	<ul class="padding-6 display-flex flex-direction-column gap-4">
+<aside class="position-sticky width-11 calc-height-device-8 background-dark overflow-vertical-auto">
+	<ul class="padding-4 display-flex flex-direction-column gap-4">
 		<a class="light hover-light-lighten" href="/docs/start">
 			<div class="padding-vertical-4 padding-horizontal-6">Get Started</div>
 		</a>
@@ -23,3 +23,9 @@
 		</a>
 	</ul>
 </aside>
+
+<style>
+	aside {
+		top: 0;
+	}
+</style>

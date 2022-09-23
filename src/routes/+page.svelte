@@ -7,9 +7,6 @@
       <span class="text-light-lighten">mobile-first</span>
       web apps.
     </p>
-    <div class="position-absolute pull-right margin-top-11 width-m height-m display-flex background-center-cover">
-      
-    </div>
   </div>
 </section>
 <section class="position-relative">
@@ -38,10 +35,3 @@
     </a>
   </div>
 </section>
-
-<style>
-  /* forced to use custom CSS */
-  .illu {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='348.795' height='348.795' style='enable-background:new 0 0 348.795 348.795' xml:space='preserve'%3e%3cpath d='M8.965 128.154v220.641H339.83V128.154H8.965zM304.81 114.143h9.475V57.271H34.507v56.872h9.47zM272.468 44.564h8.665V0H67.668v44.564h8.65z'/%3e%3c/svg%3e");
-  }
-</style>

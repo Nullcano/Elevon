@@ -4,10 +4,6 @@
   let tags = HTMLTags.sort()
 </script>
 
-<div class="padding-vertical-4">
-  <h1>Semantic Elements / Tags</h1>
-</div>
-
 <div class="padding-4" data-content="text">
   <p>A list of all HTML tags that has been augmented by Meter.</p>
   <p>Find an element and explore how they look and feel with our design standards.</p>

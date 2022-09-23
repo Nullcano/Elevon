@@ -10,7 +10,7 @@
 </script>
 
 <Document>
-  <h1>Layout</h1>
+  <h1>Semantic Elements / Tags</h1>
   <slot />
 </Document>
 
