@@ -1,10 +1,11 @@
 <script>
-	import '../meter/css/meter.css';
-	import '../css/app.css';
+	import '../meter/css/meter.css'
+	import '../css/app.css'
 	import Header from '$lib/app/Header.svelte'
+	import '../meter/js/meter.js'
 </script>
 
 <Header />
-<main class="min-height-parent display-grid columns-auto-fill">
+<main class="padding-top-350 min-height-full">
 	<slot />
 </main>

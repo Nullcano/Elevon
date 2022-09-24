@@ -1,12 +1,12 @@
 <section>
-  <div class="position-relative padding-vertical-8 display-flex gap-large align-items-center">
-    <p class="max-width-half text-7 text-uppercase text-bold">
-      An 
+  <div class="position-relative margin-xl padding-xl display-flex gap-large align-items-center">
+    <h2 class="text-light-darken margin-auto container-md font-3xl text-bold text-center text-uppercase">
+      An
       <span class="text-light-lighten">accessibility-focused</span>
       design system for
       <span class="text-light-lighten">mobile-first</span>
       web apps.
-    </p>
+    </h2>
   </div>
 </section>
 <section class="position-relative">
