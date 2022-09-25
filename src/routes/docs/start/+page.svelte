@@ -19,8 +19,8 @@
     <p>Replace the link and script paths with your own path if you are self-hosting.</p>  
   </div>
   
-  <pre class="padding-4 background-dark"><code>&#x3C;!DOCTYPE html&#x3E;
-  &#x3C;html lang=&#x22;en&#x22;&#x3E;
+  <pre class="padding-4 background-light-lighten"><code>&#x3C;!DOCTYPE html&#x3E;
+&#x3C;html lang=&#x22;en&#x22;&#x3E;
   &#x3C;head&#x3E;
     &#x3C;title&#x3E;&#x3C;/title&#x3E;
     &#x3C;meta content=&#x22;&#x22; name=&#x22;description&#x22;&#x3E;
@@ -34,8 +34,7 @@
   &#x3C;body&#x3E;
     &#x3C;!-- Enjoy building with Meter --&#x3E;
   &#x3C;/body&#x3E;
-  &#x3C;/html&#x3E;
-  </code></pre>
+&#x3C;/html&#x3E;</code></pre>
   
   <a role="button" href="#">Download Meter</a>  
 </Document>

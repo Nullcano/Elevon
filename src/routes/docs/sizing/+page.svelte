@@ -1,100 +1,56 @@
 <script>
-  const sizing = [
-    {
-      id: '0',
-      value: '0',
-      preview: 'No preview applicable.'
-    }, {
-      id: '1',
-      value: '.25rem',
-      preview: 'No preview applicable.'
-    }, {
-      id: '2',
-      value: '.5rem',
-      preview: 'No preview applicable.'
-    }, {
-      id: '3',
-      value: '.75rem',
-      preview: 'No preview applicable.'
-    }, {
-      id: '4',
-      value: '1rem',
-      preview: 'No preview applicable.'
-    }, {
-      id: '5',
-      value: '1.25rem',
-      preview: 'No preview applicable.'
-    }, {
-      id: '6',
-      value: '1.5rem',
-      preview: 'No preview applicable.'
-    }, {
-      id: '7',
-      value: '2.5rem',
-      preview: 'No preview applicable.'
-    }, {
-      id: '8',
-      value: '5rem',
-      preview: 'No preview applicable.'
-    }, {
-      id: '9',
-      value: '7.5rem',
-      preview: 'No preview applicable.'
-    }, {
-      id: '10',
-      value: '10rem',
-      preview: 'No preview applicable.'
-    }, {
-      id: '11',
-      value: '15rem',
-      preview: 'No preview applicable.'
-    }, {
-      id: '12',
-      value: '20rem',
-      preview: 'No preview applicable.'
-    }, {
-      id: 'm',
-      value: '30em',
-      preview: 'No preview applicable.'
-    }, {
-      id: 'l',
-      value: '60em',
-      preview: 'No preview applicable.'
-    }, {
-      id: 'xl',
-      value: '90em',
-      preview: 'No preview applicable.'
-    }
-  ]
+  import { sizing } from '$lib/data.js'
 </script>
 
-<div class="padding-4 margin-bottom-medium" data-content="text">
+<div class="padding-md width-prose">
   <p>An important factor in accessibility is proper sizing rules.</p>
-  <p>Meter got 12 pre-defined and reusable sizes for all purposes to keep a uniform and clear interface.</p>  
+  <p>Meter got a set of pre-defined and reusable sizes for all purposes to keep a uniform interface.</p>  
 </div>
 
-<section class="display-grid auto-fit-large gap-medium">
+<section>
   {#each sizing as item}
-    <article class="padding-3 display-flex flex-direction-column gap-medium background-dark">
-      <header class="display-flex justify-space-between">
-        <div>ID: {item.id}</div>
-        <div>Variable: <code>--sizing-{item.id}</code></div>
-      </header>
-      <div class="padding-3 background-dark-lighten">
-        {#if item.id >= 1 && item.id <= 12}
-          <div class="margin-2 width-{item.id} height-{item.id} background-dark-darken"></div>
-          {:else}
-          {@html item.preview}
-        {/if}
-      </div>
-      <footer class="display-flex justify-space-between">
-        <div>Class: <code>.sizing-{item.id}</code></div>
-        <div>Value: {item.value}</div>  
-      </footer>
+    <article id="{item.id}" class="margin-bottom-md padding-sm display-flex background-light-lighten">
+      <dl>
+        <dt class="text-150">Identifier</dt>
+        <dd class="text-150"><code class="padding-x-xs background-light border-radius-pill">{item.id}</code></dd>
+        <dt>Variable</dt>
+        <dd><code class="padding-x-xs background-light border-radius-pill">--size-{item.id}</code></dd>
+        <dt>Value</dt>
+        <dd><code class="padding-x-xs background-light border-radius-pill">{item.value}</code></dd>
+        <dt>Applies to</dt>
+        <dd>
+          {#each item.related as related}
+            <a href="/docs/{related.toLowerCase()}">
+              <code class="padding-x-xs background-light border-radius-pill">
+                {related}
+                <svg class="width-050 height-050" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 460" style="enable-background:new 0 0 460 460" xml:space="preserve"><path d="M425.934 0H171.662c-18.122 0-32.864 14.743-32.864 32.864v77.134h30V32.864A2.868 2.868 0 0 1 171.662 30h254.272a2.868 2.868 0 0 1 2.864 2.864v254.272a2.868 2.868 0 0 1-2.864 2.865h-74.729v30h74.729c18.121 0 32.864-14.743 32.864-32.865V32.864C458.797 14.743 444.055 0 425.934 0z"/><path d="M288.339 139.998H34.068c-18.122 0-32.865 14.743-32.865 32.865v254.272C1.204 445.257 15.946 460 34.068 460H288.34c18.122 0 32.865-14.743 32.865-32.864V172.863c.001-18.122-14.744-32.865-32.866-32.865zM288.341 430H34.068a2.868 2.868 0 0 1-2.865-2.864V172.863a2.868 2.868 0 0 1 2.865-2.865H288.34a2.868 2.868 0 0 1 2.865 2.865v254.273h.001a2.868 2.868 0 0 1-2.865 2.864z"/></svg>
+              </code>
+            </a>
+          {/each}
+        </dd>
+      </dl>
     </article>
   {/each}
 </section>
 
-<div class="padding-4 margin-bottom-medium">
+<div class="padding-md margin-bottom-medium">
   <p>The ID's of each size are also reflected in attributes that handle sizing.</p>
 </div>
+
+<style>
+  dl {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  dt {
+    flex-basis: 20%;
+    padding: .25rem .5rem;
+    text-align: right;
+  }
+  dd {
+    flex-basis: 70%;
+    flex-grow: 1;
+    margin: 0;
+    padding: .25rem .5rem;
+  }
+</style>

@@ -140,3 +140,13 @@ export const HTMLTags = [
     ]
   }
 ]
+
+export const sizing = [
+  { id: 'none', value: '0', related: ['border', 'height', 'margin', 'padding', 'text', 'width'] }, 
+  { id: 'pixel', value: '1px', related: ['border', 'height', 'margin', 'padding', 'text', 'width'] }, 
+  { id: 'prose', value: '60ch', related: ['width'] },
+  { id: '075', value: '.75rem', related: ['border', 'height', 'margin', 'padding', 'text', 'width'] }, 
+  { id: '100', value: '1rem', related: ['border', 'height', 'margin', 'padding', 'text', 'width'] }, 
+  { id: '125', value: '1.25rem', related: ['border', 'height', 'margin', 'padding', 'text', 'width'] }, 
+  { id: '150', value: '1.5rem', related: ['border', 'height', 'margin', 'padding', 'text', 'width'] },
+]

@@ -2,8 +2,9 @@
 	import DocsNav from '$lib/app/DocsNav.svelte'
 </script>
 
-<DocsNav />
-
-<section class="position-relative margin-left-10 overflow-vertical-auto">
-	<slot />
-</section>
+<div class="height-full display-grid columns-auto-fill">
+	<DocsNav />
+	<section class="position-relative">
+		<slot />
+	</section>
+</div>

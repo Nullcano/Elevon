@@ -6,6 +6,6 @@
 </script>
 
 <Header />
-<main class="padding-top-350 min-height-full">
+<main class="position-relative top-350 calc-height-vh-full-350 overflow-vertical-auto">
 	<slot />
 </main>

@@ -1,12 +1,7 @@
 <script>
   import Document from '$lib/app/Document.svelte'
   import AnchorNav from '$lib/app/AnchorNav.svelte'
-
-  let anchorNav = `
-    <li>
-      <a href="#quickstart">Quickstart</a>
-    </li>
-  `
+  import { sizing } from '$lib/data.js'
 </script>
 
 <Document>
@@ -15,5 +10,9 @@
 </Document>
 
 <AnchorNav>
-  {@html anchorNav}
+  {#each sizing as item}
+    <li>
+      <a href="#{item.id}">{item.id}</a>
+    </li>
+  {/each}
 </AnchorNav>

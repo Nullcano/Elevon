@@ -1,14 +1,9 @@
-<div class="logo display-flex justify-items-start gap-xs">
-  <div class="width-050 height-200 background-dark-darken"></div>
-  <div class="width-050 height-150 background-dark-darken"></div>
-  <div class="width-050 height-200 background-dark-darken"></div>
+<div class="display-block height-150">
+  <svg class="height-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+    <g id="m">
+      <rect width="20" height="100" x="0" y="0" />
+      <rect width="20" height="80" x="40" y="0" />
+      <rect width="20" height="100" x="80" y="0" />  
+    </g>
+  </svg>
 </div>
-
-<style>
-    .logo:hover div:nth-child(odd) {
-    height: var(--size-150)
-  }
-  .logo:hover div:nth-child(even) {
-    height: var(--size-200)
-  }
-</style>
