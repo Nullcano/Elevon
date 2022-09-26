@@ -1,6 +1,6 @@
 html {
   color: var(--base-font-color);
-  font-size: clamp(var(--size-100),calc(50% + 1vw),var(--size-750));
+  font-size: clamp(16px,calc(50% + .8vw),8rem);
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
 }
