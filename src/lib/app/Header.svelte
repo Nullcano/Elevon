@@ -42,11 +42,11 @@
 <header class="position-fixed pull-top pull-left pull-right display-flex background-dark text-light border-thin border-bottom border-dark-lighten backdrop-blur z-index-100">
   <div class="display-flex align-items-center">
     <a class="background-dark hover-background-dark-darken" href="/">
-      <div class="width-750 height-500 row-center justify-content-center border-thin border-right border-dark-lighten">
+      <div class="width-750 height-400 row-center justify-content-center border-thin border-right border-dark-lighten">
         <MeterIcon />
       </div>
     </a>
-    <button type="button" class="padding-x-150 height-500 card-sm display-flex align-items-center justify-space-between gap-100 border-none hover-border-none background-dark hover-background-dark-darken text-light" on:click={openSearch}>
+    <button type="button" class="padding-x-150 height-400 card-sm display-flex align-items-center justify-space-between gap-100 border-none hover-border-none background-dark hover-background-dark-darken text-light" on:click={openSearch}>
       <SearchIcon />
       <span>Search</span>
       <kbd>
@@ -58,23 +58,23 @@
   </div>
   <nav class="width-full justify-content-end display-flex">
     <a class:active="{$page.url.pathname.includes('docs')}" class="text-light hover-reset-underline" href="/docs">
-      <div class="height-500 padding-x-200 row-center">Documentation</div>
+      <div class="height-400 padding-x-200 row-center">Documentation</div>
     </a>
     <a class:active="{$page.url.pathname.includes('components')}" class="text-light hover-reset-underline" href="/components">
-      <div class="height-500 padding-x-200 row-center">Components</div>
+      <div class="height-400 padding-x-200 row-center">Components</div>
     </a>
     <a class:active="{$page.url.pathname.includes('themes')}" class="text-light hover-reset-underline" href="/themes">
-      <div class="height-500 padding-x-200 row-center">Themes</div>
+      <div class="height-400 padding-x-200 row-center">Themes</div>
     </a>
   </nav>
   <div class="display-flex align-items-center">
     <button class="padding-none border-none hover-border-none background-dark hover-background-dark-darken" on:click={() => toggleDarkMode()}>
-      <div class="width-750 height-500 row-center justify-content-center border-thin border-left border-dark-lighten">
+      <div class="width-750 height-400 row-center justify-content-center border-thin border-left border-dark-lighten">
         <SunIcon />
       </div>
     </button>
     <button class="padding-none border-none hover-border-none background-dark hover-background-dark-darken" on:click={() => toggleDarkMode()}>
-      <div class="width-750 height-500 row-center justify-content-center border-thin border-left border-dark-lighten">
+      <div class="width-750 height-400 row-center justify-content-center border-thin border-left border-dark-lighten">
         <MenuIcon />
       </div>
     </button>

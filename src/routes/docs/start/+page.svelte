@@ -22,6 +22,6 @@
 &#x3C;/body&#x3E;
 &#x3C;/html&#x3E;</code></pre>
 
-<a role="button" href="#">Download Meter</a>
+<a role="button" href="/">Download Meter</a>
 
 <em class="display-block margin-y-150 padding-150 background-light-lighten">Meter is still working on this document. Check back later.</em>
