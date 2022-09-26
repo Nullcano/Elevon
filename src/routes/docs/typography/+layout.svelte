@@ -10,7 +10,7 @@
 </script>
 
 <Document>
-  <h1>Short Hands</h1>
+  <h1>Typography</h1>
   <slot />
 </Document>
 

@@ -1,4 +1,4 @@
-<div class="display-block height-150">
+<div class="height-150">
   <svg class="height-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
     <g id="m">
       <rect width="20" height="100" x="0" y="0" />

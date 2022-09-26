@@ -1,7 +1,5 @@
-<div class="padding-vertical-4">
-    <h1>Typography</h1>
+<div class="margin-y-md width-prose">
+    <p>All font and text classes and attritubes.</p>
 </div>
 
-<div class="padding-4" data-content="text">
-    <p>Text.</p>
-</div>
+<em class="display-block padding-md background-light-lighten">Meter is still working on this document. Check back later.</em>

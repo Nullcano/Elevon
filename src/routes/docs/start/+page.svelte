@@ -1,44 +1,25 @@
-<script>
-  import Document from '$lib/app/Document.svelte'
-  import AnchorNav from "$lib/app/AnchorNav.svelte"
+<div class="margin-y-md width-prose">
+  <p>
+    Below is a recommeded HTML document for using Meter.<br>
+    Replace the link and script paths with your own path if you are self-hosting.
+  </p>
+</div>
 
-  let anchorNav = `
-    <li>
-      <a href="#quickstart">Quickstart</a>
-    </li>
-  `
-</script>
-
-<Document>
-  <div class="padding-vertical-4">
-    <h1>Quickstart</h1>
-  </div>
-  
-  <div class="padding-4">
-    <p>Below is a recommeded HTML document for using Meter.</p>
-    <p>Replace the link and script paths with your own path if you are self-hosting.</p>  
-  </div>
-  
-  <pre class="padding-4 background-light-lighten"><code>&#x3C;!DOCTYPE html&#x3E;
+<pre class="background-light-lighten"><code>&#x3C;!DOCTYPE html&#x3E;
 &#x3C;html lang=&#x22;en&#x22;&#x3E;
-  &#x3C;head&#x3E;
-    &#x3C;title&#x3E;&#x3C;/title&#x3E;
-    &#x3C;meta content=&#x22;&#x22; name=&#x22;description&#x22;&#x3E;
-    &#x3C;meta charset=&#x22;utf-8&#x22;&#x3E;
-    &#x3C;meta content=&#x22;IE=Edge&#x22; http-equiv=&#x22;X-UA-Compatible&#x22;&#x3E;
-    &#x3C;meta content=&#x22;&#x22; name=&#x22;author&#x22;&#x3E;
-    &#x3C;meta content=&#x22;width=device-width, initial-scale=1&#x22; name=&#x22;viewport&#x22;&#x3E;
-    &#x3C;link href=&#x22;path/to/meter/css/meter.min.css&#x22; rel=&#x22;stylesheet&#x22;&#x3E;
-    &#x3C;script async src=&#x22;path/to/meter/js/meter.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
-  &#x3C;/head&#x3E;
-  &#x3C;body&#x3E;
-    &#x3C;!-- Enjoy building with Meter --&#x3E;
-  &#x3C;/body&#x3E;
+&#x3C;head&#x3E;
+  &#x3C;title&#x3E;&#x3C;/title&#x3E;
+  &#x3C;meta content=&#x22;&#x22; name=&#x22;description&#x22;&#x3E;
+  &#x3C;meta charset=&#x22;utf-8&#x22;&#x3E;
+  &#x3C;meta content=&#x22;IE=Edge&#x22; http-equiv=&#x22;X-UA-Compatible&#x22;&#x3E;
+  &#x3C;meta content=&#x22;&#x22; name=&#x22;author&#x22;&#x3E;
+  &#x3C;meta content=&#x22;width=device-width, initial-scale=1&#x22; name=&#x22;viewport&#x22;&#x3E;
+  &#x3C;link href=&#x22;path/to/meter/css/meter.min.css&#x22; rel=&#x22;stylesheet&#x22;&#x3E;
+  &#x3C;script async src=&#x22;path/to/meter/js/meter.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;/head&#x3E;
+&#x3C;body&#x3E;
+  &#x3C;!-- Enjoy building with Meter --&#x3E;
+&#x3C;/body&#x3E;
 &#x3C;/html&#x3E;</code></pre>
-  
-  <a role="button" href="#">Download Meter</a>  
-</Document>
 
-<AnchorNav>
-  {@html anchorNav}
-</AnchorNav>
+<a role="button" href="#">Download Meter</a>
