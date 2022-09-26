@@ -2,17 +2,17 @@
   import { page } from '$app/stores'
 </script>
 
-<aside class="position-sticky card-sm height-full background-light-lighten overflow-vertical-auto">
-	<ul class="padding-100 display-flex flex-direction-column gap-050">
-		<h3 class="margin-bottom-050 text-bold text-center text-uppercase">Documentation</h3>
+<aside class="position-sticky card-sm height-full background-dark border-right border-thin border-dark-lighten overflow-vertical-auto">
+	<h3 class="position-sticky top-none margin-none padding-x-200 padding-y-200 text-bold text-uppercase background-dark border-bottom border-thin border-dark-lighten">Documentation</h3>
+	<ul class="margin-none padding-none display-flex flex-direction-column">
 		<a class:active="{$page.url.pathname.includes('start')}" class="light hover-light-lighten" href="/docs/start">
-			<div class="padding-x-200 padding-y-050">Get Started</div>
+			<div class="padding-x-200 padding-y-100">Get Started</div>
 		</a>
 		<a class:active="{$page.url.pathname.includes('tags')}" class="light hover-light-lighten" href="/docs/tags">
-			<div class="padding-x-200 padding-y-050">Semantic Elements</div>
+			<div class="padding-x-200 padding-y-100">Semantic Elements</div>
 		</a>
 		<a class:active="{$page.url.pathname.includes('sizing')}" class="light hover-light-lighten" href="/docs/sizing">
-			<div class="padding-x-200 padding-y-050">Sizing Guide</div>
+			<div class="padding-x-200 padding-y-100">Sizing Guide</div>
 		</a>
 		<a class:active="{$page.url.pathname.includes('layout')}" class="light hover-light-lighten" href="/docs/layout">
 			<div class="padding-x-200 padding-y-050">Layout</div>
@@ -31,9 +31,9 @@
 
 <style>
 	a {
-		border-radius: .75rem;
+		border-bottom: 1px solid var(--dark-lighten);
 	}
 	.active {
-		background-color: var(--light);
+		background-color: var(--dark-darken);
 	}
 </style>
