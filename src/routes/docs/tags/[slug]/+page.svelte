@@ -18,7 +18,7 @@
 	<meta property="og:image" content="" />
 </svelte:head>
 
-<div class="padding-vertical-4 display-flex align-items-center justify-space-between">
+<div class="display-flex align-items-center justify-space-between">
 	<h1>{item.tag}</h1>
 	<div class="display-flex align-items-center gap-medium cursor-pointer" on:click={() => goto("/docs/tags")}>
 		<svg class="width-200 height-200 flip-y--180" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +28,7 @@
 	</div>
 </div>
 
-<p class="padding-4 background-light">{itemDesc}</p>
+<p class="padding-150 background-light-lighten">{itemDesc}</p>
 
 {#each item.previews as preview}
 	<div class="width-parent margin-top-7 display-flex gap-100">

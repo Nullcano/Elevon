@@ -1,4 +1,4 @@
-<div class="margin-y-md width-prose">
+<div class="margin-y-150 width-prose">
   <p>
     Below is a recommeded HTML document for using Meter.<br>
     Replace the link and script paths with your own path if you are self-hosting.
@@ -23,3 +23,5 @@
 &#x3C;/html&#x3E;</code></pre>
 
 <a role="button" href="#">Download Meter</a>
+
+<em class="display-block margin-y-150 padding-150 background-light-lighten">Meter is still working on this document. Check back later.</em>

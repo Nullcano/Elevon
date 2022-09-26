@@ -118,11 +118,11 @@ dd { flex-basis: 70%; flex-grow: 1; margin: 0; padding: .25rem .5rem }
 dd li { margin-left: 1rem }
 
 table { font-family: inherit; border-collapse: collapse; width: 100% }
-td, th { border: 0; text-align: left; padding: var(--size-2) }
+td, th { border: 0; text-align: left; padding: var(--size-100) }
 tr:nth-child(even) { background-color: rgba(0,0,0,.1) }
 
 hr { border: 0; border-top: var(--border-sm) solid var(--dark-lighten); background: none }
-blockquote { padding: var(--size-4) }
+blockquote { padding: var(--size-150) }
 blockquote::before { content: '\201C' }
 blockquote::after { content: '\201D' }
 
