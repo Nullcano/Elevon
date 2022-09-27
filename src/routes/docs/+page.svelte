@@ -6,7 +6,7 @@
   <h1>Meter Documentation</h1>
   <div class="display-grid auto-fit-md gap-150">
     <a class="hover-reset-underline" href="/docs/start">
-      <div class="padding-200 display-flex justify-space-between border-all border-light-darken background-light-lighten">
+      <div class="padding-200 display-flex justify-space-between">
         <div >
           <h3 class="text-150">Get Started</h3>
           <div class="height-100"></div>
@@ -20,7 +20,7 @@
       </div>
     </a>
     <a class="hover-reset-underline" href="/docs/tags">
-      <div class="padding-200 display-flex justify-space-between border-all border-light-darken background-light-lighten">
+      <div class="padding-200 display-flex justify-space-between">
         <div>
           <h3 class="text-150">Semantic Elements</h3>
           <div class="height-100"></div>

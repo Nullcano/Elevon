@@ -17,8 +17,7 @@
 <div class="margin-y-100 display-grid auto-fit-sm gap-100">
   {#each tags as tag}
     <a class="hover-reset-underline" href="/docs/tags/{slugify(tag.tag)}">
-      <div class="background-light-lighten animate">
-        <div class="width-parent height-9 background-center-cover" style="background-image: url('https://ui-avatars.com/api/?size=512&font-size=0.1&length=16&name={tag.tag}&bold=true&background=2e2b3b&color=8f8aa8')"></div>
+      <div class="background-dark-lighten animate">
         <div class="padding-150">
           <strong class="display-block text-150">{tag.tag}</strong>
           <span>{tag.desc}</span>  
@@ -28,4 +27,4 @@
   {/each}
 </div>
 
-<em class="display-block margin-y-150 padding-150 background-light-lighten">Meter is still working on this document. Check back later.</em>
+<em class="display-block margin-y-150 padding-150 background-dark-lighten">Meter is still working on this document. Check back later.</em>

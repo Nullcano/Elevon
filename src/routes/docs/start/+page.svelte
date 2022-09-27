@@ -5,7 +5,7 @@
   </p>
 </div>
 
-<pre class="background-light-lighten"><code>&#x3C;!DOCTYPE html&#x3E;
+<pre class="background-dark-darken"><code>&#x3C;!DOCTYPE html&#x3E;
 &#x3C;html lang=&#x22;en&#x22;&#x3E;
 &#x3C;head&#x3E;
   &#x3C;title&#x3E;&#x3C;/title&#x3E;
@@ -22,6 +22,4 @@
 &#x3C;/body&#x3E;
 &#x3C;/html&#x3E;</code></pre>
 
-<a role="button" href="/">Download Meter</a>
-
-<em class="display-block margin-y-150 padding-150 background-light-lighten">Meter is still working on this document. Check back later.</em>
+<em class="display-block margin-y-150 padding-150 background-dark-lighten">Meter is still working on this document. Check back later.</em>

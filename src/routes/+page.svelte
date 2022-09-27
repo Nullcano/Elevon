@@ -293,11 +293,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://i.giphy.com/l9Tllo1thElT5gvVOU.gif') no-repeat center;
+    background: url('https://i.giphy.com/73WrT6n6yoVfq.gif') no-repeat center;
     background-size: cover;
-    mix-blend-mode: overlay;
+    mix-blend-mode: luminosity;
     opacity: 0;
-    transition: all 1s ease-in-out;
+    transition: all .5s ease-in-out;
   }
   .download:hover::before {
     opacity: .25;
@@ -314,8 +314,8 @@
       0 7px 0 rgb(160,160,160),
       0 1px 5px rgba(0,0,0,.05),
       0 3px 5px rgba(0,0,0,.10),
-      0 5px 10px rgba(0,0,0,.15),
-      0 7px 10px rgba(0,0,0,.20),
+      0 5px 10px rgba(0,0,0,.25),
+      0 7px 10px rgba(0,0,0,.50),
       0 10px 15px rgba(0,0,0,.75);
     transform: scale(1.1);
     transition: all .2s ease-in-out;

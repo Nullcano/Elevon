@@ -28,7 +28,7 @@
 	</div>
 </div>
 
-<p class="padding-150 background-light-lighten">{itemDesc}</p>
+<p class="padding-150 background-dark-lighten">{itemDesc}</p>
 
 {#each item.previews as preview}
 	<div class="width-parent margin-top-7 display-flex gap-100">
@@ -38,9 +38,9 @@
 				{@html preview.semantic}
 			</div>
 			<div>
-				<div class="padding-vertical-2 padding-horizontal-3 text-3 border-all border-regular border-light">HTML</div>
+				<div class="padding-vertical-2 padding-horizontal-3 text-3 border-all border-regular border-dark">HTML</div>
 				<div>
-					<pre class="background-light overflow-horizontal-auto"><code class="padding-4">{preview.semantic}</code></pre>	
+					<pre class="background-dark overflow-horizontal-auto"><code class="padding-4">{preview.semantic}</code></pre>	
 				</div>
 			</div>
 		</div>
@@ -50,9 +50,9 @@
 				{@html preview.example}
 			</div>
 			<div>
-				<div class="padding-vertical-2 padding-horizontal-3 text-3 border-all border-regular border-light">HTML</div>
+				<div class="padding-vertical-2 padding-horizontal-3 text-3 border-all border-regular border-dark">HTML</div>
 				<div>
-					<pre class="background-light overflow-horizontal-auto"><code class="padding-4">{preview.example}</code></pre>
+					<pre class="background-dark overflow-horizontal-auto"><code class="padding-4">{preview.example}</code></pre>
 				</div>
 			</div>
 		</div>
