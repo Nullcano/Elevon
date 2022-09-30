@@ -1,3 +1,3 @@
-<article class="padding-150" data-layout="contained">
+<article>
   <slot />
 </article>

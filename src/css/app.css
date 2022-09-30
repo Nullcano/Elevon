@@ -1,17 +1,23 @@
+:root {
+  --dark: hsl(195, 15%, 5%);
+  --median: hsl(195, 15%, 50%);
+  --light: hsl(195, 15%, 95%);
+}
+
 body, html {
-  overflow: hidden;
+  background: var(--light);
+  color: var(--dark);
 }
 
 a {
-  color: var(--aqua);
+  color: var(--median);
 }
 
 a:hover {
-  color: var(--aqua-lighten);
+  color: var(--median);
   text-decoration: none;
 }
 
-button:hover > .icon {
-  width: 2.5rem;
-  height: 2.5rem;
+svg {
+  fill: currentColor;
 }
