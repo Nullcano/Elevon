@@ -37,6 +37,16 @@
 
 <svelte:window on:keydown={handleKeyDown} />
 
+<svelte:head>
+  {#if searchIsOpen}
+    <style>
+      body {
+        overflow: hidden;
+      }
+    </style>
+  {/if}
+</svelte:head>
+
 <nav class="controls">
   <a role="button" href={''} class="search" on:click={openSearch}>
     <div class="ctrl-item">
@@ -44,69 +54,76 @@
       <span><kbd>Ctrl</kbd> + <kbd>K</kbd></span>
     </div>
   </a>
-  <a role="button" href={''} class="menu" on:click={openMenu}>
-    <div class="ctrl-item">
-      Overview
-    </div>
-  </a>
 </nav>
 
 {#if searchIsOpen}
-  <div class="position-fixed pull-top width-vw-full height-vh-full z-index-100">
-    <div class="position-fixed pull-top width-vw-full height-vh-full background-dark-darken-75 backdrop-blur" on:click={closeSearch}></div>
-    <div class="position-relative margin-auto container-md padding-y-200">
-      <input class="width-full padding-x-200 padding-y-100 background-dark-darken text-light-lighten" type="text" bind:this={searchInput} bind:value={searchQuery} use:focusElem on:keyup={handleKeyUp} on:click={openSearch} placeholder="Search" />
+  <div class="search-overlay" on:click={closeSearch}></div>
+  <div class="search-container">
+    <div class="search-box">
+      <input type="text" bind:this={searchInput} bind:value={searchQuery} use:focusElem on:keyup={handleKeyUp} on:click={openSearch} placeholder="Search" />
     </div>
   </div>
 {/if}
 
 <style>
+  :global(.ofh) {
+    overflow: hidden;
+  }
+  .search-overlay {
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--dark);
+  }
+  .search-container {
+    position: relative;
+    width: 100%;
+  }
+  .search-box input {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    background: var(--median);
+    color: var(--light);
+    border: 0;
+    outline: none;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    left: 12rem;
+    width: calc(100% - 12rem);
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    background: var(--dark);
+    border-bottom: 1px solid var(--median);
+  }
+  a {
+    color: var(--light);
+  }
   [role="button"] {
     background: transparent;
     border: 0;
     color: (--light);
   }
-  nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    width: 12rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    z-index: 1600;
-  }
-  nav.controls {
-    right: 0;
-    bottom: auto;
-    left: 12rem;
-    width: calc(100% - 12rem);
-    height: 4rem;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  a {
-    color: var(--light);
-  }
   .ctrl-item {
-    margin: 1rem;
-    height: 2rem;
-    padding: 0 1rem;
+    padding: .5rem 1rem;
     display: flex;
     align-items: center;
+    gap: 1rem;
   }
   .search .ctrl-item {
-    margin: 1rem 0;
-    width: 12rem;
-    height: 2rem;
-    background: var(--light);
-    color: var(--dark);
+    padding: .5rem 1rem;
+    color: var(--light);
     justify-content: space-between;
   }
   kbd {
     padding: 0 .5rem;
-    background: var(--dark);
+    background: var(--median);
     color: var(--light);
+    border-radius: 60em;
   }
 </style>

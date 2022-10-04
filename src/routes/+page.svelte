@@ -1,6 +1,9 @@
 <section>
-  <div class="intro">
-    <h2>arctic <span>design</span></h2>
+  <div class="intro mono">
+    <h2>
+      <span>arctic</span>
+      <span>.style</span>
+    </h2>
   </div>
 </section>
 
@@ -11,25 +14,23 @@
   .intro {
     position: relative;
   }
-  h2, p {
-    position: relative;
-  }
   h2 {
-    font-family: 'JetBrainsMono-Regular';
     font-size: 16vw;
-    font-weight: 900;
-    color: var(--dark);
+    font-weight: 300;
     text-transform: uppercase;
     text-align: center;
     line-height: 20vw;
     pointer-events: none;
+  }
+  h2 span:first-child {
+    color: var(--light);
   }
   h2 span {
     color: var(--median);
   }
   @media screen and (min-width: 60em) {
     h2 {
-      font-size: 22vw;
+      font-size: 20vw;
     }
   }
 </style>

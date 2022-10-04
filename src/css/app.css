@@ -1,12 +1,12 @@
 :root {
-  --dark: hsl(195, 15%, 5%);
-  --median: hsl(195, 15%, 50%);
-  --light: hsl(195, 15%, 95%);
+  --dark: hsl(210, 50%, 0%);
+  --median: hsl(210, 50%, 25%);
+  --light: hsl(210, 50%, 100%);
 }
 
 body, html {
-  background: var(--light);
-  color: var(--dark);
+  background: var(--dark);
+  color: var(--light);
 }
 
 a {

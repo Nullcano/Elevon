@@ -1,135 +1,127 @@
 <script>
   import { page } from '$app/stores'
+  import NavLogo from '$lib/app/NavLogo.svelte'
 </script>
 
 <nav>
-  <a href="/">
-    <div class="logo-item">
-      <div class="logo-bg"></div>
-      <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.002 512.002" style="enable-background:new 0 0 512.002 512.002" xml:space="preserve">
-        <path d="M510.47 206.184a7.604 7.604 0 0 0-6.072-3.027H455.72L359.241 50.359c-.03-.048-.068-.09-.099-.137a8.414 8.414 0 0 0-.305-.424c-.077-.1-.153-.202-.234-.298a7.94 7.94 0 0 0-.354-.381c-.087-.089-.17-.18-.262-.265-.132-.123-.273-.235-.413-.349-.09-.073-.176-.15-.27-.218-.162-.119-.335-.225-.507-.331-.08-.05-.156-.105-.237-.152a7.739 7.739 0 0 0-.796-.393l-.004-.002-.006-.003-76.628-32.305a7.6 7.6 0 0 0-6.7.39l-84.173 47.656-.006.003-.033.019a7.487 7.487 0 0 0-.77.503c-.072.053-.137.114-.207.169-.176.14-.349.284-.511.438-.082.078-.159.162-.238.243a7.647 7.647 0 0 0-.622.731c-.119.16-.23.325-.337.494-.062.098-.125.196-.182.297-.112.197-.21.399-.303.605-.036.081-.079.159-.114.242-.12.291-.223.591-.306.897l-.011.031-17.62 65.853-78.718 25.341c-.059.019-.112.049-.17.07a7.69 7.69 0 0 0-1.08.473c-.09.049-.185.087-.273.139-.126.074-.241.162-.362.242-.09.061-.182.118-.27.182-.28.205-.549.422-.796.661a7.428 7.428 0 0 0-.685.768c-.066.084-.125.171-.188.259a7.528 7.528 0 0 0-.889 1.614c-.034.085-.074.166-.105.252a7.437 7.437 0 0 0-.283.991c-.018.085-.026.172-.042.259-.033.188-.072.374-.091.566L76.968 225.7 2.245 299.947c-.025.024-.044.054-.068.079a7.843 7.843 0 0 0-.695.807l-.022.027c-.208.285-.39.588-.558.901-.027.052-.057.103-.084.156a7.432 7.432 0 0 0-.399.945c-.018.052-.032.103-.05.156a7.546 7.546 0 0 0-.364 2.282c0 .071-.007.14-.005.211l2.44 109.251a7.603 7.603 0 0 0 6.174 7.299l30.807 5.888 65.378 20.695 31.79 36.933c.024.028.052.052.077.08.126.142.258.277.392.409.05.049.096.099.148.146.187.171.38.335.584.488.039.028.079.053.118.081.168.122.34.237.518.345.068.042.138.078.207.117a7.236 7.236 0 0 0 1.188.538c.079.028.158.057.238.082.167.053.338.097.51.139.079.019.157.042.237.058.186.039.375.066.566.091.066.008.132.022.199.029l.026.004 92.764 9.276a7.605 7.605 0 0 0 8.069-5.482l11.615-40.773 131.656 27.669a7.602 7.602 0 0 0 7.675-2.917l64.076-86.546c.01-.013.016-.028.026-.042.101-.139.185-.29.277-.436.107-.169.22-.336.313-.512.071-.135.126-.279.189-.419.091-.202.183-.401.256-.609.011-.033.029-.064.041-.097l22-65.821c.018-.053.028-.106.045-.16.016-.053.039-.102.054-.155l31.053-108.304a7.596 7.596 0 0 0-1.236-6.672zm-69.121 2.701-68.519 56.841-60.546-141.991 40.112-55.728 88.953 140.878zM289.542 324.642c-.013-.14-.01-.278-.03-.418-.003-.023-.012-.046-.016-.069-.036-.221-.095-.436-.15-.653-.039-.152-.065-.308-.113-.456-.064-.2-.152-.39-.232-.585-.063-.153-.115-.311-.188-.459-.092-.188-.208-.362-.315-.541-.084-.141-.157-.288-.25-.423-.115-.166-.252-.317-.381-.476-.108-.133-.207-.274-.324-.399-.118-.126-.256-.236-.382-.355-.15-.14-.294-.287-.455-.415l-.029-.026c-.133-.103-.277-.182-.415-.277-.165-.112-.324-.233-.499-.333-.191-.109-.389-.192-.587-.283-.146-.067-.285-.146-.435-.204a7.942 7.942 0 0 0-.83-.256c-.083-.021-.161-.056-.245-.075l-.027-.006-.011-.003-138.798-31.296 99.804-156.258h53.95l56.66 132.876 46.935 116.883-28.583 1.668-101.464 5.921 17.174-60.283c.041-.144.057-.289.089-.433.044-.197.093-.391.122-.592.027-.194.033-.386.046-.58.011-.182.03-.363.028-.546-.004-.219-.029-.432-.049-.648zM276.664 30.568l64.402 27.15-41.353 57.452h-55.896l-39.798-43.471 72.645-41.131zM172.997 170.081l22.722-84.926 35.198 38.447-78.274 122.551 3.842-14.355 9.19-34.346 7.322-27.371zm-10.68-18.923-5.169 19.319-3.89 14.538-41.062-17.723 50.121-16.134zm-72.7 83.412a7.603 7.603 0 0 0 2.206-4.631l5.304-52.588 52.158 22.512-22.693 84.814-98.214 10.742 61.239-60.849zM37.916 412.177l-20.406-3.899-2.147-96.135 101.256-11.074-78.703 111.108zm77.005 24.908a7.604 7.604 0 0 0-3.468-2.288l-57.504-18.203 42.947-55.756 36.442 48.184 1 50.621-19.417-22.558zm-8.737-89.176 29.979-47.637 125.119 28.213-118.368 67.99-36.73-48.566zm123.365 133.785-79.723-7.972-1.242-62.965 120.968-69.483-40.003 140.42zm154.511-18.708-123.722-26.002 19.168-34.454 156.057-9.108-51.503 69.564zm61.705-85.392-27.574 1.609-35.104-87.421 80.757 31.72-18.079 54.092zm22.576-68.665-83.814-32.921 69.486-57.643h40.294l-25.966 90.564z"/>
-      </svg>
-    </div>
-  </a>
-  <a class:active="{$page.url.pathname.includes('defaults')}" href="/defaults">
-    <div class="nav-item">
-      <span>Defaults</span>
-    </div>
-  </a>
-  <a class:active="{$page.url.pathname.includes('constants')}" href="/constants">
-    <div class="nav-item">
-      <span>Constants</span>
-    </div>
-  </a>
-  <a class:active="{$page.url.pathname.includes('selectors')}" href="/selectors">
-    <div class="nav-item">
-      <span>Selectors</span>
-    </div>
-  </a>
-  <a class:active="{$page.url.pathname.includes('shorthands')}" href="/shorthands">
-    <div class="nav-item">
-      <span>Shorthands</span>
-    </div>
-  </a>
-  <a class:active="{$page.url.pathname.includes('components')}" href="/components">
-    <div class="nav-item">
-      Components
-    </div>
-  </a>
-  <a class:active="{$page.url.pathname.includes('templates')}" href="/templates">
-    <div class="nav-item">
-      Templates
-    </div>
-  </a>
+  <NavLogo />
+  <div id="references" class="box">
+    <label for="references">References</label>
+    <ul>
+      <a class:active="{$page.url.pathname.includes('intro')}" href="/intro">
+        <div class="nav-item">
+          <span>Introduction</span>
+        </div>
+      </a>
+      <a class:active="{$page.url.pathname.includes('html')}" href="/html">
+        <div class="nav-item">
+          <span>HTML</span>
+        </div>
+      </a>
+      <a class:active="{$page.url.pathname.includes('css')}" href="/css">
+        <div class="nav-item">
+          <span>CSS</span>
+        </div>
+      </a>
+    </ul>
+  </div>
+  <div id="arctic-core" class="box">
+    <label for="arctic-core">Arctic Core</label>
+    <ul>
+      <a class:active="{$page.url.pathname.includes('variables')}" href="/variables">
+        <div class="nav-item">
+          <span>Variables</span>
+        </div>
+      </a>
+      <a class:active="{$page.url.pathname.includes('classes')}" href="/classes">
+        <div class="nav-item">
+          <span>Classes</span>
+        </div>
+      </a>
+      <a class:active="{$page.url.pathname.includes('shorthands')}" href="/shorthands">
+        <div class="nav-item">
+          <span>Shorthands</span>
+        </div>
+      </a>
+    </ul>
+  </div>
+  <div id="built-with-arctic" class="box">
+    <label for="built-with-arctic">Built with Arctic</label>
+    <ul>
+      <a class:active="{$page.url.pathname.includes('components')}" href="/components">
+        <div class="nav-item">
+          <span>Components</span>
+        </div>
+      </a>
+      <a class:active="{$page.url.pathname.includes('templates')}" href="/templates">
+        <div class="nav-item">
+          <span>Templates</span>
+        </div>
+      </a>
+      <a class:active="{$page.url.pathname.includes('applications')}" href="/applications">
+        <div class="nav-item">
+          <span>Applications</span>
+        </div>
+      </a>
+    </ul>
+  </div>
 </nav>
 
 <style>
   nav {
     position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
     width: 12rem;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    gap: .25rem;
+    background: var(--dark);
+    border-right: 1px solid var(--median);
+    overflow-y: auto;
     z-index: 1600;
   }
   a {
-    color: var(--light);
+    color: var(--light)
   }
-  .logo-item {
+  span {
     position: relative;
-    height: 4rem;
-    width: 12rem;
-    margin-bottom: 2rem;
-    display: grid;
-    place-content: center;
   }
-  .logo-bg {
-    position: absolute;
-    top: 2.4rem;
-    left: 2rem;
-    width: 8rem;
-    height: 1.6rem;
-    background: url("data:image/svg+xml, %3Csvg class='logo-bg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19.3 6' style='enable-background:new 0 0 19.3 6' xml:space='preserve'%3E%3Cpath d='M-5.5 3.8C-4.2 4.8-2.8 6 0 6s4.2-1.2 5.5-2.2C6.6 2.8 7.6 2 9.7 2s3 .8 4.2 1.8c1.3 1 2.7 2.2 5.5 2.2s4.2-1.2 5.5-2.2l-1.4-.9c-1.1 1-2.1 1.8-4.2 1.8s-3-.8-4.2-1.8C13.9 1.9 12.4.7 9.7.7 6.9.7 5.5 1.9 4.2 2.9 3 3.9 2.1 4.7 0 4.7s-3-.8-4.2-1.8l-1.3.9z' style='fill:hsl(250,15%,50%)'/%3E%3C/svg%3E%0A");
-    background-repeat: repeat;
-    background-position-x: 0%;
-    background-position-y: 0%;
-    background-size: auto auto;
-    background-repeat: repeat-x;
-    background-size: 1.2rem .4rem; 
-    background-position: 0 0;
-    animation: move 8s linear infinite;
-    z-index: 0;
+  ul {
+    margin: 0;
+    padding: .5rem 0;
   }
-  .logo {
-    position: relative;
-    width: 3rem;
-    height: 3rem;
-    animation: bob 2.4s linear infinite;
+  label {
+    position: sticky;
+    top: 0;
+    padding: .5rem 1rem;
+    background: var(--dark);
+    border-top: 1px solid var(--median);
+    border-bottom: 1px solid var(--median);
+    z-index: 1;
+  }
+  .box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
   .nav-item {
     position: relative;
-    width: 12rem;
-    height: 3rem;
-    padding: 0 1rem;
+    padding: .5rem 1rem;
     display: flex;
     align-items: center;
     gap: .5rem;
   }
   .nav-item::before {
     content: '';
-    position: relative;
-    display: inline-block;
-    width: 1rem;
-    height: 1px;
+    width: .75rem;
+    height: .75rem;
+    border: 2px solid var(--median);
+    background: var(--dark);
+    border-radius: 50%;
+    transition: all .35s linear;
+  }
+  .active .nav-item::before, .nav-item:hover::before {
     background: var(--median);
-    transition: all .2s linear;
-  }
-  .nav-item:hover::before {
-    width: 2rem;
-  }
-  @keyframes move {
-    from {
-      background-position: 0 0;
-    }
-    to {
-      background-position: 8rem 0;
-    }
-  }
-  @keyframes bob {
-    0% {
-      top: 0;
-    }
-    50% {
-      top: .4rem;
-    }
-    75% {
-      top: -.2rem;
-    }
-    100% {
-      top: 0;
-    }
   }
 </style>
