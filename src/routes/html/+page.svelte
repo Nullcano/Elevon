@@ -3,8 +3,6 @@
   import { slugify } from '$lib/utils'
 	import { p, elements } from '../../api/elements'
 	import Card from '$lib/layout/Card.svelte'
-import Layout from '../+layout.svelte';
-import NavCtrl from '../../lib/app/NavCtrl.svelte';
 </script>
 
 <svelte:head>
@@ -19,7 +17,7 @@ import NavCtrl from '../../lib/app/NavCtrl.svelte';
 
 <div class="title">
 	<div class="display-flex align-items-center gap-medium cursor-pointer" on:click={() => goto("/")}>
-		<span>\ Return to home</span>
+		<span>- Return to home</span>
 	</div>
 	<h1>{p.title}</h1>
 	<p class="title-description">{p.description}</p>
@@ -40,9 +38,11 @@ import NavCtrl from '../../lib/app/NavCtrl.svelte';
 {/each}
 
 <style>
+	a {
+		text-decoration: none;
+	}
 	.title {
 		padding: 2rem;
-		border-bottom: 1px solid var(--median);
 	}
 	.title-description {
 		max-width: 60ch;

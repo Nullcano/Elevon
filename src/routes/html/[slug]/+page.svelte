@@ -1,49 +1,57 @@
 <script>
-  import { p, elements } from '../../../api/elements'
+  import { p } from '../../../api/elements'
   import { slugify } from '$lib/utils'
 
   export let data
   const item = data.item
   const snippet = JSON.stringify(item.preview)
-  let nextItem
-  let index = elements.indexOf(item)
 
-  if (index >= 0 && index < elements.length - 1) {
-    nextItem = elements[index + 1]
-  }
+  $: item = item
 </script>
 
 <nav class="breadcrumbs">
-  <a href="/{slugify(p.slug)}">{data.category}</a> / <a href="/{slugify(data.category)}/{data.slug}">{item.title}</a>
+  <a href="/{p.slug}">{data.category}</a> / <a href="/{p.slug}/{data.slug}">{item.title}</a>
 </nav>
 
 <article>
-  <small>{data.index}</small>
   <h1>{item.title}</h1>
-
   <p>{item.description}</p>
   
   {#if item.preview}
-    <div class="preview">
+  <div class="preview-container">
+    <label for="preview">Preview</label>
+    <div id="preview" class="preview">
       {@html item.preview}
     </div>
+  </div>
   {/if}
 
   {#if snippet}
-<pre><code>{JSON.parse(snippet)}</code></pre>
+  <div class="code-container">
+    <label for="code">HTML</label>
+    <pre><code>{JSON.parse(snippet)}</code></pre>
+  </div>
   {/if}
 
   <footer>
-    <h3>Next Element</h3>
-    {nextItem.title}
+    <a href="/{p.slug}/{slugify(data.previous.title)}">
+      <div class="next">
+        <h3>Previous Element</h3>
+        {data.previous.title}
+      </div>
+    </a>
+     <a href="/{p.slug}/{slugify(data.next.title)}">
+      <div class="next">
+        <h3>Next Element</h3>
+        {data.next.title}
+      </div>
+    </a>
   </footer>
 </article>
 
 <style>
   .breadcrumbs {
-    padding: 2rem;
-    color: var(--light);
-    background: var(--dark);
+    padding: 1rem 2rem;
     display: flex;
     align-items: center;
     gap: .5rem;
@@ -59,8 +67,6 @@
     margin-bottom: -1px;
     padding: 1rem;
     border: 1px solid var(--median);
-    color: initial;
-    background: var(--light);
     display: block;
     overflow: auto;
   }

@@ -23,7 +23,6 @@
 	}
 	section {
 		position: relative;
-		margin-top: 3rem;
 		margin-left: 12rem;
 	}
 </style>

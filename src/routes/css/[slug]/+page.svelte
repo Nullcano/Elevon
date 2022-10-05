@@ -31,11 +31,8 @@
 
 <style>
   .breadcrumbs {
-    height: 3rem;
     margin: 1rem;
-    padding: 0 1rem;
-    color: var(--light);
-    background: var(--dark);
+    padding: .5rem 1rem;
     display: flex;
     align-items: center;
     gap: .5rem;

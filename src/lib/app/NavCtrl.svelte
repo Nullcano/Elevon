@@ -93,31 +93,27 @@
   nav {
     position: fixed;
     top: 0;
-    left: 12rem;
-    width: calc(100% - 12rem);
-    height: 3rem;
+    right: 0;
     display: flex;
     align-items: center;
-    background: var(--dark);
-    border-bottom: 1px solid var(--median);
   }
   a {
-    color: var(--light);
+    color: var(--arctic-60);
+  }
+  a:hover {
+    color: var(--arctic-90);
+    text-decoration: none;
   }
   [role="button"] {
     background: transparent;
     border: 0;
-    color: (--light);
   }
-  .ctrl-item {
-    padding: .5rem 1rem;
+  .search .ctrl-item {
+    padding: 1rem 2rem;
+    color: var(--light);
     display: flex;
     align-items: center;
     gap: 1rem;
-  }
-  .search .ctrl-item {
-    padding: .5rem 1rem;
-    color: var(--light);
     justify-content: space-between;
   }
   kbd {

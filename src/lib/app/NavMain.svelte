@@ -70,38 +70,46 @@
 <style>
   nav {
     position: fixed;
-    width: 12rem;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: .25rem;
-    background: var(--dark);
-    border-right: 1px solid var(--median);
     overflow-y: auto;
     z-index: 1600;
   }
   a {
-    color: var(--light)
+    color: var(--arctic-50)
+  }
+  a:hover {
+    text-decoration: none;
   }
   span {
     position: relative;
   }
   ul {
-    margin: 0;
+    position: relative;
+    margin: 0 1rem;
     padding: .5rem 0;
+  }
+  ul:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 1.36rem;
+    width: 1px;
+    height: calc(100% - 2rem);
+    background: var(--arctic-10);
   }
   label {
     position: sticky;
     top: 0;
-    padding: .5rem 1rem;
-    background: var(--dark);
-    border-top: 1px solid var(--median);
-    border-bottom: 1px solid var(--median);
+    padding: .25rem 1rem;
+    border-bottom: 1px solid;
+    border-radius: 60em;
+    align-self: flex-start;
     z-index: 1;
   }
   .box {
-    width: 100%;
+    margin: 1rem;
     display: flex;
     flex-direction: column;
   }
@@ -116,12 +124,13 @@
     content: '';
     width: .75rem;
     height: .75rem;
-    border: 2px solid var(--median);
-    background: var(--dark);
+    border: 1px solid;
+    background: var(--arctic-100);
     border-radius: 50%;
     transition: all .35s linear;
   }
   .active .nav-item::before, .nav-item:hover::before {
-    background: var(--median);
+    border: 1px solid;
+    background: var(--arctic-60);
   }
 </style>

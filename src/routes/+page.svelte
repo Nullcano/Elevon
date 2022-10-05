@@ -23,7 +23,7 @@
     pointer-events: none;
   }
   h2 span:first-child {
-    color: var(--light);
+    color: var(--dark);
   }
   h2 span {
     color: var(--median);

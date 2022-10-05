@@ -16,7 +16,6 @@
     display: grid;
     grid-template-columns: 1fr 2fr 2fr;
     gap: 2rem;
-		color: var(--light);
     border-bottom: 1px solid var(--median);
 	}
 	header {
