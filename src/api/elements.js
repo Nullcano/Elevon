@@ -1,7 +1,7 @@
 export const meta = {
   slug: 'html',
   title: 'HTML Reference',
-  description: 'An overview over all reset and reworked semantic HTML elements. Explore their look and feel with Arctic applied.'
+  description: 'An overview over all reset and reworked semantic HTML elements. Explore their look and feel with Elevon applied.'
 }
 
 export const elements = [{

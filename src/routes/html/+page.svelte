@@ -25,10 +25,10 @@
 </script>
 
 <svelte:head>
-	<title>{meta.title} - Arctic Style</title>
-	<meta property="og:title" content="{meta.title} - Arctic Style" />
-	<meta property="og:site_name" content="Arctic Style" />
-	<meta property="og:url" content="https://arctic.style/{meta.slug}" />
+	<title>{meta.title} - Elevon</title>
+	<meta property="og:title" content="{meta.title} - Elevon" />
+	<meta property="og:site_name" content="Elevon" />
+	<meta property="og:url" content="https://elevon.dev/{meta.slug}" />
 	<meta property="og:description" content="{meta.description}" />
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="" />

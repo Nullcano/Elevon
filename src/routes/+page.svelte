@@ -1,3 +1,13 @@
+<svelte:head>
+	<title>Elevon</title>
+	<meta property="og:title" content="Elevon" />
+	<meta property="og:site_name" content="Elevon" />
+	<meta property="og:url" content="https://elevon.dev" />
+	<meta property="og:description" content="A contemporary UI-kit that can be utilized as a complete design system for web applications." />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="" />
+</svelte:head>
+
 <div class="illustration">
   <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="enable-background:new 0 0 512 512" viewBox="0 0 512 512">
     <path d="M70.85 158.158c-10.764-3.3-20.627-9.197-28.815-17.385a69.84 69.84 0 0 1-8.813-10.771C12.088 167.225 0 210.226 0 256s12.088 88.776 33.223 125.997a69.83 69.83 0 0 1 8.813-10.771c8.187-8.187 18.05-14.086 28.815-17.386-15.505-29.221-24.306-62.52-24.306-97.84s8.801-68.62 24.305-97.842zM478.787 130.019a70.57 70.57 0 0 1-8.822 10.755c-8.187 8.186-18.05 14.085-28.815 17.385 15.504 29.221 24.305 62.521 24.305 97.842s-8.8 68.619-24.305 97.84c10.764 3.3 20.627 9.199 28.815 17.385a70.57 70.57 0 0 1 8.822 10.755C499.915 344.764 512 301.768 512 256s-12.085-88.764-33.213-125.981zM371.225 469.963a69.378 69.378 0 0 1-17.337-28.838c-29.234 15.52-62.549 24.329-97.888 24.329s-68.655-8.81-97.887-24.329a69.385 69.385 0 0 1-17.338 28.84 70.57 70.57 0 0 1-10.755 8.822C167.236 499.915 210.232 512 256 512s88.764-12.085 125.982-33.213a70.433 70.433 0 0 1-10.757-8.824zM256 0c-45.768 0-88.764 12.085-125.981 33.213a70.57 70.57 0 0 1 10.755 8.822 69.379 69.379 0 0 1 17.34 28.84c29.232-15.52 62.548-24.329 97.887-24.329s68.655 8.81 97.888 24.329c3.23-10.56 9-20.502 17.338-28.84a70.57 70.57 0 0 1 10.755-8.822C344.764 12.085 301.768 0 256 0zM437.051 404.139a23.203 23.203 0 0 0-16.457-6.817 23.194 23.194 0 0 0-16.457 6.817c-9.087 9.089-9.087 23.824 0 32.912a23.203 23.203 0 0 0 16.457 6.817 23.203 23.203 0 0 0 16.457-6.817c9.089-9.089 9.089-23.824 0-32.912zM107.861 74.949a23.202 23.202 0 0 0-16.457-6.816 23.198 23.198 0 0 0-16.455 6.816c-9.089 9.089-9.089 23.824 0 32.912a23.202 23.202 0 0 0 16.455 6.817 23.194 23.194 0 0 0 16.457-6.817c9.089-9.088 9.089-23.823 0-32.912zM437.052 74.949c-4.544-4.544-10.501-6.816-16.457-6.816s-11.913 2.273-16.457 6.816c-9.087 9.089-9.087 23.824 0 32.912 4.544 4.544 10.501 6.817 16.457 6.817s11.913-2.271 16.457-6.817c9.089-9.088 9.089-23.823 0-32.912zM107.861 404.139a23.203 23.203 0 0 0-16.457-6.817 23.186 23.186 0 0 0-16.455 6.817c-9.089 9.089-9.089 23.824 0 32.912a23.202 23.202 0 0 0 16.455 6.817 23.203 23.203 0 0 0 16.457-6.817c9.089-9.089 9.089-23.824 0-32.912zM256 93.091c-89.972 0-162.909 72.937-162.909 162.909S166.028 418.909 256 418.909 418.909 345.972 418.909 256 345.972 93.091 256 93.091zm114.022 186.182h-67.477v46.545h46.482c-21.251 28.244-55.04 46.545-93.027 46.545-56.194 0-103.21-40.042-114.022-93.091h67.477v-46.545h-67.477c10.813-53.049 57.828-93.091 114.022-93.091 37.987 0 71.776 18.302 93.027 46.545h-77.512v46.545h98.507c1.533 7.522 2.341 15.304 2.341 23.273s-.808 15.752-2.341 23.274z"/>
@@ -5,15 +15,7 @@
 </div>
 
 <div class="splash">
-  <h2>Elevon</h2>
-  <p>A customizable and multi-<br/>
-    purpose design framework.</p>
-  <a href="/intro">
-    <span>Get Up, Set Up</span>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17">
-      <path d="M16 .997V10h-1V2.703L4.683 13l-.707-.708L14.291 1.997H6.975v-1H16z"/>
-    </svg>
-  </a>
+  <h1>Contemporary UI-Kit and <mark>Design</mark> System for the <mark>Next Gen</mark>eration of Web <mark>Applications</mark>.</h1>
 </div>
 
 <style>
@@ -21,42 +23,21 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: start;
   }
-  h2 {
+  h1 {
     margin: 8rem 0 0 0;
+    max-width: 20ch;
     padding: 0;
-    font-size: 12rem;
-    color: transparent;
-    -webkit-text-stroke: 2px var(--gray-80);
+    font-size: 4rem;
     text-transform: uppercase;
     font-weight: 900;
-    line-height: 1;
+    line-height: 1.25;
   }
-  a {
-    margin: 2rem 0;
-    padding: 1rem 2rem;
-    float: right;
-    font-size: 2rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    background-color: var(--gray-5);
-    border: 3px solid hsl(196, 100%, 10%);
-    color: var(--gray-80);
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  mark {
+    background: hsl(270, 50%, 10%);
+    color: currentColor;
     border-radius: 60em;
-  }
-  a svg {
-    width: 2rem;
-    height: 2rem;
-    fill: currentColor;
-  }
-  p {
-    margin: 2rem 0;
-    font-size: 3rem;
   }
   .illustration {
     pointer-events: none;
@@ -71,7 +52,7 @@
   .illustration svg {
     height: 80vh;
     fill: none;
-    stroke: hsl(196, 100%, 10%);
+    stroke: hsl(270, 50%, 10%);
     stroke-width: 2;
     animation: rotate 30s linear infinite;
   }
@@ -79,11 +60,8 @@
     to { transform: rotate(360deg);}
   }
   @media (max-width: 60em) {
-    h2 {
-      font-size: 6rem;
-    }
-    p, a {
-      font-size: 1.5rem;
+    h1 {
+      font-size: 2rem;
     }
   }
 </style>

@@ -51,9 +51,7 @@
 </svelte:head>
 
 <a role="button" href={''} class="search" on:click={openSearch}>
-  <div class="nav-item">
-    <span>Search <kbd>Ctrl</kbd> + <kbd>K</kbd></span>
-  </div>
+  <span>Search <kbd>Ctrl</kbd> + <kbd>K</kbd></span>
 </a>
 
 {#if searchIsOpen}
@@ -144,15 +142,17 @@
     text-decoration: none;
   }
   [role="button"] {
-    background: transparent;
-    border: 0;
-  }
-  .nav-item {
-    text-transform: uppercase;
+    padding: .25rem .75rem;
+    border: 1px solid var(--gray-15);
+    border-radius: 60em;
+    display: flex;
+    align-items: center;
   }
   kbd {
-    padding: 0 .25rem;
-    border: 1px solid var(--gray-30);
+    position: relative;
+    top: -2px;
+    padding: 0 .5rem;
+    border: 1px solid var(--gray-15);
     color: var(--gray-60);
     border-radius: 60em;
   }
