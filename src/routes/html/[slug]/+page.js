@@ -1,21 +1,25 @@
-import { elements } from '../../../api/elements'
+import { meta, elements } from '../../../api/elements'
 import { slugify } from '$lib/utils'
 
 export async function load({ params }) {
   const { slug } = params
-  let nextItem
+  let previous, next
 
-  const currentItem = elements.find(i => slugify(i.title) === slug)
-  const currentIndex = elements.indexOf(currentItem)
-  if (currentIndex >= 0 && currentIndex < elements.length - 1) {
-    nextItem = elements[currentIndex + 1]
+  const item = elements.find(i => slugify(i.title) === slug)
+  const index = elements.indexOf(item)
+  
+  if (index >= 0 && index < elements.length - 1) {
+    previous = elements[index - 1]
+    next = elements[index + 1]
+  } else if (index >= 1 && index < elements.length) {
+    previous = elements[index - 1]
   }
 
   return {
-    category: "HTML",
-    item: currentItem,
-    previous: currentItem,
-    next: nextItem,
+    category: meta.title,
+    item: item,
+    previous: previous,
+    next: next,
     slug: slug
   }
 }

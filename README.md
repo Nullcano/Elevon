@@ -1,3 +1,3 @@
-# Meter
+# Elevon
 
-A mobile-first and accessibility-focused design system for web applications.
+A contemporary UI-kit that can be utilized as a complete design system for web applications.

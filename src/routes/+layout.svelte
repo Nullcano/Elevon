@@ -1,28 +1,28 @@
 <script>
 	import '../arctic/css/arctic.css'
 	import '../css/app.css'
-	import '../arctic/js/arctic.js'
 	import NavMain from '$lib/app/NavMain.svelte'
-	import NavCtrl from '$lib/app/NavCtrl.svelte'
 </script>
 
+<NavMain />
 <main>
-	<NavMain />
-	<section>
-		<NavCtrl />
-		<slot />
-	</section>
+	<slot />
 </main>
 
 <style>
 	main {
 		position: relative;
+		margin: 0 auto;
+		padding: 5rem 0;
+		max-width: 90em;
+		width: calc(100% - 5rem);
+		border-left: 1px solid var(--gray-15);
+		border-right: 1px solid var(--gray-15);
 		min-height: 100vh;
-		overflow-x: hidden;
-		overflow-y: auto;
 	}
-	section {
-		position: relative;
-		margin-left: 12rem;
+	@media (max-width: 30rem) {
+		main {
+			width: calc(100% - 2rem);
+		}
 	}
 </style>

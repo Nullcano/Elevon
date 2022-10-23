@@ -1,14 +1,14 @@
 <script>
   import { goto } from '$app/navigation'
   import { slugify } from '$lib/utils'
-	import { meta, elements } from '../../api/elements'
+	import { meta, classes } from '../../api/classes'
 	import List from '$lib/layout/List.svelte'
 	import Card from '$lib/layout/Card.svelte'
 
 	let filterTerm = ''
 	let dataDisplayMode = 'list'
 
-	const searchResults = elements.filter(i => {
+	const searchResults = classes.filter(i => {
     let title = i.title.toLowerCase()
     let desc = i.description.toLowerCase()
     let term = filterTerm.toLowerCase()
@@ -17,8 +17,8 @@
     }
   })
 
-	const all = elements
-	const flow = elements.filter(i => i.categories.includes("Flow"))
+	const all = classes
+	const flow = classes.filter(i => i.categories.includes("Flow"))
 	const none  = ''
 
 	$: currentFilter = all

@@ -1,122 +1,261 @@
-export const p = {
-  slug: "html",
-  title: "HTML Reference",
-  description: "An overview over all reset and reworked semantic HTML elements. Explore their look and feel with Arctic applied."
+export const meta = {
+  slug: 'html',
+  title: 'HTML Reference',
+  description: 'An overview over all reset and reworked semantic HTML elements. Explore their look and feel with Arctic applied.'
 }
 
 export const elements = [{
   title: '<a>',
-  description: 'Anchor element to create a hyperlink to any URL address.',
-  preview: `You can read the <a href="/intro">introduction here</a>.`,
+  description: 'Create an anchor element with hyperlink to any URL address.',
+  preview: `A network error occured. <a href="/status">Check network status</a>
+or <a role="button" onclick="openForm()">contact support</a>`,
   categories: ['Flow', 'Phrasing', 'Interactive', 'Palpable'],
 }, {
   title: '<abbr>',
-  description: 'Abbreviation or acronym element to inform the user what the abbreviation or acronym means.',
+  description: 'Inform users what abbreviations mean. This element is also used for acronyms.',
   preview: `Arctic provides <abbr title="Cascading Style Sheets">CSS</abbr>.`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
   title: '<address>',
-  description: 'Identify an address block',
+  description: 'Provide contact information for a person, group, or an organization.',
   preview: `<address>
-  <p>Jim Rock</p>
+  <p>Arctic Style</p>
   <a href="mailto:jim@rock.com">jim@rock.com</a><br>
   <a href="tel:+13115552368">(311) 555-2368</a>
 </address>`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
   title: '<area>',
-  description: 'Map an area of an image',
-  preview: ``,
+  description: 'Define clickable areas inside an image map.',
+  preview: `<map name="infographic">
+  <area shape="rect" coords="184,6,253,27"
+        href="https://mozilla.org"
+        target="_blank" alt="Mozilla">
+  <area shape="circle" coords="130,136,60"
+        href="https://developer.mozilla.org/"
+        target="_blank" alt="MDN">
+  <area shape="poly" coords="130,6,253,96,223,106,130,39"
+        href="https://developer.mozilla.org/docs/Web/Guide/Graphics"
+        target="_blank" alt="Graphics">
+  <area shape="poly" coords="253,96,207,241,189,217,223,103"
+        href="https://developer.mozilla.org/docs/Web/HTML"
+        target="_blank" alt="HTML">
+  <area shape="poly" coords="207,241,54,241,72,217,189,217"
+        href="https://developer.mozilla.org/docs/Web/JavaScript"
+        target="_blank" alt="JavaScript">
+  <area shape="poly" coords="54,241,6,97,36,107,72,217"
+        href="https://developer.mozilla.org/docs/Web/API"
+        target="_blank" alt="Web APIs">
+  <area shape="poly" coords="6,97,130,6,130,39,36,107"
+        href="https://developer.mozilla.org/docs/Web/CSS"
+        target="_blank" alt="CSS">
+</map>
+
+<img usemap="#infographic" src="https://interactive-examples.mdn.mozilla.net/media/examples/mdn-info.png" 
+     alt="MDN infographic" style="display:block;margin:0 auto;width:260px;height:248px">`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
   title: '<article>',
-  description: 'Identify an article or independent content',
-  preview: ``,
+  description: 'Self-contain compositions in a document, page, application, or site, which is intended to be independently distributable or reusable.',
+  preview: `<article class="forecast">
+  <h1>Weather forecast for Seattle</h1>
+  <article class="day-forecast">
+      <h2>03 March 2018</h2>
+      <p>Rain.</p>
+  </article>
+  <article class="day-forecast">
+      <h2>04 March 2018</h2>
+      <p>Periods of rain.</p>
+  </article>
+  <article class="day-forecast">
+      <h2>05 March 2018</h2>
+      <p>Heavy rain.</p>
+  </article>
+</article>`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
   title: '<aside>',
-  description: 'Add a sidebar',
-  preview: ``,
+  description: `Define content that is indirectly related to the document's main content. Asides are not aligned to the side by default.`,
+  preview: `<p>Salamanders are a group of amphibians with a lizard-like appearance, including short legs and a tail in both larval and adult forms.</p>
+
+<aside style="margin:1rem;width:33%;float:right">
+  <i>The Rough-skinned Newt defends itself with a deadly neurotoxin.</i>
+</aside>
+
+<p>Several species of salamander inhabit the temperate rainforest of the Pacific Northwest, including the Ensatina, the Northwestern Salamander and the Rough-skinned Newt. Most salamanders are nocturnal, and hunt for insects, worms and other small creatures.</p>`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
   title: '<audio>',
-  description: 'Set audio autoplay features',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
+  description: 'Embed sound content in documents. It may contain one or more audio sources and other fallback elements when audio is not supported.',
+  preview: `<audio controls>
+  <source src="myAudio.mp3" type="audio/mpeg" />
+  <source src="myAudio.ogg" type="audio/ogg" />
+  <p>
+    Download <a href="myAudio.mp3">MP3</a> or
+    <a href="myAudio.ogg">OGG</a> audio.
+  </p>
+</audio>`,
+  categories: ['Flow', 'Phrasing', 'Embedded', 'Interactive', 'Palpable']
 }, {
   title: '<b>',
-  description: 'Set bold text',
-  preview: ``,
+  description: `Draw the reader's attention to the element's contents, which are not otherwise granted special importance.`,
+  preview: `The most popular science courses are 
+<b>chemistry</b> and <b>physics</b>.`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
-  title: '<bb>',
-  description: 'Settings for the browser button',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<base>',
-  description: 'Set a base for relative URLs',
-  preview: ``,
+  title: '<bdi>',
+  description: 'Tell the browser\'s bidirectional algorithm to treat the text it contains in isolation from its surrounding text.',
+  preview: `<ul>
+  <li><bdi>Evil Steven</bdi>: 1st place</li>
+  <li><bdi>François fatale</bdi>: 2nd place</li>
+  <li><span>تیز سمی</span>: 3rd place</li>
+  <li><bdi>الرجل القوي إيان</bdi>: 4th place</li>
+  <li><span dir="auto">تیز سمی</span>: 5th place</li>
+</ul>`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
   title: '<bdo>',
-  description: 'Set bi-directional override for text direction',
-  preview: ``,
+  description: 'Override the current directionality of text, so that the text within is rendered in a different direction.',
+  preview: `<p>Looks like this in Hebrew: 
+  <span dir="rtl">אה, אני אוהב להיות ליד חוף הים</span>
+</p>
+
+<p>In the computer's memory, this is stored as 
+  <bdo dir="ltr">אה, אני אוהב להיות ליד חוף הים</bdo>
+</p>`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
   title: '<blockquote>',
-  description: 'For a long block quotation',
-  preview: ``,
+  description: 'Define quotation blocks.',
+  preview: `<figure>
+  <blockquote cite="https://www.huxley.net/bnw/four.html">
+      <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
+  </blockquote>
+  <figcaption>—Aldous Huxley, <cite>Brave New World</cite></figcaption>
+</figure>`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
   title: '<body>',
-  description: 'Identify the main body of content and the part displayed in the main browser window',
-  preview: ``,
+  description: 'Identify the main body of content and the part displayed in the main browser window.',
+  preview: `<body>
+  Hello world
+</body>`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
-  title: '<br />',
-  description: 'A line break',
-  preview: ``,
+  title: '<br>',
+  description: 'insert a line break.',
+  preview: `<br>
+<br>
+<br>
+<br>`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
   title: '<button>',
-  description: 'Insert a clickable button',
-  preview: ``,
+  description: 'insert a clickable button.',
+  preview: `<button type="button">Click me</button>`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
   title: '<canvas>',
-  description: 'A canvas to draw JavaScript graphics',
-  preview: ``,
+  description: 'Draw graphics with JavaScript and render them with HTML5.',
+  preview: `<canvas>
+  An alternative text describing what your canvas displays.
+</canvas>`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
   title: '<caption>',
-  description: 'Include a caption with a table',
-  preview: ``,
+  description: 'Specify the caption or title of a table.',
+  preview: `<table>
+  <caption>He-Man and Skeletor facts</caption>
+  <tr>
+    <td> </td>
+    <th scope="col" class="heman">He-Man</th>
+    <th scope="col" class="skeletor">Skeletor</th>
+  </tr>
+  <tr>
+    <th scope="row">Role</th>
+    <td>Hero</td>
+    <td>Villain</td>
+  </tr>
+  <tr>
+    <th scope="row">Weapon</th>
+    <td>Power Sword</td>
+    <td>Havoc Staff</td>
+  </tr>
+  <tr>
+    <th scope="row">Dark secret</th>
+    <td>Expert florist</td>
+    <td>Cries at romcoms</td>
+  </tr>
+</table>`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
   title: '<cite>',
-  description: 'To cite a title of work',
-  preview: ``,
+  description: 'Describe a reference to a cited creative work, and must include the title of that work.',
+  preview: `<figure>
+  <blockquote>
+    <p>It was a bright cold day in April, and the clocks were striking thirteen.</p>
+  </blockquote>
+  <figcaption>First sentence in <cite><a href="http://www.george-orwell.org/1984/0.html">Nineteen Eighty-Four</a></cite> by George Orwell (Part 1, Chapter 1).</figcaption>
+</figure>`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
   title: '<code>',
-  description: 'A phrase tag for computer code',
-  preview: ``,
+  description: 'display its contents styled in a fashion intended to indicate that the text is a short fragment of computer code.',
+  preview: `The <code>push()</code> method adds one or more elements to the 
+end of an array and returns the new length of the array.`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
   title: '<col>',
-  description: 'Specify column properties in a table.',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<command>',
-  description: 'Specify a command',
-  preview: ``,
+  description: 'Define a column within a table and is used for defining common semantics on all common cells.',
+  preview: `<table>
+  <caption>Superheros and sidekicks</caption>
+  <colgroup>
+    <col>
+    <col span="2" class="batman">
+    <col span="2" class="flash">
+  </colgroup>
+  <tr>
+    <td> </td>
+    <th scope="col">Batman</th>
+    <th scope="col">Robin</th>
+    <th scope="col">The Flash</th>
+    <th scope="col">Kid Flash</th>
+  </tr>
+  <tr>
+    <th scope="row">Skill</th>
+    <td>Smarts</td>
+    <td>Dex, acrobat</td>
+    <td>Super speed</td>
+    <td>Super speed</td>
+  </tr>
+</table>
+`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
   title: '<colgroup>',
-  description: 'Format columns in a group of a table',
-  preview: ``,
+  description: 'Define a group of columns within a table.',
+  preview: `<table>
+  <caption>Superheros and sidekicks</caption>
+  <colgroup>
+    <col>
+    <col span="2" class="batman">
+    <col span="2" class="flash">
+  </colgroup>
+  <tr>
+    <td> </td>
+    <th scope="col">Batman</th>
+    <th scope="col">Robin</th>
+    <th scope="col">The Flash</th>
+    <th scope="col">Kid Flash</th>
+  </tr>
+  <tr>
+    <th scope="row">Skill</th>
+    <td>Smarts</td>
+    <td>Dex, acrobat</td>
+    <td>Super speed</td>
+    <td>Super speed</td>
+  </tr>
+</table>`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
   title: '<datalist>',
@@ -195,58 +334,56 @@ export const elements = [{
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
   title: '<h1>',
-  description: 'The largest of six section headings',
-  preview: ``,
+  description: 'define the largest section heading.',
+  preview: `<h1>Heading level 1</h1>`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
   title: '<h2>',
-  description: 'The second largest of six section headings',
-  preview: ``,
+  description: 'define the second largest section heading.',
+  preview: `<h2>Heading level 2</h2>`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
   title: '<h3>',
-  description: 'The third largest of six section headings',
-  preview: ``,
+  description: 'define the third largest section heading.',
+  preview: `<h3>Heading level 3</h3>`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
   title: '<h4>',
-  description: 'The fourth largest of six section headings',
-  preview: ``,
+  description: 'define the fourth largest section heading.',
+  preview: `<h4>Heading level 4</h4>`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
   title: '<h5>',
-  description: 'The fifth largest of six section headings',
-  preview: ``,
+  description: 'define the fifth largest section heading.',
+  preview: `<h5>Heading level 5</h5>`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
   title: '<h6>',
-  description: 'The sixth largest of six section headings',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<head>',
-  description: 'Include a head section of the document for metadata, file links, images, CSS, JavaScript and links to third party data',
-  preview: ``,
+  description: 'define the sixth largest section heading.',
+  preview: `<h6>Heading level 6</h6>`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
   title: '<header>',
-  description: 'Provide introductory header information',
-  preview: ``,
+  description: 'represent introductory content, typically a group of introductory or navigational aids.',
+  preview: `<header>
+  <h1>Welcome!</h1>
+</header>`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
-  title: '<hr />',
-  description: 'A horizontal rule or line showing a break',
-  preview: ``,
+  title: '<hr>',
+  description: 'insert a horizontal rule or line showing a break between paragraph-level elements.',
+  preview: `<hr>`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
   title: '<html>',
   description: 'The html tag is the root element of the document and within it sit all other tags',
-  preview: ``,
+  preview: `Unable to preview this element.`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
   title: '<i>',
-  description: 'Set text to italic',
-  preview: ``,
+  description: 'represents a range of text that is set off from the normal text, such as technical terms, displayed in italics.',
+  preview: `The term <i>bandwidth</i> describes the measure of how much information 
+can pass through a data connection in a given amount of time.`,
   categories: ['Flow', 'Phrasing', 'Palpable']
 }, {
   title: '<iframe>',

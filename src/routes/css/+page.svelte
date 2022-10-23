@@ -2,6 +2,7 @@
   import { goto } from '$app/navigation'
   import { slugify } from '$lib/utils'
 	import { properties } from '../../api/properties'
+	import Card from '$lib/layout/Card.svelte'
 </script>
 
 <svelte:head>
@@ -30,15 +31,7 @@
 	{#each properties as i}
 		{#if i.enabled}
 			<a href="/{slugify(i.title)}/{slugify(i.title)}">
-				<div class="card">
-					<h3>{i.title}</h3>
-					<figure class="illustration">
-						{#if i.illustration}
-							{i.illustration}
-						{/if}
-					</figure>
-					<p>{i.description}</p>
-				</div>
+				<Card title="{i.title}" description="{i.description}" />
 			</a>
 		{/if}
 	{/each}
