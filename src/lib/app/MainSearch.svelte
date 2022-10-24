@@ -1,6 +1,6 @@
 <script>
 	import { slugify } from '$lib/utils'
-	import { meta, elements } from './../../api/elements.js'
+	import { meta, elements } from '$lib/api/elements.js'
 
   let searchIsOpen
   let searchInput

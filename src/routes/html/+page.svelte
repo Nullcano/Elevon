@@ -1,7 +1,7 @@
 <script>
   import { goto } from '$app/navigation'
   import { slugify } from '$lib/utils'
-	import { meta, elements } from '../../api/elements'
+	import { meta, elements } from '$lib/api/elements'
 	import List from '$lib/layout/List.svelte'
 	import Card from '$lib/layout/Card.svelte'
 

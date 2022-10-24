@@ -1,4 +1,4 @@
-import { meta, classes } from '../../../api/classes'
+import { meta, classes } from '$lib/api/classes'
 import { slugify } from '$lib/utils'
 
 export async function load({ params }) {

@@ -1,4 +1,4 @@
-import { meta, elements } from '../../../api/elements'
+import { meta, elements } from '$lib/api/elements'
 import { slugify } from '$lib/utils'
 
 export async function load({ params }) {

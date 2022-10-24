@@ -1,5 +1,5 @@
 <script>
-  import { meta } from '../../../api/elements'
+  import { meta } from '$lib/api/elements'
   import { slugify } from '$lib/utils'
 
   export let data
