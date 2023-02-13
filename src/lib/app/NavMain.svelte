@@ -10,175 +10,56 @@
       <NavLogo />
       <MainSearch />
     </div>
-    <div class="nav flex-row-center">
-      <div class="box" tabindex="0">
-        <span class="link">Specs</span>
-        <ul>
-          <a class:active="{$page.url.pathname.includes('intro')}" href="/intro">
-            <div class="nav-item">
-              <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 32 32">
-                <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2">
-                  {#if ($page.url.pathname.includes('intro'))}
-                    <path d="M27 12c0-6.075-4.925-11-11-11S5 5.925 5 12c0 8 11 19 11 19s11-11 11-19z"/>
-                    <circle cx="16" cy="12" r="4"/>
-                    {:else}
-                    <circle cx="16" cy="12" r="4"/>
-                  {/if}
-                </g>
-              </svg>
-              <span>Introduction</span>
-            </div>
-          </a>
-          <a class:active="{$page.url.pathname.includes('html')}" href="/html">
-            <div class="nav-item">
-              <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 32 32">
-                <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2">
-                  {#if ($page.url.pathname.includes('html'))}
-                    <path d="M27 12c0-6.075-4.925-11-11-11S5 5.925 5 12c0 8 11 19 11 19s11-11 11-19z"/>
-                    <circle cx="16" cy="12" r="4"/>
-                    {:else}
-                    <circle cx="16" cy="12" r="4"/>
-                  {/if}
-                </g>
-              </svg>
-              <span>HTML</span>
-            </div>
-          </a>
-          <a class:active="{$page.url.pathname.includes('css')}" href="/css">
-            <div class="nav-item">
-              <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 32 32">
-                <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2">
-                  {#if ($page.url.pathname.includes('css'))}
-                    <path d="M27 12c0-6.075-4.925-11-11-11S5 5.925 5 12c0 8 11 19 11 19s11-11 11-19z"/>
-                    <circle cx="16" cy="12" r="4"/>
-                    {:else}
-                    <circle cx="16" cy="12" r="4"/>
-                  {/if}
-                </g>
-              </svg>
-              <span>CSS</span>
-            </div>
-          </a>
-        </ul>
+    <a class:active="{$page.url.pathname.includes('variables')}" href="/variables">
+      <div class="nav-item">
+        <span>Variables</span>
       </div>
-      <div class="box" tabindex="0">
-        <span class="link">Core</span>
-        <ul>
-          <a class:active="{$page.url.pathname.includes('variables')}" href="/variables">
-            <div class="nav-item">
-              <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 32 32">
-                <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2">
-                  {#if ($page.url.pathname.includes('variables'))}
-                    <path d="M27 12c0-6.075-4.925-11-11-11S5 5.925 5 12c0 8 11 19 11 19s11-11 11-19z"/>
-                    <circle cx="16" cy="12" r="4"/>
-                    {:else}
-                    <circle cx="16" cy="12" r="4"/>
-                  {/if}
-                </g>
-              </svg>
-              <span>Variables</span>
-            </div>
-          </a>
-          <a class:active="{$page.url.pathname.includes('classes')}" href="/classes">
-            <div class="nav-item">
-              <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 32 32">
-                <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2">
-                  {#if ($page.url.pathname.includes('classes'))}
-                    <path d="M27 12c0-6.075-4.925-11-11-11S5 5.925 5 12c0 8 11 19 11 19s11-11 11-19z"/>
-                    <circle cx="16" cy="12" r="4"/>
-                    {:else}
-                    <circle cx="16" cy="12" r="4"/>
-                  {/if}
-                </g>
-              </svg>
-              <span>Classes</span>
-            </div>
-          </a>
-          <a class:active="{$page.url.pathname.includes('shorthands')}" href="/shorthands">
-            <div class="nav-item">
-              <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 32 32">
-                <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2">
-                  {#if ($page.url.pathname.includes('shorthands'))}
-                    <path d="M27 12c0-6.075-4.925-11-11-11S5 5.925 5 12c0 8 11 19 11 19s11-11 11-19z"/>
-                    <circle cx="16" cy="12" r="4"/>
-                    {:else}
-                    <circle cx="16" cy="12" r="4"/>
-                  {/if}
-                </g>
-              </svg>
-              <span>Shorthands</span>
-            </div>
-          </a>
-        </ul>
+    </a>
+    <a class:active="{$page.url.pathname.includes('classes')}" href="/classes">
+      <div class="nav-item">
+        <span>Classes</span>
       </div>
-      <div class="box" tabindex="0">
-        <span class="link">Prefab</span>
-        <ul>
-          <a class:active="{$page.url.pathname.includes('components')}" href="/components">
-            <div class="nav-item">
-              <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 32 32">
-                <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2">
-                  {#if ($page.url.pathname.includes('components'))}
-                    <path d="M27 12c0-6.075-4.925-11-11-11S5 5.925 5 12c0 8 11 19 11 19s11-11 11-19z"/>
-                    <circle cx="16" cy="12" r="4"/>
-                    {:else}
-                    <circle cx="16" cy="12" r="4"/>
-                  {/if}
-                </g>
-              </svg>
-              <span>Components</span>
-            </div>
-          </a>
-          <a class:active="{$page.url.pathname.includes('templates')}" href="/templates">
-            <div class="nav-item">
-              <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 32 32">
-                <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2">
-                  {#if ($page.url.pathname.includes('templates'))}
-                    <path d="M27 12c0-6.075-4.925-11-11-11S5 5.925 5 12c0 8 11 19 11 19s11-11 11-19z"/>
-                    <circle cx="16" cy="12" r="4"/>
-                    {:else}
-                    <circle cx="16" cy="12" r="4"/>
-                  {/if}
-                </g>
-              </svg>
-              <span>Templates</span>
-            </div>
-          </a>
-          <a class:active="{$page.url.pathname.includes('applications')}" href="/applications">
-            <div class="nav-item">
-              <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 32 32">
-                <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2">
-                  {#if ($page.url.pathname.includes('applications'))}
-                    <path d="M27 12c0-6.075-4.925-11-11-11S5 5.925 5 12c0 8 11 19 11 19s11-11 11-19z"/>
-                    <circle cx="16" cy="12" r="4"/>
-                    {:else}
-                    <circle cx="16" cy="12" r="4"/>
-                  {/if}
-                </g>
-              </svg>
-              <span>Applications</span>
-            </div>
-          </a>
-        </ul>
+    </a>
+    <a class:active="{$page.url.pathname.includes('shorthands')}" href="/shorthands">
+      <div class="nav-item">
+        <span>Shorthands</span>
       </div>
+    </a>
+    <a class:active="{$page.url.pathname.includes('components')}" href="/components">
+      <div class="nav-item">
+        <span>Components</span>
+      </div>
+    </a>
+    <a class:active="{$page.url.pathname.includes('templates')}" href="/templates">
+      <div class="nav-item">
+        <span>Templates</span>
+      </div>
+    </a>
+    <a class:active="{$page.url.pathname.includes('applications')}" href="/applications">
+      <div class="nav-item">
+        <span>Applications</span>
+      </div>
+    </a>
+    <div class="flex">
+      <a class:active="{$page.url.pathname.includes('html')}" href="/html">
+        <div class="nav-item">
+          <span>HTML</span>
+        </div>
+      </a>
+      <a class:active="{$page.url.pathname.includes('css')}" href="/css">
+        <div class="nav-item">
+          <span>CSS</span>
+        </div>
+      </a>
     </div>
   </div>
 </nav>
 
 <style>
   nav {
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: relative;
     color: var(--gray-90);
     user-select: none;
-    z-index: 1500;
-  }
-  .flex-row-center {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    gap: 2rem;
   }
   .inner {
     margin: 0 auto;
@@ -188,12 +69,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  .nav {
-    position: fixed;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
   }
   a, .link {
     color: var(--gray-80);
@@ -215,21 +90,13 @@
     padding: 1.5rem;
     line-height: 1;
     position: relative;
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
     white-space: nowrap;
-    -webkit-writing-mode: vertical-rl;
-    writing-mode: vertical-rl;
     text-transform: uppercase;
   }
   .box ul {
-    position: absolute;
-    left: 100%;
     margin: 0;
     padding: 1rem 2rem;
     background: var(--gray-5);
-    display: none;
-    z-index: 1400;
   }
   .box:focus-within > ul {
     display: block;
@@ -241,10 +108,6 @@
     display: flex;
     align-items: center;
     gap: .25rem;
-  }
-  .nav-item svg {
-    width: 1.5rem;
-    transform: rotate(-90deg);
   }
   @media (max-width:60em) {
     nav {
