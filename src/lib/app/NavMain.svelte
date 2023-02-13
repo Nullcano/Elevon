@@ -10,7 +10,7 @@
       <NavLogo />
       <MainSearch />
     </div>
-    <div class="flex-row-center">
+    <div class="nav flex-row-center">
       <div class="box" tabindex="0">
         <span class="link">Specs</span>
         <ul>
@@ -170,18 +170,14 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 4rem;
     color: var(--gray-90);
-    background-color: hsla(270, 50%, 5%, .9);
-    backdrop-filter: blur(4px);
-    border-bottom: 1px solid var(--gray-15);
     user-select: none;
     z-index: 1500;
   }
   .flex-row-center {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-items: center;
     gap: 2rem;
   }
   .inner {
@@ -192,6 +188,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .nav {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
   }
   a, .link {
     color: var(--gray-80);
@@ -205,20 +207,27 @@
   }
   .box {
     position: relative;
+    display: grid;
+    place-items: center;
     cursor: pointer;
   }
   .link {
-    padding: 1rem;
+    padding: 1.5rem;
+    line-height: 1;
+    position: relative;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    white-space: nowrap;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
     text-transform: uppercase;
   }
   .box ul {
     position: absolute;
-    top: 1rem;
-    left: -50%;
-    margin-left: 1rem;
+    left: 100%;
+    margin: 0;
     padding: 1rem 2rem;
     background: var(--gray-5);
-    border: 1px solid var(--gray-15);
     display: none;
     z-index: 1400;
   }
@@ -236,5 +245,11 @@
   .nav-item svg {
     width: 1.5rem;
     transform: rotate(-90deg);
+  }
+  @media (max-width:60em) {
+    nav {
+      background-color: hsla(266, 14%, 10%, .9);
+      backdrop-filter: blur(4px);
+    }
   }
 </style>

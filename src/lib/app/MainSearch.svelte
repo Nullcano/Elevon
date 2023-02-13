@@ -142,6 +142,9 @@
     text-decoration: none;
   }
   [role="button"] {
+    position: fixed;
+    top: 1rem;
+    left: 15rem;
     padding: .25rem .75rem;
     border: 1px solid var(--gray-15);
     border-radius: 60em;

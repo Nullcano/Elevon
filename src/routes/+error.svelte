@@ -1,6 +1,6 @@
 <script>
-  import { page } from '$app/stores'
+	import { errorMessages } from './+page.js';
+  let randomMessage = errorMessages[Math.floor(Math.random() * errorMessages.length)];
 </script>
 
-<h1>Something went wrong.</h1>
-<span>{$page.status} - {$page.error.message}</span>
+<span>{randomMessage}</span>

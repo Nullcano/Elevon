@@ -1,5 +1,7 @@
 <script>
-	import '../elevon/css/elevon.css'
+	import '../elevon/css/atoms.css'
+	import '../elevon/css/prevention.css'
+	import '../elevon/css/molecules.css'
 	import '../css/app.css'
 	import NavMain from '$lib/app/NavMain.svelte'
 </script>
@@ -26,8 +28,6 @@
 		padding: 4rem 0;
 		max-width: 90em;
 		width: calc(100% - 4rem);
-		border-left: 1px solid var(--gray-15);
-		border-right: 1px solid var(--gray-15);
 		min-height: 100vh;
 	}
 	@media (max-width: 30rem) {

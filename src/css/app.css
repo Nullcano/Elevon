@@ -1,23 +1,37 @@
+@import 'clash-grotesk.css';
+
 :root {
-  --gray-0: hsl(270, 50%, 0%);
-  --gray-5: hsl(270, 50%, 5%);
-  --gray-10: hsl(270, 50%, 10%);
-  --gray-15: hsl(270, 50%, 15%);
-  --gray-20: hsl(270, 50%, 20%);
-  --gray-30: hsl(270, 50%, 30%);
-  --gray-40: hsl(270, 50%, 40%);
-  --gray-50: hsl(270, 50%, 50%);
-  --gray-60: hsl(270, 50%, 60%);
-  --gray-70: hsl(270, 50%, 70%);
-  --gray-80: hsl(270, 50%, 80%);
-  --gray-90: hsl(270, 50%, 90%);
-  --gray-95: hsl(270, 50%, 95%);
-  --gray-100: hsl(270, 50%, 100%);
+  --gray-0: hsl(266, 14%, 0%);
+  --gray-2_5: hsl(266, 14%, 2.5%);
+  --gray-5: hsl(266, 14%, 5%);
+  --gray-7_5: hsl(266, 14%, 7.5%);
+  --gray-10: hsl(266, 14%, 10%);
+  --gray-15: hsl(266, 14%, 15%);
+  --gray-20: hsl(266, 14%, 20%);
+  --gray-30: hsl(266, 14%, 30%);
+  --gray-40: hsl(266, 14%, 40%);
+  --gray-50: hsl(266, 14%, 50%);
+  --gray-60: hsl(266, 14%, 60%);
+  --gray-70: hsl(266, 14%, 70%);
+  --gray-80: hsl(266, 14%, 80%);
+  --gray-90: hsl(266, 14%, 90%);
+  --gray-95: hsl(266, 14%, 95%);
+  --gray-100: hsl(266, 14%, 100%);
 }
 
 body {
-  background-color: var(--gray-5);
+  background-color: var(--gray-7_5);
   color: var(--gray-90);
+  font-family: 'ClashGrotesk-Variable';
+}
+
+a {
+  color: inherit;
+  opacity: .75;
+}
+
+a:hover {
+  opacity: 1;
 }
 
 .grid a:nth-child(3n) > .card {

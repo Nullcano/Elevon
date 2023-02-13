@@ -1,15 +1,25 @@
 <a href="/">
-  <svg class="logo" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 350 50">
-    <path fill="white" d="M0 0h50v10H0zM0 20h50v10H0zM0 40h50v10H0z M110 40v10H60V40z M60 0h10v50H60z M120 0h50v10h-50zM120 20h50v10h-50zM120 40h50v10h-50zM205 50 180 0h50l-25 50Z"/>
-    <circle cx="265" cy="25" r="25" fill="white"/>
-    <path fill="white" d="M300 25c0-13.807 11.193-25 25-25s25 11.193 25 25v25h-50V25Z"/>
+  <svg class="logo" viewBox="0 0 32 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 0C10 0 8 2 8 4H28L30 2L32 0H12Z" />
+    <path d="M8 5C6 5 4 7 4 9H28L30 7L32 5H8Z" />
+    <path d="M4 10C2 10 0 12 0 14H28L30 12L32 10H4Z" />
   </svg>
+  <span>Elevon</span>
 </a>
 
 <style>
   a {
-    height: 1rem;
-    line-height: 1;
+    position: fixed;
+    top: 1.5rem;
+    left: 5rem;
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid hsla(0,0%,100%,.1);
+    border-radius: 60em;
     opacity: .8;
   }
   a:hover {
@@ -17,7 +27,9 @@
   }
   .logo {
     position: relative;
-    height: 20px;
+    height: 1rem;
+  }
+  path {
     fill: currentColor;
   }
 </style>
