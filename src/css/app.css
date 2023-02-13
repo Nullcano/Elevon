@@ -1,4 +1,4 @@
-@import 'clash-grotesk.css';
+@import 'https://api.fontshare.com/v2/css?f[]=archivo@701,401,700,500,501,400,600,601&f[]=tabular@400&display=swap';
 
 :root {
   --gray-0: hsl(266, 14%, 0%);
@@ -22,7 +22,7 @@
 body {
   background-color: var(--gray-7_5);
   color: var(--gray-90);
-  font-family: 'ClashGrotesk-Variable';
+  font-family: 'Archivo', sans-serif;
 }
 
 a {
@@ -36,6 +36,10 @@ a:hover {
 
 .grid a:nth-child(3n) > .card {
   border: 0
+}
+
+.code, code {
+  font-family: 'Tabular', monospace;
 }
 
 .preview {
