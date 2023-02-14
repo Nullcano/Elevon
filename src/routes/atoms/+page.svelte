@@ -1,17 +1,23 @@
-<h1>Variables</h1>
+<h1>Elevon Atoms</h1>
 
-<div class="bg-red-1 h-size-4 w-size-8 mb-1">
-  <p class="text-white">This is a red div with a height of 1rem and a width of 3.5rem, with a margin bottom of .25rem.</p>
+<p>These CSS variables are the foundation of Elevon's design system.</p>
+<p>By customizing these variables, you have complete control over the look and feel of your application, ensuring it fits your brand and user experience.</p>
+<p>With Elevon Atoms, you can make quick and easy changes to the overall design without having to write new CSS code.</p>
+
+<div>
+  <p>No variables available yet.</p>
+  <p>Check back later.</p>
 </div>
 
-<div class="bg-blue-3 h-size-6 w-size-12 mb-1">
-  <p class="text-white">This is a blue div with a height of 2rem and a width of 4.5rem, with a margin bottom of .25rem.</p>
-</div>
-
-<div class="bg-pink-2 h-size-5 w-size-11 mb-1">
-  <p class="text-white">This is a pink div with a height of 1.5rem and a width of 4rem, with a margin bottom of .25rem.</p>
-</div>
-
-<div class="bg-orange-4 h-size-7 w-size-13 mb-1">
-  <p class="text-white">This is an orange div with a height of 3rem and a width of 10rem, with a margin bottom of .25rem.</p>
-</div>
+<style>
+  p {
+    margin: .5rem 0;
+    max-width: 60ch;
+    line-height: 1.5;
+  }
+  div {
+    margin: 4rem 0;
+    font-size: 1.5rem;
+    opacity: .5;
+  }
+</style>

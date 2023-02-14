@@ -4,7 +4,7 @@
     <path d="M8 5C6 5 4 7 4 9H28L30 7L32 5H8Z" />
     <path d="M4 10C2 10 0 12 0 14H28L30 12L32 10H4Z" />
   </svg>
-  <span>Elevon</span>
+  <span>Elevon <sup>BETA</sup></span>
 </a>
 
 <style>
@@ -15,12 +15,9 @@
     gap: .5rem;
     text-transform: uppercase;
     text-decoration: none;
-    border: 1px solid hsla(0,0%,100%,.1);
+    background-color: var(--blue-4);
+    border: 1px solid hsla(0,0%,100%,.5);
     border-radius: 60em;
-    opacity: .8;
-  }
-  a:hover {
-    opacity: 1;
   }
   .logo {
     position: relative;

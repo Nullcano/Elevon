@@ -17,14 +17,4 @@
 </svelte:head>
 
 <NavMain />
-<main>
-	<slot />
-</main>
-
-<style>
-	main {
-		position: relative;
-		margin: 0 auto;
-		min-height: 100vh;
-	}
-</style>
+<slot />

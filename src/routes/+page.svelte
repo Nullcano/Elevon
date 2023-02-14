@@ -12,7 +12,6 @@
       <circle cx="10" cy="10" r="2" fill="var(--blue-4)"/>
     </svg>
     <h2>Elevon Atoms</h2>
-    <div class="spacer"></div>
     <p>Collection of CSS variables to customize your application.</p>
   </a>
   <a href="/molecules">
@@ -26,7 +25,6 @@
       <path d="M13.5 12C13.5 13.933 11.933 15.5 10 15.5C8.067 15.5 6.5 13.933 6.5 12C6.5 10.067 8.067 8.5 10 8.5C11.933 8.5 13.5 10.067 13.5 12Z" fill="var(--blue-4)" stroke="black" stroke-linecap="round"/>
     </svg>      
     <h2>Elevon Molecules</h2>
-    <div class="spacer"></div>
     <p>An extensive library of CSS classes for easy layout, spacing, and typography.</p>
   </a>
   <a href="/structures">
@@ -35,7 +33,6 @@
       <path d="M20 2C20 0.895431 19.1046 0 18 0H12C10.8954 0 10 0.895431 10 2V3C10 3.55228 9.55228 4 9 4V4C8.44772 4 8 4.44772 8 5V7C8 7.55228 8.44772 8 9 8V8C9.55228 8 10 8.44772 10 9V11C10 11.5523 9.55228 12 9 12V12C8.44772 12 8 12.4477 8 13V15C8 15.5523 8.44772 16 9 16V16C9.55228 16 10 16.4477 10 17V18C10 19.1046 10.8954 20 12 20H18C19.1046 20 20 19.1046 20 18V2Z" fill="var(--blue-4)"/>
     </svg>
     <h2>Elevon Structures</h2>
-    <div class="spacer"></div>
     <p>A pre-made component library that adheres to Elevon's design and interface standards.</p>
   </a>
   <a href="/ecosystems">
@@ -48,7 +45,6 @@
       <circle cx="10" cy="10" r="2" fill="var(--blue-4)"/>
     </svg>
     <h2>Elevon Ecosystems</h2>
-    <div class="spacer"></div>
     <p>Time-saving HTML templates for building out app layouts and structures.</p>
   </a>
   <a href="/graphics">
@@ -57,7 +53,6 @@
       <path d="M3 5C3 3.89543 3.89543 3 5 3H15C16.1046 3 17 3.89543 17 5C17 6.10457 16.1046 7 15 7H9.15037C8.72768 7 8.31587 7.13392 7.97402 7.38253C6.40753 8.52179 7.21341 11 9.15037 11H15C16.1046 11 17 11.8954 17 13V15C17 16.1046 16.1046 17 15 17H5C3.89543 17 3 16.1046 3 15V5Z" fill="var(--blue-4)"/>
     </svg>
     <h2>Elevon Graphics</h2>
-    <div class="spacer"></div>
     <p>A library of visually appealing icons to enhance your application.</p>
   </a>
   <a href="/typefaces">
@@ -66,7 +61,6 @@
       <path d="M16 3C16.5523 3 17 3.44772 17 4V6C17 6.55228 16.5523 7 16 7C15.4477 7 15 6.55228 15 6C15 5.44772 14.5523 5 14 5H12C11.4477 5 11 5.44772 11 6V14C11 14.5523 11.4477 15 12 15C12.5523 15 13 15.4477 13 16C13 16.5523 12.5523 17 12 17H8C7.44772 17 7 16.5523 7 16C7 15.4477 7.44772 15 8 15C8.55228 15 9 14.5523 9 14V6C9 5.44772 8.55228 5 8 5H6C5.44772 5 5 5.44772 5 6C5 6.55228 4.55228 7 4 7C3.44772 7 3 6.55228 3 6V4C3 3.44772 3.44772 3 4 3L16 3Z" fill="var(--blue-4)"/>
     </svg>
     <h2>Elevon Typefaces</h2>
-    <div class="spacer"></div>
     <p>Elevon offers font families with both sans-serif and monospace options.</p>
   </a>
   <a href="/biosphere">
@@ -76,7 +70,6 @@
       <path d="M2.99999 17C-0.888991 13.111 -0.972252 6.80573 2.91673 2.91674C6.80572 -0.972245 13.111 -0.888984 17 3V7L13 13L7 17H2.99999Z" fill="black"/>
     </svg>
     <h2>Elevon Biosphere</h2>
-    <div class="spacer"></div>
     <p>Applications created using Elevon's design system, all in one collection.</p>
   </a>
 </section>
@@ -110,6 +103,7 @@
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     gap: 1rem;
     background: white;
     color: black;
@@ -118,14 +112,23 @@
     transition: all .25s linear;
     cursor: pointer;
   }
+  .features a:nth-child(3), .features a:nth-child(4) {
+    background: var(--blue-1);
+  }
+  .features a:nth-child(5), .features a:nth-child(6) {
+    background: var(--blue-2);
+  }
   .features a:last-child {
     grid-area: 4 / 1 / 5 / 3;
-    justify-content: center;
+    background: var(--blue-3);
+    color: white;
+    justify-content: space-evenly;
     align-items: center;
   }
   .features a:hover {
     outline: .5rem solid black;
   }
+
   .features svg {
     width: 3rem;
   }
@@ -136,10 +139,6 @@
   }
   p {
     font-size: 1.25rem;
-  }
-  .spacer {
-    flex: 1 1 0%;
-    place-self: stretch;
   }
   @media (max-width: 60em) {
     h1 {
