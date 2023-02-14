@@ -102,6 +102,7 @@
     padding: 1rem 2rem;
     font-size: 1.5rem;
     background: var(--gray-10);
+    color: var(--gray-100);
     border: 0;
     border-radius: .5rem;
     outline: none;
@@ -136,24 +137,19 @@
   }
   a {
     color: var(--gray-80);
+    text-decoration: none;
   }
   a:hover {
     color: var(--gray-100);
-    text-decoration: none;
   }
   [role="button"] {
-    position: fixed;
-    top: 1rem;
-    left: 15rem;
-    padding: .25rem .75rem;
+    padding: .5rem 1rem;
     border: 1px solid var(--gray-15);
     border-radius: 60em;
     display: flex;
     align-items: center;
   }
   kbd {
-    position: relative;
-    top: -2px;
     padding: 0 .5rem;
     border: 1px solid var(--gray-15);
     color: var(--gray-60);

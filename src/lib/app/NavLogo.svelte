@@ -9,9 +9,6 @@
 
 <style>
   a {
-    position: fixed;
-    top: 1.5rem;
-    left: 5rem;
     padding: .5rem 1rem;
     display: flex;
     align-items: center;

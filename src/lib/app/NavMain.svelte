@@ -2,117 +2,78 @@
   import { page } from '$app/stores'
   import NavLogo from './NavLogo.svelte'
   import MainSearch from './MainSearch.svelte';
+
+  const navLinks = [
+    { slug: 'atoms', title: 'Atoms' },
+    { slug: 'molecules', title: 'Molecules' },
+    { slug: 'structures', title: 'Structures' },
+    { slug: 'ecosystems', title: 'Ecosystems' },
+    { slug: 'graphics', title: 'Graphics' },
+    { slug: 'typefaces', title: 'Typefaces' },
+    { slug: 'biosphere', title: 'Biosphere' }
+  ]
+  const moreLinks = [
+    { slug: 'html', title: 'HTML Ref' },
+    { slug: 'css', title: 'CSS Ref' }
+  ]
 </script>
 
 <nav>
-  <div class="inner">
-    <div class="flex-row-center">
-      <NavLogo />
-      <MainSearch />
-    </div>
-    <a class:active="{$page.url.pathname.includes('variables')}" href="/variables">
-      <div class="nav-item">
-        <span>Variables</span>
-      </div>
-    </a>
-    <a class:active="{$page.url.pathname.includes('classes')}" href="/classes">
-      <div class="nav-item">
-        <span>Classes</span>
-      </div>
-    </a>
-    <a class:active="{$page.url.pathname.includes('shorthands')}" href="/shorthands">
-      <div class="nav-item">
-        <span>Shorthands</span>
-      </div>
-    </a>
-    <a class:active="{$page.url.pathname.includes('components')}" href="/components">
-      <div class="nav-item">
-        <span>Components</span>
-      </div>
-    </a>
-    <a class:active="{$page.url.pathname.includes('templates')}" href="/templates">
-      <div class="nav-item">
-        <span>Templates</span>
-      </div>
-    </a>
-    <a class:active="{$page.url.pathname.includes('applications')}" href="/applications">
-      <div class="nav-item">
-        <span>Applications</span>
-      </div>
-    </a>
-    <div class="flex">
-      <a class:active="{$page.url.pathname.includes('html')}" href="/html">
+  <div class="sec">
+    <NavLogo />
+    <MainSearch />
+  </div>
+  <div class="sec">
+    {#each navLinks as link}
+      <a class:active="{$page.url.pathname.includes(link.slug)}" href="/{link.slug}">
         <div class="nav-item">
-          <span>HTML</span>
+          <span>{link.title}</span>
         </div>
       </a>
-      <a class:active="{$page.url.pathname.includes('css')}" href="/css">
+    {/each}
+  </div>
+  <div class="sec">
+    {#each moreLinks as link}
+      <a class:active="{$page.url.pathname.includes(link.slug)}" href="/{link.slug}">
         <div class="nav-item">
-          <span>CSS</span>
+          <span>{link.title}</span>
         </div>
       </a>
-    </div>
+    {/each}
   </div>
 </nav>
 
 <style>
   nav {
-    position: relative;
-    color: var(--gray-90);
-    user-select: none;
-  }
-  .inner {
-    margin: 0 auto;
-    padding: 0 2rem;
-    max-width: 90em;
-    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    user-select: none;
+    z-index: 9;
   }
-  a, .link {
+  .sec {
+    margin: 0 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  a {
     color: var(--gray-80);
     text-decoration: none;
   }
-  a:hover, .link:hover {
+  a:hover, .active {
     color: var(--gray-100)
   }
-  .active {
-    color: var(--gray-100);
-  }
-  .box {
-    position: relative;
-    display: grid;
-    place-items: center;
-    cursor: pointer;
-  }
-  .link {
-    padding: 1.5rem;
-    line-height: 1;
-    position: relative;
-    white-space: nowrap;
-    text-transform: uppercase;
-  }
-  .box ul {
-    margin: 0;
-    padding: 1rem 2rem;
-    background: var(--gray-5);
-  }
-  .box:focus-within > ul {
-    display: block;
-  }
-
   .nav-item {
     position: relative;
     padding: .5rem 0;
     display: flex;
     align-items: center;
     gap: .25rem;
-  }
-  @media (max-width:60em) {
-    nav {
-      background-color: hsla(266, 14%, 10%, .9);
-      backdrop-filter: blur(4px);
-    }
   }
 </style>

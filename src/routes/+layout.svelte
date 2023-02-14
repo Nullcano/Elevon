@@ -25,14 +25,6 @@
 	main {
 		position: relative;
 		margin: 0 auto;
-		padding: 4rem 0;
-		max-width: 90em;
-		width: calc(100% - 4rem);
 		min-height: 100vh;
-	}
-	@media (max-width: 30rem) {
-		main {
-			width: calc(100% - 2rem);
-		}
 	}
 </style>

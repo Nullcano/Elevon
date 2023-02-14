@@ -1,33 +1,13 @@
 @import 'https://api.fontshare.com/v2/css?f[]=archivo@701,401,700,500,501,400,600,601&f[]=tabular@400&display=swap';
 
-:root {
-  --gray-0: hsl(266, 14%, 0%);
-  --gray-2_5: hsl(266, 14%, 2.5%);
-  --gray-5: hsl(266, 14%, 5%);
-  --gray-7_5: hsl(266, 14%, 7.5%);
-  --gray-10: hsl(266, 14%, 10%);
-  --gray-15: hsl(266, 14%, 15%);
-  --gray-20: hsl(266, 14%, 20%);
-  --gray-30: hsl(266, 14%, 30%);
-  --gray-40: hsl(266, 14%, 40%);
-  --gray-50: hsl(266, 14%, 50%);
-  --gray-60: hsl(266, 14%, 60%);
-  --gray-70: hsl(266, 14%, 70%);
-  --gray-80: hsl(266, 14%, 80%);
-  --gray-90: hsl(266, 14%, 90%);
-  --gray-95: hsl(266, 14%, 95%);
-  --gray-100: hsl(266, 14%, 100%);
-}
-
 body {
-  background-color: var(--gray-7_5);
-  color: var(--gray-90);
+  background-color: var(--blue-4);
+  color: var(--day-1);
   font-family: 'Archivo', sans-serif;
 }
 
 a {
   color: inherit;
-  opacity: .75;
 }
 
 a:hover {
@@ -51,7 +31,7 @@ a:hover {
   overflow: auto;
 }
 .preview a {
-  color: var(--blue-50);
+  color: var(--blue-4);
   text-decoration: none;
 }
 .preview a:hover {
