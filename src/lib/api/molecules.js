@@ -7,6 +7,9 @@ export const meta = {
     `The extensive range of options available in the class library caters to every design requirement, making Elevon Molecules an indispensable tool in the system.`
   ]
 }
+export const categories = [
+  '',
+]
 export const classes = [{
   title: 'baat',
   description: 'Defines how the background image will behave when scrolling the page.',

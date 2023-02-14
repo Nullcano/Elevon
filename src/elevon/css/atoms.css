@@ -1,6 +1,6 @@
-/* Elevon Member List */
-/* Colors */
+/* Elevon Atoms */
 :root {
+  /* Colors */
   --day-1: hsl(210, 10%, 100%);
   --day-2: hsl(210, 10%, 95%);
   --day-3: hsl(210, 10%, 90%);
@@ -122,9 +122,9 @@
   --z-index-4: 4;
   --z-index-5: 5;
 /* Media Queries */
-  --breakpoint-small: 768px;
-  --breakpoint-medium: 992px;
-  --breakpoint-large: 1200px;
+  --mq-sm: 30em;
+  --mq-md: 60em;
+  --mq-lg: 90em;
 /* Masks */
   --mask-none: none;
   --mask-full: rect(0, 0, 0, 0);
