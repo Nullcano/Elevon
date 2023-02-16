@@ -89,7 +89,7 @@
     left: 0;
     width: 100%;
     height: 70vh;
-    background-image: url('../images/elevonscape.webp');
+    background-image: url('images/elevonscape.webp');
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: cover;
