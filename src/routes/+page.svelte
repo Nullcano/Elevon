@@ -82,6 +82,19 @@
     flex-direction: column;
     justify-content: flex-end;
   }
+  .intro::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+    background-image: url('../images/elevonscape.webp');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    opacity: .1;
+  }
   h1 {
     margin: 2rem;
     max-width: 28ch;
@@ -92,43 +105,37 @@
     letter-spacing: -.05rem;
   }
   section.features {
-    margin: 1rem;
+    position: relative;
+    padding: 2rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
+    background: var(--night-3);
     gap: 1rem;
   }
   .features a {
-    min-height: calc(30vh - 2rem);
+    min-height: calc(30vh - 3rem);
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     gap: 1rem;
-    background: white;
-    color: black;
+    background: var(--night-2);
+    color: var(--day-1);
     text-decoration: none;
+    outline: var(--night-2);
     border-radius: 1.5rem;
     transition: all .25s linear;
     cursor: pointer;
   }
-  .features a:nth-child(3), .features a:nth-child(4) {
-    background: var(--blue-1);
-  }
-  .features a:nth-child(5), .features a:nth-child(6) {
-    background: var(--blue-2);
-  }
   .features a:last-child {
     grid-area: 4 / 1 / 5 / 3;
-    background: var(--blue-3);
-    color: white;
     justify-content: space-evenly;
     align-items: center;
   }
   .features a:hover {
-    outline: .5rem solid black;
+    outline: .5rem solid var(--night-2);
   }
-
   .features svg {
     width: 3rem;
   }

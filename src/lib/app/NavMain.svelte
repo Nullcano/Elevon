@@ -76,11 +76,18 @@
     justify-content: space-between;
     align-items: center;
     user-select: none;
-    background: hsla(210, 100%, 35%, .8);
-    backdrop-filter: blur(4px);
     z-index: 10;
   }
+  nav::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--night-3-08);
+    backdrop-filter: blur(4px);
+  }
   .sec {
+    position: relative;
     margin: 0 2rem;
     display: flex;
     align-items: center;
@@ -98,7 +105,7 @@
     padding: .5rem;
     display: flex;
     flex-direction: column;
-    background: var(--day-1);
+    background: var(--night-2);
     border-radius: 1rem;
     z-index: 50;
   }
@@ -107,18 +114,18 @@
     padding: .5rem;
     grid-template-columns: auto 1fr;
     gap: 1rem;
-    color: var(--night-1);
+    color: var(--day-4);
     text-decoration: none;
     border-radius: 1rem;
   }
   a:hover, .active {
-    background: var(--blue-1);
+    background: var(--night-1);
   }
   .icon {
     width: 3rem;
     height: 3rem;
     border-radius: 1rem;
-    background: var(--blue-4);
+    background: var(--night-3);
   }
   .details {
     display: flex;

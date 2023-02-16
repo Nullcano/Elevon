@@ -15,8 +15,7 @@
     gap: .5rem;
     text-transform: uppercase;
     text-decoration: none;
-    background-color: var(--blue-4);
-    border: 1px solid hsla(0,0%,100%,.5);
+    border: 1px solid var(--night-1);
     border-radius: 60em;
   }
   .logo {

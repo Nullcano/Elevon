@@ -50,11 +50,12 @@
   {/if}
 </svelte:head>
 
-<a role="button" href={''} class="search" on:click={openSearch}>
+<a role="button" href={null} class="search" on:click={openSearch}>
   <span>Search <kbd>Ctrl</kbd> + <kbd>K</kbd></span>
 </a>
 
 {#if searchIsOpen}
+<div class="search-wrapper">
   <div class="search-overlay" on:click={closeSearch}></div>
   <div class="search-container">
     <div class="search-box">
@@ -72,11 +73,13 @@
       </div>
     {/if}
   </div>
+</div>
 {/if}
 
 <style>
-  :global(.ofh) {
-    overflow: hidden;
+  .search-wrapper {
+    position: relative;
+    z-index: 99;
   }
   .search-overlay {
     position: fixed;
@@ -84,9 +87,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(5,5,5,.75);
+    background: var(--night-3-08);
     backdrop-filter: blur(4px);
-    z-index: 1100;
+    z-index: 20;
   }
   .search-container {
     position: fixed;
@@ -95,13 +98,13 @@
     transform: translateX(-50%);
     width: 40em;
     max-width: 100%;
-    z-index: 1100;
+    z-index: 30;
   }
   .search-box input {
     width: 100%;
     padding: 1rem 2rem;
     font-size: 1.5rem;
-    background: var(--blue-4);
+    background: var(--night-4);
     color: var(--day-1);
     border: 0;
     border-radius: .5rem;
@@ -113,7 +116,7 @@
     top: 5rem;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--day-1);
+    background: var(--night-4);
     max-width: 40em;
     width: 100%;
     max-height: 50vh;
@@ -123,35 +126,32 @@
   }
   .result {
     padding: 1rem;
-    border-top: 1px solid var(--gray-15);
   }
   a:focus-visible {
     outline: 0;
   }
-  a:hover .result, a:focus-visible .result {
-    background: var(--gray-5);
-  }
   .search-results a {
-    margin: 1rem;
-    color: black;
+    margin: .5rem;
     text-decoration: none;
     display: block;
-    border-radius: .5rem;
+    border-radius: 60em;
+    background: var(--night-3);
+  }
+  .search-results a:hover {
+    background: var(--night-2);
   }
   [role="button"] {
     padding: .5rem 1rem;
     color: var(--day-1);
-    text-decoration: none;
-    background-color: var(--blue-4);
-    border: 1px solid hsla(0,0%,100%,.5);
+    border: 1px solid var(--night-1);
     border-radius: 60em;
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
   kbd {
     padding: 0 .5rem;
-    border: 1px solid var(--day-4);
-    color: var(--day-1);
+    border: 1px solid var(--night-1);
     border-radius: .5rem;
     text-transform: uppercase;
   }
