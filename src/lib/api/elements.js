@@ -1,678 +1,416 @@
-export const meta = {
-  slug: 'html',
-  title: 'HTML Reference',
-  description: 'An overview over all reset and reworked semantic HTML elements. Explore their look and feel with Elevon applied.'
-}
-
-export const elements = [{
-  title: '<a>',
-  description: 'Create an anchor element with hyperlink to any URL address.',
-  preview: `A network error occured. <a href="/status">Check network status</a>
-or <a role="button" onclick="openForm()">contact support</a>`,
-  categories: ['Flow', 'Phrasing', 'Interactive', 'Palpable'],
-}, {
-  title: '<abbr>',
-  description: 'Inform users what abbreviations mean. This element is also used for acronyms.',
-  preview: `Arctic provides <abbr title="Cascading Style Sheets">CSS</abbr>.`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<address>',
-  description: 'Provide contact information for a person, group, or an organization.',
-  preview: `<address>
-  <p>Arctic Style</p>
-  <a href="mailto:jim@rock.com">jim@rock.com</a><br>
-  <a href="tel:+13115552368">(311) 555-2368</a>
-</address>`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<area>',
-  description: 'Define clickable areas inside an image map.',
-  preview: `<map name="infographic">
-  <area shape="rect" coords="184,6,253,27"
-        href="https://mozilla.org"
-        target="_blank" alt="Mozilla">
-  <area shape="circle" coords="130,136,60"
-        href="https://developer.mozilla.org/"
-        target="_blank" alt="MDN">
-  <area shape="poly" coords="130,6,253,96,223,106,130,39"
-        href="https://developer.mozilla.org/docs/Web/Guide/Graphics"
-        target="_blank" alt="Graphics">
-  <area shape="poly" coords="253,96,207,241,189,217,223,103"
-        href="https://developer.mozilla.org/docs/Web/HTML"
-        target="_blank" alt="HTML">
-  <area shape="poly" coords="207,241,54,241,72,217,189,217"
-        href="https://developer.mozilla.org/docs/Web/JavaScript"
-        target="_blank" alt="JavaScript">
-  <area shape="poly" coords="54,241,6,97,36,107,72,217"
-        href="https://developer.mozilla.org/docs/Web/API"
-        target="_blank" alt="Web APIs">
-  <area shape="poly" coords="6,97,130,6,130,39,36,107"
-        href="https://developer.mozilla.org/docs/Web/CSS"
-        target="_blank" alt="CSS">
-</map>
-
-<img usemap="#infographic" src="https://interactive-examples.mdn.mozilla.net/media/examples/mdn-info.png" 
-     alt="MDN infographic" style="display:block;margin:0 auto;width:260px;height:248px">`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<article>',
-  description: 'Self-contain compositions in a document, page, application, or site, which is intended to be independently distributable or reusable.',
-  preview: `<article class="forecast">
-  <h1>Weather forecast for Seattle</h1>
-  <article class="day-forecast">
-      <h2>03 March 2018</h2>
-      <p>Rain.</p>
-  </article>
-  <article class="day-forecast">
-      <h2>04 March 2018</h2>
-      <p>Periods of rain.</p>
-  </article>
-  <article class="day-forecast">
-      <h2>05 March 2018</h2>
-      <p>Heavy rain.</p>
-  </article>
-</article>`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<aside>',
-  description: `Define content that is indirectly related to the document's main content. Asides are not aligned to the side by default.`,
-  preview: `<p>Salamanders are a group of amphibians with a lizard-like appearance, including short legs and a tail in both larval and adult forms.</p>
-
-<aside style="margin:1rem;width:33%;float:right">
-  <i>The Rough-skinned Newt defends itself with a deadly neurotoxin.</i>
-</aside>
-
-<p>Several species of salamander inhabit the temperate rainforest of the Pacific Northwest, including the Ensatina, the Northwestern Salamander and the Rough-skinned Newt. Most salamanders are nocturnal, and hunt for insects, worms and other small creatures.</p>`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<audio>',
-  description: 'Embed sound content in documents. It may contain one or more audio sources and other fallback elements when audio is not supported.',
-  preview: `<audio controls>
-  <source src="myAudio.mp3" type="audio/mpeg" />
-  <source src="myAudio.ogg" type="audio/ogg" />
-  <p>
-    Download <a href="myAudio.mp3">MP3</a> or
-    <a href="myAudio.ogg">OGG</a> audio.
-  </p>
-</audio>`,
-  categories: ['Flow', 'Phrasing', 'Embedded', 'Interactive', 'Palpable']
-}, {
-  title: '<b>',
-  description: `Draw the reader's attention to the element's contents, which are not otherwise granted special importance.`,
-  preview: `The most popular science courses are 
-<b>chemistry</b> and <b>physics</b>.`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<bdi>',
-  description: 'Tell the browser\'s bidirectional algorithm to treat the text it contains in isolation from its surrounding text.',
-  preview: `<ul>
-  <li><bdi>Evil Steven</bdi>: 1st place</li>
-  <li><bdi>François fatale</bdi>: 2nd place</li>
-  <li><span>تیز سمی</span>: 3rd place</li>
-  <li><bdi>الرجل القوي إيان</bdi>: 4th place</li>
-  <li><span dir="auto">تیز سمی</span>: 5th place</li>
-</ul>`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<bdo>',
-  description: 'Override the current directionality of text, so that the text within is rendered in a different direction.',
-  preview: `<p>Looks like this in Hebrew: 
-  <span dir="rtl">אה, אני אוהב להיות ליד חוף הים</span>
-</p>
-
-<p>In the computer's memory, this is stored as 
-  <bdo dir="ltr">אה, אני אוהב להיות ליד חוף הים</bdo>
-</p>`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<blockquote>',
-  description: 'Define quotation blocks.',
-  preview: `<figure>
-  <blockquote cite="https://www.huxley.net/bnw/four.html">
-      <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
-  </blockquote>
-  <figcaption>—Aldous Huxley, <cite>Brave New World</cite></figcaption>
-</figure>`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<body>',
-  description: 'Identify the main body of content and the part displayed in the main browser window.',
-  preview: `<body>
-  Hello world
-</body>`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<br>',
-  description: 'insert a line break.',
-  preview: `<br>
-<br>
-<br>
-<br>`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<button>',
-  description: 'insert a clickable button.',
-  preview: `<button type="button">Click me</button>`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<canvas>',
-  description: 'Draw graphics with JavaScript and render them with HTML5.',
-  preview: `<canvas>
-  An alternative text describing what your canvas displays.
-</canvas>`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<caption>',
-  description: 'Specify the caption or title of a table.',
-  preview: `<table>
-  <caption>He-Man and Skeletor facts</caption>
-  <tr>
-    <td> </td>
-    <th scope="col" class="heman">He-Man</th>
-    <th scope="col" class="skeletor">Skeletor</th>
-  </tr>
-  <tr>
-    <th scope="row">Role</th>
-    <td>Hero</td>
-    <td>Villain</td>
-  </tr>
-  <tr>
-    <th scope="row">Weapon</th>
-    <td>Power Sword</td>
-    <td>Havoc Staff</td>
-  </tr>
-  <tr>
-    <th scope="row">Dark secret</th>
-    <td>Expert florist</td>
-    <td>Cries at romcoms</td>
-  </tr>
-</table>`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<cite>',
-  description: 'Describe a reference to a cited creative work, and must include the title of that work.',
-  preview: `<figure>
-  <blockquote>
-    <p>It was a bright cold day in April, and the clocks were striking thirteen.</p>
-  </blockquote>
-  <figcaption>First sentence in <cite><a href="http://www.george-orwell.org/1984/0.html">Nineteen Eighty-Four</a></cite> by George Orwell (Part 1, Chapter 1).</figcaption>
-</figure>`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<code>',
-  description: 'display its contents styled in a fashion intended to indicate that the text is a short fragment of computer code.',
-  preview: `The <code>push()</code> method adds one or more elements to the 
-end of an array and returns the new length of the array.`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<col>',
-  description: 'Define a column within a table and is used for defining common semantics on all common cells.',
-  preview: `<table>
-  <caption>Superheros and sidekicks</caption>
-  <colgroup>
-    <col>
-    <col span="2" class="batman">
-    <col span="2" class="flash">
-  </colgroup>
-  <tr>
-    <td> </td>
-    <th scope="col">Batman</th>
-    <th scope="col">Robin</th>
-    <th scope="col">The Flash</th>
-    <th scope="col">Kid Flash</th>
-  </tr>
-  <tr>
-    <th scope="row">Skill</th>
-    <td>Smarts</td>
-    <td>Dex, acrobat</td>
-    <td>Super speed</td>
-    <td>Super speed</td>
-  </tr>
-</table>
-`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<colgroup>',
-  description: 'Define a group of columns within a table.',
-  preview: `<table>
-  <caption>Superheros and sidekicks</caption>
-  <colgroup>
-    <col>
-    <col span="2" class="batman">
-    <col span="2" class="flash">
-  </colgroup>
-  <tr>
-    <td> </td>
-    <th scope="col">Batman</th>
-    <th scope="col">Robin</th>
-    <th scope="col">The Flash</th>
-    <th scope="col">Kid Flash</th>
-  </tr>
-  <tr>
-    <th scope="row">Skill</th>
-    <td>Smarts</td>
-    <td>Dex, acrobat</td>
-    <td>Super speed</td>
-    <td>Super speed</td>
-  </tr>
-</table>`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<datalist>',
-  description: 'Set options for a data list',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<dd>',
-  description: 'Define a Description in a list',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<del>',
-  description: 'Refer to strikethrough deleted content',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<details>',
-  description: 'Insert section so details can be expanded',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<dfn>',
-  description: 'A term definition',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<dialog>',
-  description: 'Set up a dialog box',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<div>',
-  description: 'Set up a division or section in a document',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<dl>',
-  description: 'For a description list',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<dt>',
-  description: 'For a description term',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<em>',
-  description: 'To add emphasis to text',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<embed>',
-  description: 'To embed media into a document',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<fieldset>',
-  description: 'Establish a fieldset for a form',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<figure>',
-  description: 'Set up a figure for an image',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<footer>',
-  description: 'Create a footer on the page',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<form>',
-  description: 'Set up an input form',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<h1>',
-  description: 'define the largest section heading.',
-  preview: `<h1>Heading level 1</h1>`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<h2>',
-  description: 'define the second largest section heading.',
-  preview: `<h2>Heading level 2</h2>`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<h3>',
-  description: 'define the third largest section heading.',
-  preview: `<h3>Heading level 3</h3>`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<h4>',
-  description: 'define the fourth largest section heading.',
-  preview: `<h4>Heading level 4</h4>`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<h5>',
-  description: 'define the fifth largest section heading.',
-  preview: `<h5>Heading level 5</h5>`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<h6>',
-  description: 'define the sixth largest section heading.',
-  preview: `<h6>Heading level 6</h6>`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<header>',
-  description: 'represent introductory content, typically a group of introductory or navigational aids.',
-  preview: `<header>
-  <h1>Welcome!</h1>
-</header>`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<hr>',
-  description: 'insert a horizontal rule or line showing a break between paragraph-level elements.',
-  preview: `<hr>`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<html>',
-  description: 'The html tag is the root element of the document and within it sit all other tags',
-  preview: `Unable to preview this element.`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<i>',
-  description: 'represents a range of text that is set off from the normal text, such as technical terms, displayed in italics.',
-  preview: `The term <i>bandwidth</i> describes the measure of how much information 
-can pass through a data connection in a given amount of time.`,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<iframe>',
-  description: 'To embed an inline frame',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<img />',
-  description: 'Place an image in the document',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<input>',
-  description: 'Create an input form',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<ins>',
-  description: 'Indicates inserted or updated text',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<kbd>',
-  description: 'Show text as if it were entered in a keyboard',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<keygen>',
-  description: 'A key generator for a form',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<label>',
-  description: 'Give a form a label',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<legend>',
-  description: 'Set a legend for a form',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<li>',
-  description: 'Create a list item like a bullet point',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<link />',
-  description: 'For a link to an external document like stylesheet',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<main>',
-  description: 'Semantically identifies a main section of the document',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<map>',
-  description: 'For a clickable image map',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<mark>',
-  description: 'To mark text like a highlighter',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<menu>',
-  description: 'Establish a clickable menu',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<meta />',
-  description: 'For non-visible metadata about the document including SEO data, character encodings and third-party data',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<meter>',
-  description: 'Show a progress meter graphic',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<nav>',
-  description: 'Define navigational links',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<noscript>',
-  description: 'Text to display when browser selects no scripting',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<object>',
-  description: 'Embed an object like media',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<ol>',
-  description: 'Set an ordered list',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<optgroup>',
-  description: 'Set up an option group in a form',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<option>',
-  description: 'For an option in a form',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<output>',
-  description: 'For a calculated output area for a form',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<p>',
-  description: 'Create a paragraph section',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<param>',
-  description: 'For parameters for embedded plugins',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<picture>',
-  description: 'Add flexibility with pictures and images',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<pre>',
-  description: 'For preformatted text',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<progress>',
-  description: 'Show a progress meter',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<q>',
-  description: 'Include a quote in text',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<rp>',
-  description: 'Add a ruby parentheses for text',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<rt>',
-  description: 'Add a ruby tag for text',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<ruby>',
-  description: 'Provide pronunciation for ruby text',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<s>',
-  description: 'For strikethrough text',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<samp>',
-  description: 'Show sample output',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<script>',
-  description: 'To include a script like JavaScript',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<section>',
-  description: 'Set a section of the document',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<select>',
-  description: 'Establish a select list in a form',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<small>',
-  description: 'Print using a smaller font',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<source>',
-  description: 'Settings for media sources',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<span>',
-  description: 'Set a span of text with different formatting',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<strong>',
-  description: 'Make text stronger or more important',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<style>',
-  description: 'Set a style for an HTML document',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<sub>',
-  description: 'Print text in subscript',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<summary>',
-  description: 'Show a summary within a details tag',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<sup>',
-  description: 'Print text in superscript',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<table>',
-  description: 'Present data in a table',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<tbody>',
-  description: 'Add a table body',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<td>',
-  description: 'Establish table data',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<textarea>',
-  description: 'A multi-line text area for a form',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<tfoot>',
-  description: 'For a table footer section',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<th>',
-  description: 'For a table heading',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<thead>',
-  description: 'For a table header section',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<time>',
-  description: 'For time in a machine-readable form',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<title>',
-  description: 'The title of a document',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<tr>',
-  description: 'Establish a table row',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<ul>',
-  description: 'For an unordered list',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<var>',
-  description: 'Give text a variable name',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}, {
-  title: '<video>',
-  description: 'Insert media as a video',
-  preview: ``,
-  categories: ['Flow', 'Phrasing', 'Palpable']
-}]
+export const elements = [
+  {
+    category: "Metadata",
+    title: "<head>",
+    description: "Defines a container for metadata (data about data) and is placed between the <html> tag and the <body> tag.",
+    preview: `<head>\n  <title>Document Title</title>\n  <meta charset=\"UTF-8\">\n</head>`
+  },
+  {
+    category: "Metadata",
+    title: "<title>",
+    description: "Defines the title of the document, which is displayed in the browser's title bar or on the page's tab.",
+    preview: `<title>Document Title</title>`
+  },
+  {
+    category: "Metadata",
+    title: "<meta>",
+    description: "Provides metadata about the document, such as character set, description, keywords, and more.",
+    preview: `<meta charset=\"UTF-8\">`
+  },
+  {
+    category: "Text",
+    title: "<p>",
+    description: "Defines a paragraph of text.",
+    preview: `<p>This is a paragraph of text.</p>`
+  },
+  {
+    category: "Text",
+    title: "<a>",
+    description: "Defines a hyperlink, which is used to link one page to another or to a specific location on the same page.",
+    preview: `<a href=\"https://www.example.com\">Link text</a>`
+  },
+  {
+    category: "Text",
+    title: "<h1> - <h6>",
+    description: "Defines headings of different levels, where <h1> is the most important and <h6> is the least important.",
+    preview: `<h1>Heading level 1</h1>`
+  },
+  {
+    category: "Text",
+    title: "<em>",
+    description: "Defines emphasized text, which is usually displayed in italics.",
+    preview: `<em>Emphasized text</em>`
+  },
+  {
+    category: "Text",
+    title: "<strong>",
+    description: "Defines strong text, which is usually displayed in bold.",
+    preview: `<strong>Strong text</strong>`
+  },
+  {
+    category: "Text",
+    title: "<u>",
+    description: "Defines underlined text.",
+    preview: `<u>Underlined text</u>`
+  },
+  {
+    category: "Text",
+    title: "<br>",
+    description: "Inserts a single line break.",
+    preview: `This text is on one line.<br>This text is on another line.`
+  },
+  {
+    category: "Text",
+    title: "<hr>",
+    description: "Inserts a thematic break, which is typically displayed as a horizontal line.",
+    preview: `<p>This is some text.</p>\n<hr>\n<p>This is more text.</p>`
+  },
+  {
+    category: "Text",
+    title: "<blockquote>",
+    description: "Defines a section of quoted text.",
+    preview: `<blockquote>\n  <p>This is a quote.</p>\n</blockquote>`
+  },
+  {
+    category: "Text",
+    title: "<code>",
+    description: "Defines a piece of computer code.",
+    preview: `<p>The code element is used to display code:</p>\n<code>console.log('Hello, world!');</code>`
+  },
+  {
+    category: "Text",
+    title: "<pre>",
+    description: "Defines preformatted text, which is usually displayed in a monospace font.",
+    preview: `<pre>\n  This text\n  is preformatted.\n</pre>`
+  },
+  {
+    category: "Text",
+    title: "<sub>",
+    description: "Defines subscripted text, which is usually displayed below the baseline.",
+    preview: `This is some <sub>subscripted</sub> text.`
+  },
+  {
+    category: "Text",
+    title: "<sup>",
+    description: "Defines superscripted text, which is usually displayed above the baseline.",
+    preview: `This is some <sup>superscripted</sup> text.`
+  },
+  {
+    category: "Text",
+    title: "<kbd>",
+    description: "Defines keyboard input, which is usually displayed in a monospace font.",
+    preview: `<p>The kbd element is used to display keyboard input:</p>\n<kbd>Ctrl + C</kbd>`
+  },
+  {
+    category: "Text",
+    title: "<var>",
+    description: "Defines a variable.",
+    preview: `<p>The var element is used to display variables:</p>\n<var>x</var> = <var>y</var> + <var>z</var>;`
+  },
+  {
+    category: "Text",
+    title: "<mark>",
+    description: "Defines highlighted text.",
+    preview: `<p>The mark element is used to highlight text:</p>\n<p>This is <mark>important</mark> text.</p>`
+  },
+  {
+    category: "Text",
+    title: "<abbr>",
+    description: "Defines an abbreviation or acronym.",
+    preview: `<p>The abbr element is used to define an abbreviation or acronym:</p>\n<p><abbr title="World Health Organization">WHO</abbr></p>`
+  },
+  {
+    category: "Text",
+    title: "<time>",
+    description: "Defines a date or time.",
+    preview: `<p>The time element is used to display a date or time:</p>\n<p>Time is: <time datetime="2023-02-19">now</time></p>`
+  },
+  {
+    category: "Text",
+    title: "<cite>",
+    description: "Defines the title of a work.",
+    preview: `<p>The cite element is used to define the title of a work:</p>\n<p><cite>The Great Gatsby</cite> by F. Scott Fitzgerald</p>`
+  },
+  {
+    category: "Text",
+    title: "<dfn>",
+    description: "Defines a definition.",
+    preview: `<p>The dfn element is used to define a term:</p>\n<p><dfn>HTML</dfn> stands for Hyper Text Markup Language.</p>`
+  },
+  {
+    category: "Text",
+    title: "<i>",
+    description: "Defines italic text.",
+    preview: `<p>The i element is used to display text in italics:</p>\n<p><i>This text is in italics.</i></p>`
+  },
+  {
+    category: "Text",
+    title: "<b>",
+    description: "Defines bold text.",
+    preview: `<p>The b element is used to display text in bold:</p>\n<p><b>This text is in bold.</b></p>`
+  },
+  {
+    category: "Text",
+    title: "<s>",
+    description: "Defines strikethrough text.",
+    preview: `<p>The s element is used to display text with a strikethrough:</p>\n<p><s>This text has a strikethrough.</s></p>`
+  },
+  {
+    category: "Text",
+    title: "<small>",
+    description: "Defines small text.",
+    preview: `<p>The small element is used to display small text:</p>\n<p><small>This text is small.</small></p>`
+  },
+  {
+    category: "Text",
+    title: "<u>",
+    description: "Defines underlined text.",
+    preview: `<p>The u element is used to display underlined text:</p>\n<p><u>This text is underlined.</u></p>`
+  },
+  {
+    category: "Text",
+    title: "<em>",
+    description: "Defines emphasized text.",
+    preview: `<p>The em element is used to emphasize text:</p>\n<p><em>This text is emphasized.</em></p>`
+  },
+  {
+    category: "Text",
+    title: "<strong>",
+    description: "Defines important text.",
+    preview: `<p>The strong element is used to display important text:</p>\n<p><strong>This text is important.</strong></p>`
+  },
+  {
+    category: "Text",
+    title: "<code>",
+    description: "Defines a piece of computer code.",
+    preview: `<p>The code element is used to display computer code:</p>\n<p><code>console.log("Hello, World!");</code></p>`
+  },
+  {
+    category: "Text",
+    title: "<pre>",
+    description: "Defines preformatted text.",
+    preview: `<p>The pre element is used to display preformatted text:</p>\n<pre> This text\n is\n preformatted\n</pre>`
+  },
+  {
+    category: "Text",
+    title: "<blockquote>",
+    description: "Defines a long quotation.",
+    preview: `<p>The blockquote element is used to display a long quotation:</p>\n<blockquote>\n<p>"Life is what happens when you're busy making other plans."</p>\n<cite>John Lennon</cite>\n</blockquote>`
+  },
+  {
+    category: "Text",
+    title: "<q>",
+    description: "Defines a short quotation.",
+    preview: `<p>The q element is used to display a short quotation:</p>\n<p><q>Be the change you wish to see in the world.</q></p>`
+  },
+  {
+    category: "Text",
+    title: "<del>",
+    description: "Defines deleted text.",
+    preview: `<p>The del element is used to display deleted text:</p>\n<p><del>This text has been deleted.</del></p>`
+  },
+  {
+    category: "Text",
+    title: "<ins>",
+    description: "Defines inserted text.",
+    preview: `<p>The ins element is used to display inserted text:</p>\n<p><ins>This text has been inserted.</ins></p>`
+  },
+  {
+    category: "Text",
+    title: "<sup>",
+    description: "Defines superscripted text, which is usually displayed above the baseline.",
+    preview: `This is some <sup>superscripted</sup> text.`
+  },
+  {
+    category: "Text",
+    title: "<sub>",
+    description: "Defines subscripted text, which is usually displayed below the baseline.",
+    preview: `This is some <sub>subscripted</sub> text.`
+  },
+  {
+    category: "Links",
+    title: "<a>",
+    description: "Defines a hyperlink.",
+    preview: `<p>The a element is used to create a hyperlink:</p>\n<p><a href="https://www.example.com\">This is a link</a></p>`
+  },
+  {
+    category: "Links",
+    title: "<link>",
+    description: "Defines the relationship between a document and an external resource.",
+    preview: `<p>The link element is used to define the relationship between a document and an external resource:</p>\n<link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\">`
+  },
+  {
+    category: "Links",
+    title: "<a>",
+    description: "Defines a hyperlink.",
+    preview: `<p>The a element is used to create a hyperlink:</p>\n<a href=\"https://www.example.com\">Example</a>`
+  },
+  {
+    category: "Links",
+    title: "<nav>",
+    description: "Defines a set of navigation links.",
+    preview: `<p>The nav element is used to define a set of navigation links:</p>\n<nav>\n<a href=\"#\">Home</a>\n<a href=\"#\">About</a>\n<a href=\"#\">Contact</a>\n</nav>`
+  },
+  {
+    category: "Links",
+    title: "<area>",
+    description: "Defines a clickable area in an image map.",
+    preview: `<p>The area element is used to define a clickable area in an image map:</p>\n<img src=\"example.png\" alt=\"Example Image\" usemap=\"#exampleMap\">\n<map name=\"exampleMap\">\n<area shape=\"rect\" coords=\"0,0,50,50\" href=\"#\">\n<area shape=\"rect\" coords=\"50,50,100,100\" href=\"#\">\n</map>`
+  },
+  {
+    category: "Links",
+    title: "<button>",
+    description: "Defines a clickable button.",
+    preview: `<p>The button element is used to create a clickable button:</p>\n<button>Click me</button>`
+  },
+  {
+    category: "Images",
+    title: "<img>",
+    description: "Defines an image.",
+    preview: `<p>The img element is used to display an image:</p>\n<img src=\"example.jpg\" alt=\"Example Image\">`
+  },
+  {
+    category: "Images",
+    title: "<figure>",
+    description: "Defines self-contained content, like illustrations, diagrams, photos, code listings, etc.",
+    preview: `<p>The figure element is used to display self-contained content:</p>\n<figure>\n<img src=\"example.png\" alt=\"Example Image\">\n<figcaption>Figure caption</figcaption>\n</figure>`
+  },
+  {
+    category: "Images",
+    title: "<figcaption>",
+    description: "Defines a caption for a figure element.",
+    preview: `<p>The figcaption element is used to define a caption for a figure element:</p>\n<figure>\n<img src=\"example.png\" alt=\"Example Image\">\n<figcaption>Figure caption</figcaption>\n</figure>`
+  },
+  {
+    category: "Lists",
+    title: "<ul>",
+    description: "Defines an unordered list.",
+    preview: `<p>The ul element is used to create an unordered list:</p>\n<ul>\n<li>Item 1</li>\n<li>Item 2</li>\n<li>Item 3</li>\n</ul>`
+  },
+  {
+    category: "Lists",
+    title: "<ol>",
+    description: "Defines an ordered list.",
+    preview: `<p>The ol element is used to create an ordered list:</p>\n<ol>\n<li>Item 1</li>\n<li>Item 2</li>\n<li>Item 3</li>\n</ol>`
+  },
+  {
+    category: "Lists",
+    title: "<li>",
+    description: "Defines a list item.",
+    preview: `<p>The li element is used to define a list item:</p>\n<ul>\n<li>Item 1</li>\n<li>Item 2</li>\n<li>Item 3</li>\n</ul>`
+  },
+  {
+    category: "Lists",
+    title: "<dl>",
+    description: "Defines a description list.",
+    preview: `<p>The dl element is used to create a description list:</p>\n<dl>\n<dt>Term 1</dt>\n<dd>Description 1</dd>\n<dt>Term 2</dt>\n<dd>Description 2</dd>\n</dl>`
+  },
+  {
+    category: "Lists",
+    title: "<dt>",
+    description: "Defines a term (an item) in a description list.",
+    preview: `<p>The dt element is used to define a term (an item) in a description list:</p>\n<dl>\n<dt>Term 1</dt>\n<dd>Description 1</dd>\n<dt>Term 2</dt>\n<dd>Description 2</dd>\n</dl>`
+  },
+  {
+    category: "Lists",
+    title: "<dd>",
+    description: "Defines a description (an explanation) for a term in a description list.",
+    preview: `<p>The dd element is used to define a description (an explanation) for a term in a description list:</p>\n<dl>\n<dt>Term 1</dt>\n<dd>Description 1</dd>\n<dt>Term 2</dt>\n<dd>Description 2</dd>\n</dl>`
+  },
+  {
+    category: "Tables",
+    title: "<table>",
+    description: "Defines a table.",
+    preview: `<p>The table element is used to create a table:</p>\n<table>\n<tr>\n<th>Header 1</th>\n<th>Header 2</th>\n</tr>\n<tr>\n<td>Row 1, Column 1</td>\n<td>Row 1, Column 2</td>\n</tr>\n<tr>\n<td>Row 2, Column 1</td>\n<td>Row 2, Column 2</td>\n</tr>\n</table>`
+  },
+  {
+    category: "Tables",
+    title: "<tr>",
+    description: "Defines a table row.",
+    preview: `<p>The tr element is used to define a table row:</p>\n<table>\n<tr>\n<th>Header 1</th>\n<th>Header 2</th>\n</tr>\n<tr>\n<td>Row 1, Column 1</td>\n<td>Row 1, Column 2</td>\n</tr>\n<tr>\n<td>Row 2, Column 1</td>\n<td>Row 2, Column 2</td>\n</tr>\n</table>`
+  },
+  {
+    category: "Tables",
+    title: "<th>",
+    description: "Defines a header cell in a table.",
+    preview: `<p>The th element is used to define a header cell in a table:</p>\n<table>\n<tr>\n<th>Header 1</th>\n<th>Header 2</th>\n</tr>\n<tr>\n<td>Row 1, Column 1</td>\n<td>Row 1, Column 2</td>\n</tr>\n<tr>\n<td>Row 2, Column 1</td>\n<td>Row 2, Column 2</td>\n</tr>\n</table>`
+  },
+  {
+    category: "Tables",
+    title: "<td>",
+    description: "Defines a standard cell in a table.",
+    preview: `<p>The td element is used to define a standard cell in a table:</p>\n<table>\n<tr>\n<th>Header 1</th>\n<th>Header 2</th>\n</tr>\n<tr>\n<td>Row 1, Column 1</td>\n<td>Row 1, Column 2</td>\n</tr>\n<tr>\n<td>Row 2, Column 1</td>\n<td>Row 2, Column 2</td>\n</tr>\n</table>`
+  },
+  {
+    category: "Forms",
+    title: "<form>",
+    description: "Defines a form for user input.",
+    preview: `<p>The form element is used to create a form for user input:</p>\n<form>\n<label for=\"username\">Usertitle:</label>\n<input type=\"text\" id=\"username\" name=\"username\"><br><br>\n<label for=\"password\">Password:</label>\n<input type=\"password\" id=\"password\" name=\"password\"><br><br>\n<input type=\"submit\" value=\"Submit\">\n</form>`
+  },
+  {
+    category: "Forms",
+    title: "<input>",
+    description: "Defines an input field where the user can enter data.",
+    preview: `<p>The input element is used to create an input field where the user can enter data:</p>\n<form>\n<label for=\"username\">Usertitle:</label>\n<input type=\"text\" id=\"username\" name=\"username\"><br><br>\n<label for=\"password\">Password:</label>\n<input type=\"password\" id=\"password\" name=\"password\"><br><br>\n<input type=\"submit\" value=\"Submit\">\n</form>`
+  },
+  {
+    category: "Forms",
+    title: "<label>",
+    description: "Defines a label for an input element.",
+    preview: `<p>The label element is used to create a label for an input element:</p>\n<form>\n<label for=\"username\">Usertitle:</label>\n<input type=\"text\" id=\"username\" name=\"username\"><br><br>\n<label for=\"password\">Password:</label>\n<input type=\"password\" id=\"password\" name=\"password\"><br><br>\n<input type=\"submit\" value=\"Submit\">\n</form>`
+  },
+  {
+    category: "Forms",
+    title: "<select>",
+    description: "Defines a drop-down list.",
+    preview: `<p>The select element is used to create a drop-down list:</p>\n<form>\n<label for=\"color\">Choose a color:</label>\n<select id=\"color\" name=\"color\">\n<option value=\"red\">Red</option>\n<option value=\"green\">Green</option>\n<option value=\"blue\">Blue</option>\n</select>\n</form>`
+  },
+  {
+    category: "Forms",
+    title: "<option>",
+    description: "Defines an option in a drop-down list.",
+    preview: `<p>The option element is used to create an option in a drop-down list:</p>\n<form>\n<label for=\"color\">Choose a color:</label>\n<select id=\"color\" name=\"color\">\n<option value=\"red\">Red</option>\n<option value=\"green\">Green</option>\n<option value=\"blue\">Blue</option>\n</select>\n</form>`
+  },
+  {
+    category: "Forms",
+    title: "<button>",
+    description: "Defines a clickable button.",
+    preview: `<p>The button element is used to create a clickable button:</p>\n<button>Click me</button>`
+  },
+  {
+    category: "Forms",
+    title: "<textarea>",
+    description: "Defines a multi-line input field.",
+    preview: `<p>The textarea element is used to create a multi-line input field:</p>\n<form>\n<label for=\"message\">Message:</label>\n<textarea id=\"message\" name=\"message\" rows=\"4\" cols=\"40\"></textarea><br><br>\n<input type=\"submit\" value=\"Submit\">\n</form>`
+  },
+  {
+    category: "Media",
+    title: "<img>",
+    description: "Defines an image.",
+    preview: `<p>The img element is used to display an image:</p>\n<img src=\"https://www.example.com/images/example.jpg\" alt=\"Example image\">`
+  },
+  {
+    category: "Media",
+    title: "<audio>",
+    description: "Defines sound content.",
+    preview: `<p>The audio element is used to embed sound content in a document:</p>\n<audio controls>\n<source src=\"https://www.example.com/sound/example.mp3\" type=\"audio/mpeg\">\n<source src=\"https://www.example.com/sound/example.ogg\" type=\"audio/ogg\">\nYour browser does not support the audio element.\n</audio>`
+  },
+  {
+    category: "Media",
+    title: "<video>",
+    description: "Defines video content.",
+    preview: `<p>The video element is used to embed video content in a document:</p>\n<video width=\"320\" height=\"240\" controls>\n<source src=\"https://www.example.com/video/example.mp4\" type=\"video/mp4\">\n<source src=\"https://www.example.com/video/example.webm\" type=\"video/webm\">\nYour browser does not support the video element.\n</video>`
+  },
+  {
+    category: "Scripting",
+    title: "<script>",
+    description: "Defines a client-side script.",
+    preview: `<p>The script element is used to embed a client-side script in a document:</p>\n<script>\nalert(\"Hello, world!\");\n</script>`
+  },
+  {
+    category: "Scripting",
+    title: "<noscript>",
+    description: "Defines content to be displayed if the browser does not support scripting.",
+    preview: `<p>The noscript element is used to define alternative content to be displayed if a script is not executed:</p>\n<noscript>\n<p>Your browser does not support JavaScript!</p>\n</noscript>`
+  }
+]

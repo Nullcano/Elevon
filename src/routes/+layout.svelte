@@ -1,9 +1,10 @@
 <script>
-	import '../elevon/css/atoms.css'
-	import '../elevon/css/prevention.css'
-	import '../elevon/css/molecules.css'
+	import '../elevon/css/props.css'
+	import '../elevon/css/resets.css'
+	import '../elevon/css/classes.css'
 	import '../css/app.css'
-	import NavMain from '$lib/app/NavMain.svelte'
+	import AppHeader from '$lib/app/AppHeader.svelte'
+	import AppNav from '$lib/app/AppNav.svelte'
 </script>
 
 <svelte:head>
@@ -16,5 +17,14 @@
 	<meta property="og:image" content="" />
 </svelte:head>
 
-<NavMain />
-<slot />
+<div>
+	<AppNav />
+	<AppHeader />
+	<slot />
+</div>
+
+<style>
+	div {
+		padding-inline-start: 18rem;
+	}
+</style>

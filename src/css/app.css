@@ -1,7 +1,7 @@
 @import 'https://api.fontshare.com/v2/css?f[]=archivo@701,401,700,500,501,400,600,601&f[]=tabular@400&display=swap';
 
 body {
-  background-color: var(--night-3);
+  background-color: black;
   color: var(--day-1);
   font-family: 'Archivo', sans-serif;
 }

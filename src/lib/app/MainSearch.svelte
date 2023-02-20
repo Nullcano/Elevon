@@ -1,6 +1,6 @@
 <script>
 	import { slugify } from '$lib/utils'
-	import { meta, elements } from '$lib/api/elements.js'
+	import { elements } from '$lib/api/elements'
 
   let searchIsOpen
   let searchInput
@@ -51,7 +51,8 @@
 </svelte:head>
 
 <a role="button" href={null} class="search" on:click={openSearch}>
-  <span>Search <kbd>Ctrl</kbd> + <kbd>K</kbd></span>
+  <span>Search</span>
+  <span><kbd>Ctrl</kbd> + <kbd>K</kbd></span>
 </a>
 
 {#if searchIsOpen}
@@ -64,7 +65,7 @@
     {#if searchTerm}
       <div class="search-results" on:click={closeSearch}>
         {#each filteredResults as r}
-          <a href="/{meta.slug}/{slugify(r.title)}">
+          <a href="/html/{slugify(r.title)}">
             <div class="result">
               {r.title}
             </div>
@@ -141,17 +142,18 @@
     background: var(--night-2);
   }
   [role="button"] {
-    padding: .5rem 1rem;
-    color: var(--day-1);
-    border: 1px solid var(--night-1);
+    padding: .75rem 1rem;
+    color: white;
+    border: 1px solid rgba(255,255,255,.5);
     border-radius: 60em;
     display: flex;
+    gap: 8rem;
     align-items: center;
     cursor: pointer;
   }
   kbd {
-    padding: 0 .5rem;
-    border: 1px solid var(--night-1);
+    padding: .25rem .5rem;
+    border: 1px solid rgba(255,255,255,.5);
     border-radius: .5rem;
     text-transform: uppercase;
   }

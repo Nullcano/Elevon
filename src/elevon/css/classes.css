@@ -1,0 +1,66 @@
+/* Core */
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  font-family: system-ui,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  touch-action: manipulation;
+}
+*, ::before, ::after {
+  border-color: rgb(128, 128, 128);
+  word-wrap: break-word;
+}
+*, ::before, ::after {
+  border-width: 0;
+  border-style: solid;
+  box-sizing: border-box;
+}
+h1 { font-size:  3rem }
+h2 { font-size: 2.5rem }
+h3 { font-size: 2rem }
+h4 { font-size: 1.5rem }
+h5 { font-size: 1.25rem }
+h6 { font-size: 1rem }
+
+/* Classes */
+.ma0 { margin: var(--size-0) }
+.ma1 { margin: var(--size-1) }
+.ma2 { margin: var(--size-2) }
+.ma3 { margin: var(--size-3) }
+.ma4 { margin: var(--size-4) }
+.ma5 { margin: var(--size-5) }
+.ma6 { margin: var(--size-6) }
+.ma7 { margin: var(--size-7) }
+.ma8 { margin: var(--size-8) }
+
+.pa0 { padding: var(--size-0) }
+.pa1 { padding: var(--size-1) }
+.pa2 { padding: var(--size-2) }
+.pa3 { padding: var(--size-3) }
+.pa4 { padding: var(--size-4) }
+.pa5 { padding: var(--size-5) }
+.pa6 { padding: var(--size-6) }
+.pa7 { padding: var(--size-7) }
+.pa8 { padding: var(--size-8) }
+
+.w0 { width: var(--size-0) }
+.w1 { width: var(--size-1) }
+.w2 { width: var(--size-2) }
+.w3 { width: var(--size-3) }
+.w4 { width: var(--size-4) }
+.w5 { width: var(--size-5) }
+.w6 { width: var(--size-6) }
+.w7 { width: var(--size-7) }
+.w8 { width: var(--size-8) }
+
+.h0 { height: var(--size-0) }
+.h1 { height: var(--size-1) }
+.h2 { height: var(--size-2) }
+.h3 { height: var(--size-3) }
+.h4 { height: var(--size-4) }
+.h5 { height: var(--size-5) }
+.h6 { height: var(--size-6) }
+.h7 { height: var(--size-7) }
+.h8 { height: var(--size-8) }
