@@ -1,6 +1,7 @@
 <script>
   import { page } from '$app/stores'
   import Logo from './Logo.svelte'
+  import ScrollTop from './ScrollTop.svelte'
 
   const categories = [
     {
@@ -35,9 +36,9 @@
   ]
 </script>
 
-<nav>
+<aside>
   <Logo />
-  <div class="sec">
+  <div class="px4 py3 sec">
     {#each categories as category}
       <h3>{category.title}</h3>
       <div class="category-nav">
@@ -58,10 +59,11 @@
     <span class="active">Night Mode</span>
     <span>Day Mode</span>
   </div>
-</nav>
+  <ScrollTop />
+</aside>
 
 <style>
-  nav {
+  aside {
     position: fixed;
     top: 0px;
     left: 0px;
@@ -79,7 +81,6 @@
   .sec {
     position: relative;
     flex: 1;
-    padding: 1rem 2rem;
     gap: .5rem;
     overflow-y: auto;
   }

@@ -3,28 +3,27 @@
   import MainSearch from './MainSearch.svelte'
 </script>
 
-<header>
-  <div class="sec">
+<nav class="h5">
+  <div class="pa3 sec">
     <MainSearch />
     <a role="button" href="/get">
       <span>Get Elevon</span>
     </a>
   </div>
-</header>
+</nav>
 
 <style>
-  header {
+  nav {
     position: sticky;
     top: 0;
     left: 0;
     width: 100%;
-    height: 4rem;
     display: flex;
     align-items: center;
     user-select: none;
     z-index: 10;
   }
-  header::before {
+  nav::before {
     content: '';
     position: absolute;
     width: 100%;

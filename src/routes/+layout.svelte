@@ -4,7 +4,7 @@
 	import '../elevon/css/classes.css'
 	import '../css/app.css'
 	import AppHeader from '$lib/app/AppHeader.svelte'
-	import AppNav from '$lib/app/AppNav.svelte'
+	import AppAside from '$lib/app/AppAside.svelte'
 </script>
 
 <svelte:head>
@@ -18,7 +18,7 @@
 </svelte:head>
 
 <div>
-	<AppNav />
+	<AppAside />
 	<AppHeader />
 	<slot />
 </div>
