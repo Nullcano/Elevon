@@ -1,12 +1,11 @@
 <script>
-  import { page } from '$app/stores'
-  import MainSearch from './MainSearch.svelte'
+  import SearchButton from './SearchButton.svelte'
 </script>
 
 <nav class="h5">
-  <div class="pa3 sec">
-    <MainSearch />
-    <a role="button" href="/get">
+  <div class="px4 py3 sec">
+    <SearchButton />
+    <a class="px3 py2" role="button" href="/get">
       <span>Get Elevon</span>
     </a>
   </div>
@@ -41,7 +40,6 @@
   a {
     position: relative;
     display: block;
-    padding: .75rem 1rem;
     background: white;
     color: black;
     text-decoration: none;

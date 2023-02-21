@@ -1,22 +1,21 @@
-<h1>Elevon Typefaces</h1>
+<script>
+  import { sections } from '$lib/api/sections'
+  let here = sections[5]
+</script>
 
-<p>Elevon's font families provide both sans-serif and monospace options, ensuring that your application has a professional and consistent look.</p>
-<p>The typefaces are easy to use and integrate seamlessly with Elevon's design system, making it easy to create beautiful and readable designs.</p>
+<svelte:head>
+	<title>{here.title} - Elevon</title>
+	<meta property="og:title" content="{here.title} - Elevon" />
+	<meta property="og:site_name" content="Elevon" />
+	<meta property="og:url" content="https://elevon.dev/{here.slug}" />
+	<meta property="og:description" content="{here.shortDescription}" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="" />
+</svelte:head>
 
-<div>
-  <p>No fonts available yet.</p>
-  <p>Check back later.</p>
+<div class="grid-2">
+  <div class="intro">
+    <h1>{here.title}</h1>
+    <p>{here.description}</p>  
+	</div>
 </div>
-
-<style>
-  p {
-    margin: .5rem 0;
-    max-width: 60ch;
-    line-height: 1.5;
-  }
-  div {
-    margin: 4rem 0;
-    font-size: 1.5rem;
-    opacity: .5;
-  }
-</style>

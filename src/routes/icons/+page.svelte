@@ -1,23 +1,21 @@
-<h1>Elevon Graphics</h1>
+<script>
+  import { sections } from '$lib/api/sections'
+  let here = sections[6]
+</script>
 
-<p>The library of visually appealing icons is an essential component of Elevon's design system.</p>
-<p>The icons are designed to enhance your application and provide a professional and polished look.</p>
-<p>Elevon Graphics offers a wide range of icons that are easy to use and can be customized to fit your style.</p>
+<svelte:head>
+	<title>{here.title} - Elevon</title>
+	<meta property="og:title" content="{here.title} - Elevon" />
+	<meta property="og:site_name" content="Elevon" />
+	<meta property="og:url" content="https://elevon.dev/{here.slug}" />
+	<meta property="og:description" content="{here.shortDescription}" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="" />
+</svelte:head>
 
-<div>
-  <p>No icons available yet.</p>
-  <p>Check back later.</p>
+<div class="grid-2">
+  <div class="intro">
+    <h1>{here.title}</h1>
+    <p>{here.description}</p>  
+	</div>
 </div>
-
-<style>
-  p {
-    margin: .5rem 0;
-    max-width: 60ch;
-    line-height: 1.5;
-  }
-  div {
-    margin: 4rem 0;
-    font-size: 1.5rem;
-    opacity: .5;
-  }
-</style>

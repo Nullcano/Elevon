@@ -37,6 +37,63 @@ a:hover {
 .preview a:hover {
   text-decoration: underline
 }
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--size-5);
+}
+.intro h1 {
+  margin-bottom: 1rem
+}
+.right {
+  display: flex;
+  align-items: center;
+}
+.illustration {
+  width: 100%;
+  height: 0;
+  position: relative;
+  padding-bottom: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.illustration img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+.category-links {
+  margin: var(--size-3) 0;
+  font-size: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--size-3);
+}
+.category-links .category {
+  background: black;
+  border: 1px solid rgba(255,255,255,.25);
+  box-shadow: 0 0 1rem hsla(0,0%,0%,0.5);
+  border-radius: 1.5rem;
+}
+.category h2 {
+  font-weight: normal;
+}
+
+@media (max-width:60em) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .illustration {
+    display: none;
+  }
+}
+
 @media (max-width: 60em) {
   .grid a:nth-child(2n) > .card {
     border: 0

@@ -1,24 +1,21 @@
-<h1>Elevon Structures</h1>
+<script>
+  import { sections } from '$lib/api/sections'
+  let here = sections[2]
+</script>
 
-<p>A collection of pre-constructed web components, comprised of Elevon Molecules.</p>
-<p>These components are designed to be simple and uniform, guaranteeing a consistent visual appearance throughout your application.</p>
-<p>If Elevon is integrated into your project, utilizing these structures is as simple as copying and pasting, providing a hassle-free start to your design process.</p>
-<p>Customizing Elevon Structures using Elevon Molecules is an excellent starting point for getting familiar with Elevon's design system.</p>
+<svelte:head>
+	<title>{here.title} - Elevon</title>
+	<meta property="og:title" content="{here.title} - Elevon" />
+	<meta property="og:site_name" content="Elevon" />
+	<meta property="og:url" content="https://elevon.dev/{here.slug}" />
+	<meta property="og:description" content="{here.shortDescription}" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="" />
+</svelte:head>
 
-<div>
-  <p>No components available yet.</p>
-  <p>Check back later.</p>
+<div class="grid-2">
+  <div class="intro">
+    <h1>{here.title}</h1>
+    <p>{here.description}</p>  
+	</div>
 </div>
-
-<style>
-  p {
-    margin: .5rem 0;
-    max-width: 60ch;
-    line-height: 1.5;
-  }
-  div {
-    margin: 4rem 0;
-    font-size: 1.5rem;
-    opacity: .5;
-  }
-</style>

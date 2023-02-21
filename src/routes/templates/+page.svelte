@@ -1,23 +1,21 @@
-<h1>Elevon Ecosystems</h1>
+<script>
+  import { sections } from '$lib/api/sections'
+  let here = sections[3]
+</script>
 
-<p>The HTML templates offered in the Elevon Ecosystems component make it easy to build out your application's layout and structure.</p>
-<p>These templates are time-saving and allow you to quickly create new pages and sections with minimal effort.</p>
-<p>With Elevon Ecosystems, you can focus on building the content and functionality of your application, rather than spending time on the layout and structure.</p>
+<svelte:head>
+	<title>{here.title} - Elevon</title>
+	<meta property="og:title" content="{here.title} - Elevon" />
+	<meta property="og:site_name" content="Elevon" />
+	<meta property="og:url" content="https://elevon.dev/{here.slug}" />
+	<meta property="og:description" content="{here.shortDescription}" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="" />
+</svelte:head>
 
-<div>
-  <p>No templates available yet.</p>
-  <p>Check back later.</p>
+<div class="grid-2">
+  <div class="intro">
+    <h1>{here.title}</h1>
+    <p>{here.description}</p>  
+	</div>
 </div>
-
-<style>
-  p {
-    margin: .5rem 0;
-    max-width: 60ch;
-    line-height: 1.5;
-  }
-  div {
-    margin: 4rem 0;
-    font-size: 1.5rem;
-    opacity: .5;
-  }
-</style>

@@ -34,6 +34,24 @@ h6 { font-size: 1rem }
 .m6 { margin: var(--size-6) }
 .m7 { margin: var(--size-7) }
 .m8 { margin: var(--size-8) }
+.mx0 { margin-inline: var(--size-0) }
+.mx1 { margin-inline: var(--size-1) }
+.mx2 { margin-inline: var(--size-2) }
+.mx3 { margin-inline: var(--size-3) }
+.mx4 { margin-inline: var(--size-4) }
+.mx5 { margin-inline: var(--size-5) }
+.mx6 { margin-inline: var(--size-6) }
+.mx7 { margin-inline: var(--size-7) }
+.mx8 { margin-inline: var(--size-8) }
+.my0 { margin-block: var(--size-0) }
+.my1 { margin-block: var(--size-1) }
+.my2 { margin-block: var(--size-2) }
+.my3 { margin-block: var(--size-3) }
+.my4 { margin-block: var(--size-4) }
+.my5 { margin-block: var(--size-5) }
+.my6 { margin-block: var(--size-6) }
+.my7 { margin-block: var(--size-7) }
+.my8 { margin-block: var(--size-8) }
 
 .p0 { padding: var(--size-0) }
 .p1 { padding: var(--size-1) }
