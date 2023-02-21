@@ -47,17 +47,25 @@
             <svg viewBox="0 0 16 16">
               <circle cx="8" cy="8" r="8" fill="currentColor" />
             </svg>            
-            <div class="details">
-              <span>{link.title}</span>
-            </div>
+            <span>{link.title}</span>
           </a>
         {/each}
       </div>
     {/each}
   </div>
   <div class="theme">
-    <span class="active">Night Mode</span>
-    <span>Day Mode</span>
+    <div class="link active">
+      <svg viewBox="0 0 16 16">
+        <circle cx="8" cy="8" r="8" fill="currentColor" />
+      </svg> 
+      <span>Night Mode</span>
+    </div>
+    <div class="link">
+      <svg viewBox="0 0 16 16">
+        <circle cx="8" cy="8" r="8" fill="currentColor" />
+      </svg> 
+      <span>Day Mode (Coming)</span>
+    </div>
   </div>
   <ScrollTop />
 </aside>
@@ -85,35 +93,31 @@
     overflow-y: auto;
   }
   .category-nav {
-    padding: .5rem;
     display: flex;
     flex-direction: column;
     border-radius: 1rem;
   }
-  a {
-    padding: .5rem;
+  a, .link {
+    padding: .5rem 1rem;
     display: flex;
     align-items: center;
     gap: 1rem;
+    background: black;
     color: rgba(255,255,255,.5);
     text-decoration: none;
     transition: all .25s linear;
+    border-radius: 1rem;
   }
-  a:hover, .active {
-    color: rgba(255,255,255,1);
+  a:hover, .active, .link:hover, .link.active {
+    background: linear-gradient(120deg, rgba(221,221,221,1) 0%, rgba(204,204,204,1) 15%, rgba(255,255,255,1) 25%, rgba(204,204,204,1) 35%, rgba(221,221,221,1) 100%);
+    color: rgba(0,0,0,1);
   }
-  a svg {
-    width: .5rem;
-    height: .5rem;
-  }
-  .details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: .5rem;
+  svg {
+    width: 1rem;
+    height: 1rem;
   }
   h3 {
-    margin-block: 1rem 0;
+    margin-block: 1rem .5rem;
     font-weight: normal;
     font-size: .75rem;
     text-transform: uppercase;
@@ -123,11 +127,7 @@
     display: flex;
     flex-direction: column;
   }
-  .theme span {
-    padding: .5rem;
-    color: rgba(255,255,255,.5);
-  }
-  .theme span.active {
-    color: white;
+  .link {
+    cursor: pointer;
   }
 </style>

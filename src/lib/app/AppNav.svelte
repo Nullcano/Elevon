@@ -40,9 +40,13 @@
   a {
     position: relative;
     display: block;
-    background: white;
+    background: linear-gradient(120deg, rgba(221,221,221,1) 0%, rgba(204,204,204,1) 15%, rgba(255,255,255,1) 25%, rgba(204,204,204,1) 35%, rgba(221,221,221,1) 100%);
     color: black;
     text-decoration: none;
     border-radius: 60em;
+    transition: all .25s linear;
+  }
+  a:hover {
+    background: linear-gradient(120deg, rgba(221,221,221,1) 0%, rgba(204,204,204,1) 65%, rgba(255,255,255,1) 75%, rgba(204,204,204,1) 85%, rgba(221,221,221,1) 100%);
   }
 </style>

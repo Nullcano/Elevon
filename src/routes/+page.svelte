@@ -3,10 +3,15 @@
 </script>
 
 <section>
-  <div class="intro">
-    <div class="p5 inner">
+  <div class="p5 intro">
+    <div class="inner">
       <h1>All-Inclusive <i>Design System</i> for the Modern Web ________</h1>  
     </div>
+    <svg class="w7" viewBox="0 0 32 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 0C10 0 8 2 8 4H28L30 2L32 0H12Z" />
+      <path d="M8 5C6 5 4 7 4 9H28L30 7L32 5H8Z" />
+      <path d="M4 10C2 10 0 12 0 14H28L30 12L32 10H4Z" />
+    </svg>
   </div>
   <div class="p5 features">
     {#each sections as s}
@@ -24,7 +29,9 @@
   }
   .intro {
     position: relative;
-    background: white;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(120deg, rgba(221,221,221,1) 0%, rgba(204,204,204,1) 15%, rgba(255,255,255,1) 25%, rgba(204,204,204,1) 35%, rgba(221,221,221,1) 100%);
     color: black;
   }
   h1 {
