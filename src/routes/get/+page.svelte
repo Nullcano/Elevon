@@ -1,7 +1,3 @@
-<script>
-
-</script>
-
 <svelte:head>
 	<title>Get Elevon</title>
 	<meta property="og:title" content="Get Elevon" />
@@ -15,6 +11,6 @@
 <div class="grid-2">
   <div class="intro">
     <h1>Get Elevon</h1>
-    <p>Not yet released. Stay awake.</p>  
+    <h3>Not yet released. Stay awake.</h3>  
 	</div>
 </div>

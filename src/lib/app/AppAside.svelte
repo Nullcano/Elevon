@@ -1,5 +1,6 @@
 <script>
   import { page } from '$app/stores'
+  import { nightMode } from '$lib/stores'
   import Logo from './Logo.svelte'
   import ScrollTop from './ScrollTop.svelte'
 
@@ -54,16 +55,16 @@
     {/each}
   </div>
   <div class="theme">
-    <div class="link active">
+    <div class="link {$nightMode ? 'active' : ''}" on:click={() => $nightMode = true}>
       <svg viewBox="0 0 16 16">
         <circle cx="8" cy="8" r="8" fill="currentColor" />
-      </svg> 
+      </svg>
       <span>Night Mode</span>
     </div>
-    <div class="link">
+    <div class="link {!$nightMode ? 'active' : ''}" on:click={() => $nightMode = false}>
       <svg viewBox="0 0 16 16">
         <circle cx="8" cy="8" r="8" fill="currentColor" />
-      </svg> 
+      </svg>
       <span>Day Mode (Coming)</span>
     </div>
   </div>
@@ -95,6 +96,7 @@
   .category-nav {
     display: flex;
     flex-direction: column;
+    gap: .5rem;
     border-radius: 1rem;
   }
   a, .link {
@@ -126,6 +128,7 @@
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    gap: .5rem;
   }
   .link {
     cursor: pointer;

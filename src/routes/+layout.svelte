@@ -4,6 +4,7 @@
 	import '../elevon/css/classes.css'
 	import '../css/app.css'
 
+	import { nightMode } from '$lib/stores'
 	import AppNav from '$lib/app/AppNav.svelte'
 	import AppAside from '$lib/app/AppAside.svelte'
 	import SearchModal from '$lib/app/SearchModal.svelte'
@@ -19,7 +20,7 @@
 	<meta property="og:image" content="" />
 </svelte:head>
 
-<div>
+<div data-theme={$nightMode ? 'night' : 'day'}>
 	<AppNav />
 	<AppAside />
 	<slot />

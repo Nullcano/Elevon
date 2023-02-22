@@ -1,7 +1,6 @@
 <script>
   import { slugify } from '$lib/utils'
 	import { elements } from '$lib/api/elements'
-
   import { showSearch } from '$lib/stores'
 
   let searchInput
@@ -52,7 +51,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--night-3-08);
+    background: rgba(0,0,0,.8);
     backdrop-filter: blur(4px);
   }
   .search-container {
