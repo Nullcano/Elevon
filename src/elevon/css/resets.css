@@ -1,39 +1,82 @@
-/* Elevon Prevention Sheet */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-}
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-ol, ul {
+/* Elevon Prevention Sheet */ :where(html) {
+	all: initial;
+	animation: none;
+	appearance: none;
+	backface-visibility: hidden;
+	background-clip: border-box;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	box-sizing: border-box;
+	clear: none;
+	clip: auto;
+	color: inherit;
+	column-count: auto;
+	column-gap: normal;
+	column-rule: none;
+	cursor: auto;
+	display: inline;
+	flex: initial;
+	flex-basis: auto;
+	flex-direction: row;
+	flex-flow: row wrap;
+	flex-grow: 0;
+	flex-shrink: 1;
+	flex-wrap: nowrap;
+	float: none;
+	font: normal;
+	font-family: inherit;
+	font-size: medium;
+	font-style: normal;
+	font-weight: normal;
+	height: auto;
+	hyphens: none;
+	justify-content: flex-start;
+	left: auto;
+	letter-spacing: normal;
+	line-height: normal;
 	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+	margin: 0;
+	max-height: none;
+	max-width: none;
+	min-height: 0;
+	min-width: 0;
+	object-fit: fill;
+	object-position: 50% 50%;
+	opacity: 1;
+	order: 0;
+	outline: none;
+	overflow: visible;
+	overflow-wrap: normal;
+	padding: 0;
+	perspective: none;
+	perspective-origin: 50% 50%;
+	position: static;
+	resize: none;
+	right: auto;
+	tab-size: 8;
+	table-layout: auto;
+	text-align: inherit;
+	text-align-last: auto;
+	text-decoration: none;
+	text-indent: 0;
+	text-overflow: clip;
+	text-rendering: auto;
+	text-shadow: none;
+	text-transform: none;
+	top: auto;
+	transform: none;
+	transform-origin: 50% 50%;
+	transform-style: flat;
+	transition: none;
+	unicode-bidi: normal;
+	user-select: auto;
+	vertical-align: baseline;
+	visibility: visible;
+	white-space: normal;
+	width: auto;
+	word-break: normal;
+	word-spacing: normal;
+	writing-mode: horizontal-tb;
+	z-index: auto;
+	}  
