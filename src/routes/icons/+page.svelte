@@ -18,4 +18,9 @@
     <h1>{here.title}</h1>
     <p>{here.description}</p>  
 	</div>
+	<div class="right">
+    <div class="illustration">
+      <img src="images/icons.png" alt="Classes" />
+    </div>
+  </div>
 </div>
