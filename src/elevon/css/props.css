@@ -1,4 +1,4 @@
-/* Elevon Atoms */
+/* Elevon Props */
 :where(html) {
   /* Colors */
   --day-1: hsl(210, 10%, 100%);
@@ -63,36 +63,36 @@
   --orange-2: hsl(30, 100%, 75%);
   --orange-3: hsl(30, 100%, 55%);
   --orange-4: hsl(30, 100%, 35%);
-/* Gradients */
-  --primary-gradient: linear-gradient(to right, #0074D9, #7FDBFF);
-  --secondary-gradient: linear-gradient(to right, #7FDBFF, #0074D9);
-/* Shadows */
-  --shadow-1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  --shadow-2: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  --shadow-3: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-/* Aspect Ratios */
+  /* Gradients */
+  --primary-gradient: linear-gradient(to right, #0074d9, #7fdbff);
+  --secondary-gradient: linear-gradient(to right, #7fdbff, #0074d9);
+  /* Shadows */
+  --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --shadow-2: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  --shadow-3: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  /* Aspect Ratios */
   --aspect-ratio-16x9: 56.25%;
   --aspect-ratio-4x3: 75%;
   --aspect-ratio-1x1: 100%;
-/* Typography */
+  /* Typography */
   --font-family-sans-serif: "Open Sans", sans-serif;
   --font-family-monospace: "Inconsolata", monospace;
   --font-size-base: 16px;
   --font-size-small: 14px;
   --font-size-large: 18px;
   --line-height-base: 1.5;
-/* Easing */
+  /* Easing */
   --ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
   --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-/* Animations */
+  /* Animations */
   --transition-duration: 0.2s;
-/* Sizes */
+  /* Sizes */
   --size-0: 0;
   --size-1: 0.25rem;
   --size-2: 0.5rem;
   --size-3: 1rem;
-  --size-4: 2rem; 
+  --size-4: 2rem;
   --size-5: 4rem;
   --size-6: 8rem;
   --size-7: 16rem;
@@ -108,22 +108,22 @@
   --size-fill: 100%;
   --size-fixed-fill-w: 100vw;
   --size-fixed-fill-h: 100vh;
-/* Borders */
+  /* Borders */
   --border-width: 1px;
   --border-style: solid;
   --border-color: #ccc;
   --border-radius: 4px;
-/* Z-Index */
+  /* Z-Index */
   --z-index-1: 1;
   --z-index-2: 2;
   --z-index-3: 3;
   --z-index-4: 4;
   --z-index-5: 5;
-/* Media Queries */
+  /* Media Queries */
   --mq-sm: 30em;
   --mq-md: 60em;
   --mq-lg: 90em;
-/* Masks */
+  /* Masks */
   --mask-none: none;
   --mask-full: rect(0, 0, 0, 0);
 }

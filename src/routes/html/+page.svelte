@@ -1,5 +1,8 @@
 <script>
   import { sections } from '$lib/api/sections'
+  import { elements } from '$lib/api/elements'
+  import { slugify } from '$lib/utils'
+
   let here = sections[7]
 </script>
 
@@ -19,3 +22,29 @@
     <p>{here.description}</p>  
 	</div>
 </div>
+
+<div class="list">
+	{#each elements as element}
+		<a href="/html/{slugify(element.title)}">
+			<div class="grid">
+				<div>{element.title}</div>
+				<div>{element.description}</div>
+			</div>
+		</a>
+	{/each}
+</div>
+
+<style>
+	.list {
+		display: flex;
+		flex-direction: column;
+	}
+	.grid {
+		padding: 1rem;
+		display: grid;
+		grid-template-columns: 16rem 1fr;
+	}
+	a {
+		text-decoration: none;
+	}
+</style>

@@ -1,9 +1,9 @@
-@import 'https://api.fontshare.com/v2/css?f[]=archivo@701,401,700,500,501,400,600,601&f[]=tabular@400&display=swap';
+@import "https://api.fontshare.com/v2/css?f[]=archivo@701,401,700,500,501,400,600,601&f[]=tabular@400&display=swap";
 
 body {
   background-color: black;
   color: var(--day-1);
-  font-family: 'Archivo', sans-serif;
+  font-family: "Archivo", sans-serif;
 }
 
 a {
@@ -14,12 +14,9 @@ a:hover {
   opacity: 1;
 }
 
-.grid a:nth-child(3n) > .card {
-  border: 0
-}
-
-.code, code {
-  font-family: 'Tabular', monospace;
+.code,
+code {
+  font-family: "Tabular", monospace;
 }
 
 .preview {
@@ -35,7 +32,7 @@ a:hover {
   text-decoration: none;
 }
 .preview a:hover {
-  text-decoration: underline
+  text-decoration: underline;
 }
 
 .grid-2 {
@@ -44,7 +41,7 @@ a:hover {
   gap: var(--size-5);
 }
 .intro h1 {
-  margin-bottom: 1rem
+  margin-bottom: 1rem;
 }
 .right {
   display: flex;
@@ -77,28 +74,19 @@ a:hover {
 }
 .category-links .category {
   background: black;
-  border: 1px solid rgba(255,255,255,.25);
-  box-shadow: 0 0 1rem hsla(0,0%,0%,0.5);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 1rem hsla(0, 0%, 0%, 0.5);
   border-radius: 1.5rem;
 }
 .category h2 {
   font-weight: normal;
 }
 
-@media (max-width:60em) {
+@media (max-width: 60em) {
   .grid-2 {
     grid-template-columns: 1fr;
   }
   .illustration {
     display: none;
-  }
-}
-
-@media (max-width: 60em) {
-  .grid a:nth-child(2n) > .card {
-    border: 0
-  }
-  .grid a:nth-child(3n) > .card {
-    border-right: 1px solid var(--gray-15)
   }
 }
