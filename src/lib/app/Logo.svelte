@@ -20,8 +20,6 @@
     gap: .5rem;
     text-decoration: none;
     text-transform: uppercase;
-    background: rgba(0,0,0,.8);
-    backdrop-filter: blur(4px);
   }
   .logo {
     position: relative;

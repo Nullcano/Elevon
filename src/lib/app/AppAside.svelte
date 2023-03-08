@@ -95,8 +95,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-right: 1px dashed rgba(255,255,255,.25);
-    background: rgba(0,0,0,.8);
+    border-right: 1px dashed var(--night-1);
+    background: var(--night-3-08);
     backdrop-filter: blur(4px);
   }
   .sec {
@@ -116,15 +116,14 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    background: black;
     color: rgba(255,255,255,.5);
     text-decoration: none;
     transition: all .25s linear;
     border-radius: 1rem;
   }
   a:hover, .active, .link:hover, .link.active {
-    background: linear-gradient(120deg, rgba(221,221,221,1) 0%, rgba(204,204,204,1) 15%, rgba(255,255,255,1) 25%, rgba(204,204,204,1) 35%, rgba(221,221,221,1) 100%);
-    color: rgba(0,0,0,1);
+    background-color: var(--night-2);
+    color: var(--day-1);
   }
   svg {
     width: 1rem;

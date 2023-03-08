@@ -31,8 +31,10 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    background: linear-gradient(120deg, rgba(221,221,221,1) 0%, rgba(204,204,204,1) 15%, rgba(255,255,255,1) 25%, rgba(204,204,204,1) 35%, rgba(221,221,221,1) 100%);
-    color: black;
+    background: var(--night-2);
+    color: var(--day-4);
+    pointer-events: none;
+    user-select: none;
   }
   h1 {
     margin: 2rem;

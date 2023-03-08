@@ -11,18 +11,24 @@
   <div class="grid-2">
     <div class="intro">
       <h1>{component.title}</h1>
-      <p>{component.description}</p>  
+      <div>
+        {@html component.description}
+      </div>  
     </div>
   </div>
   {#if component.examples}
     {#each component.examples as example}
-      <div class="py3">
+      <div class="pt4">
         <h4>{example.title}</h4>
-        <p class="py3">{example.description}</p>
-        <div>
-          {@html example.markup}
+        <div class="py3">
+          {@html example.description}
         </div>
-        <pre><code>{example.markup}</code></pre>
+        <div class="card">
+          <div class="body">
+            {@html example.markup}
+          </div>
+        </div>
+        <pre class="p3 bg-night-1"><code>{example.markup}</code></pre>
       </div>
     {/each}
   {/if}

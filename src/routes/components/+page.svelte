@@ -25,14 +25,17 @@
 
 {#each [...new Set(components.map(component => component.category))] as category}
 	<div class="flex">
-    <a href="/components/{slugify(category)}">
+    	<a href="/components/{slugify(category)}">
 			<h4>{category}</h4>
 		</a>
 		<div class="grid">
 			{#each components.filter(component => component.category === category) as item}
 				<a href="/components/{slugify(category)}/{slugify(item.title)}">
 					<div class="card">
-						<div>{item.title}</div>
+						<div class="body">
+							<div class="h5"></div>
+							{item.title}
+						</div>
 					</div>
 				</a>
 			{/each}
@@ -52,10 +55,6 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
 		gap: 1rem;
-	}
-	.card {
-		padding: 5rem 1rem 1rem 1rem;
-		border: 2px solid rgba(255,255,255,.1);
 	}
 	a {
 		text-decoration: none;

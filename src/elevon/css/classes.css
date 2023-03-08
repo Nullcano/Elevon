@@ -48,6 +48,10 @@ h6 {
   font-size: 1rem;
 }
 
+code {
+  white-space: pre-wrap;
+}
+
 /* Classes */
 .m0 {
   margin: var(--size-0);
@@ -157,6 +161,33 @@ h6 {
 }
 .p8 {
   padding: var(--size-8);
+}
+.pt0 {
+  padding-top: var(--size-0);
+}
+.pt1 {
+  padding-top: var(--size-1);
+}
+.pt2 {
+  padding-top: var(--size-2);
+}
+.pt3 {
+  padding-top: var(--size-3);
+}
+.pt4 {
+  padding-top: var(--size-4);
+}
+.pt5 {
+  padding-top: var(--size-5);
+}
+.pt6 {
+  padding-top: var(--size-6);
+}
+.pt7 {
+  padding-top: var(--size-7);
+}
+.pt8 {
+  padding-top: var(--size-8);
 }
 .px0 {
   padding-inline: var(--size-0);
@@ -269,6 +300,10 @@ h6 {
   height: var(--size-8);
 }
 
+.bg-night-1 {
+  background-color: var(--night-1);
+}
+
 /* Components */
 .aspect-ratio {
   position: relative;
@@ -310,8 +345,36 @@ h6 {
   padding-bottom: 56.25%;
 }
 
+.center {
+  display: flex;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: center;
+  justify-content: center;
+}
+
 .object-cover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-width: 0px;
+  overflow-wrap: break-word;
+  border-radius: var(--size-3);
+  border-width: 1px;
+  border-color: hsla(222, 22%, 100%, .25);
+}
+
+.card .body {
+  padding: var(--size-3);
+  flex: 1 1 0%;
+}
+
+.code {
+  background-color: var(--night-3);
 }

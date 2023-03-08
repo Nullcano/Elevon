@@ -22,7 +22,10 @@
   {#each categoryItems as item}
     <a href="/components/{slugify(categoryName)}/{slugify(item.title)}">
       <div class="card">
-        <div>{item.title}</div>
+        <div class="body">
+          <div class="h5"></div>
+          {item.title}
+        </div>
       </div>
     </a>
   {/each}
@@ -33,10 +36,6 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
 		gap: 1rem;
-	}
-	.card {
-		padding: 5rem 1rem 1rem 1rem;
-		border: 2px solid rgba(255,255,255,.1);
 	}
 	a {
 		text-decoration: none;

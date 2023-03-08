@@ -2,24 +2,19 @@ export const components = [
   {
     category: "Layout",
     title: "Aspect Ratio",
-    description:
-      "AspectRatio component is used to embed responsive videos and maps, etc.",
+    description: `<p>AspectRatio component is used to embed responsive videos and maps, etc.</p>`,
     examples: [
       {
         title: "Embed Video",
-        description:
-          "To embed a video with a specific aspect ratio, use an iframe with src pointing to the link of the video.",
-        markup: `
-<div class="aspect-ratio ratio-1-1 w8">
+        description: `<p>To embed a video with a specific aspect ratio, use an iframe with src pointing to the link of the video.</p>`,
+        markup: `<div class="aspect-ratio ratio-1-1 w8">
   <iframe src="https://www.youtube.com/embed/b6L40CEYVyM?controls=0" allowfullscreen></iframe>
 </div>`,
       },
       {
         title: "Embed Image",
-        description:
-          "Here's how to embed an image that has a 4 by 3 aspect ratio.",
-        markup: `
-<div class="aspect-ratio ratio-4-3 w8">
+        description: `<p>Here's how to embed an image that has a 4 by 3 aspect ratio.</p>`,
+        markup: `<div class="aspect-ratio ratio-4-3 w8">
   <img alt="Generative placeholder" src="https://generative-placeholders.glitch.me/image?width=800&height=800" class="image object-cover">
 </div>`,
       },
@@ -27,8 +22,7 @@ export const components = [
         title: "Embed Map",
         description:
           "Here's how to embed a responsive Google map using AspectRatio.",
-        markup: `
-<div class="aspect-ratio ratio-16-9 w8">
+        markup: `<div class="aspect-ratio ratio-16-9 w8">
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d938513.653639834!2d-116.87784363386679!3d37.31605711351219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80b81baaba3e8c81%3A0x970427e38e6237ae!2sArea%2051%2C%20NV%2C%20USA!5e0!3m2!1sen!2sng!4v1678252368820!5m2!1sen!2sng"></iframe>
 </div>`,
       },
@@ -36,15 +30,18 @@ export const components = [
   },
   {
     category: "Layout",
-    title: "Box",
-    description:
-      "Box is the most abstract component on top of which all other Elevon components are built. By default, it renders a `div` element",
-  },
-  {
-    category: "Layout",
     title: "Center",
     description:
-      "Center is a layout component that centers its child within itself.",
+      `<p><code class="code inline">center</code> is a component class that centers its child within itself.</p>`,
+    examples: [
+      {
+        title: "Usage",
+        description: `<p>Put any child element inside it, give it any width or/and height, it'll ensure the child is centered.</p>`,
+        markup: `<div class="center bg-night-1 h6">
+  Center of the Universe
+</div>`,
+      },
+    ]
   },
   {
     category: "Layout",
@@ -173,8 +170,18 @@ export const components = [
   {
     category: "Data Display",
     title: "Card",
-    description:
-      "Card is a flexible component used to group and display content in a clear and concise format.",
+    description: `<p>Card is a flexible component used to group and display content in a clear and concise format.</p>`,
+    examples: [
+      {
+        title: "Basic Card",
+        description: `<p>Create a div with a card class and a child element with a body class for the content to get a basic card.</p>`,
+        markup: `<div class="card">
+  <div class="body">
+    <p>This is a basic card. You may customize it as you wish.</p>
+  </div>
+</div>`,
+      }
+    ]
   },
   {
     category: "Data Display",
