@@ -7,14 +7,14 @@ export const components = [
       {
         title: "Embed Video",
         description: `<p>To embed a video with a specific aspect ratio, use an iframe with src pointing to the link of the video.</p>`,
-        markup: `<div class="aspect-ratio ratio-1-1 w8">
+        markup: `<div class="aspect-ratio ratio-1-1 w12">
   <iframe src="https://www.youtube.com/embed/b6L40CEYVyM?controls=0" allowfullscreen></iframe>
 </div>`,
       },
       {
         title: "Embed Image",
         description: `<p>Here's how to embed an image that has a 4 by 3 aspect ratio.</p>`,
-        markup: `<div class="aspect-ratio ratio-4-3 w8">
+        markup: `<div class="aspect-ratio ratio-4-3 w12">
   <img alt="Generative placeholder" src="https://generative-placeholders.glitch.me/image?width=800&height=800" class="image object-cover">
 </div>`,
       },
@@ -22,7 +22,7 @@ export const components = [
         title: "Embed Map",
         description:
           "Here's how to embed a responsive Google map using AspectRatio.",
-        markup: `<div class="aspect-ratio ratio-16-9 w8">
+        markup: `<div class="aspect-ratio ratio-16-9 w12">
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d938513.653639834!2d-116.87784363386679!3d37.31605711351219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80b81baaba3e8c81%3A0x970427e38e6237ae!2sArea%2051%2C%20NV%2C%20USA!5e0!3m2!1sen!2sng!4v1678252368820!5m2!1sen!2sng"></iframe>
 </div>`,
       },
@@ -31,8 +31,7 @@ export const components = [
   {
     category: "Layout",
     title: "Center",
-    description:
-      `<p><code class="code inline">center</code> is a component class that centers its child within itself.</p>`,
+    description: `<p><code class="code inline">center</code> is a component class that centers its child within itself.</p>`,
     examples: [
       {
         title: "Usage",
@@ -41,19 +40,58 @@ export const components = [
   Center of the Universe
 </div>`,
       },
-    ]
+    ],
   },
   {
     category: "Layout",
     title: "Container",
     description:
       "Containers are used to constrain a content's width to the current breakpoint, while keeping it fluid.",
+    examples: [
+      {
+        title: "Usage",
+        description: `<p>Put any child element inside it, give it any width or/and height, it'll ensure the child is centered.</p>`,
+        markup: `<div class="container">
+  There are many benefits to a joint design and development system. Not only does it bring benefits to the design team, but it also brings benefits to engineering teams. It makes sure that our experiences have a consistent look and feel, not just in our design specs, but in production
+</div>`,
+      },
+    ],
   },
   {
     category: "Layout",
     title: "Flex",
     description:
-      "Flex is Box with display set to flex and comes with helpful style shorthand. It renders a `div` element.",
+      "Flex is mostly used for horizontal layouts. For vertical layouts, see ",
+    examples: [
+      {
+        title: "Usage",
+        description: `<p>Basic grid.</p>`,
+        markup: `<div class="flex">
+  <div class="center w8 h8 bg-night-1">
+    Box 1
+  </div>
+  <div class="center w11 h8">
+    Box 2
+  </div>
+  <div class="flex-1 p3 bg-night-1">
+    Box 3
+  </div>
+</div>`,
+      },
+      {
+        title: "Using Spacer",
+        description: `<p>The spacer class will span and stretch itself and push adjacent items away.</p>`,
+        markup: `<div class="flex">
+  <div class="p4 bg-night-1">
+    Box 1
+  </div>
+  <div class="spacer"></div>
+  <div class="p4 bg-night-1">
+    Box 2
+  </div>
+</div>`,
+      },
+    ],
   },
   {
     category: "Layout",
@@ -180,8 +218,8 @@ export const components = [
     <p>This is a basic card. You may customize it as you wish.</p>
   </div>
 </div>`,
-      }
-    ]
+      },
+    ],
   },
   {
     category: "Data Display",

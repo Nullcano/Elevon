@@ -1,61 +1,102 @@
 <script>
-  import SearchButton from './SearchButton.svelte'
+  const categories = [
+    {
+      title: 'Core',
+      links: [
+        { slug: 'props', title: 'Props' },
+        { slug: 'classes', title: 'Classes' },
+      ],
+    },
+    {
+      title: 'Prefab',
+      links: [
+        { slug: 'components', title: 'Components' },
+        { slug: 'templates', title: 'Templates' },
+        { slug: 'applications', title: 'Applications' },
+      ],
+    },
+    {
+      title: 'Assets',
+      links: [
+        { slug: 'icons', title: 'Icons' },
+        { slug: 'fonts', title: 'Fonts' },
+      ],
+    },
+    {
+      title: 'Extra',
+      links: [
+        { slug: 'html', title: 'HTML Reference' },
+        { slug: 'css', title: 'CSS Reference' },
+      ],
+    },
+  ]
+
+  let openDropdown = null
+
+  function toggleDropdown(index) {
+    if (openDropdown === index) {
+      openDropdown = null
+    } else {
+      openDropdown = index
+    }
+  }
+
+  function handleBodyClick(event) {
+    const nav = event.target.closest('nav')
+    if (!nav) {
+      openDropdown = null
+    }
+  }
 </script>
 
-<nav class="h5">
-  <div class="px4 py3 sec">
-    <SearchButton />
-    <a class="px3 py2" role="button" href="/get">
-      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 20H4V28H28V20H32V32H0V20Z" fill="currentColor"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M14 16V0H18V16L22 12L25 15L16 24L6.99999 15L9.99999 12L14 16Z" fill="currentColor"/>
-      </svg>
-      <span>Get Elevon</span>
-    </a>
-  </div>
+<svelte:body on:click={handleBodyClick} />
+
+<nav>
+  {#each categories as category, index}
+    <div class="nav-item nav-item-{index}" on:click={() => toggleDropdown(index)}>
+      <span class="px3 py2">{category.title}</span>
+      {#if openDropdown === index}
+        <div class="nav-dropdown nav-dropdown-active w11 p2 bg-night-3">
+          {#each category.links as link}
+            <a class="px3 py2" href="{`/${link.slug}`}">{link.title}</a>
+          {/each}
+        </div>
+      {/if}
+    </div>
+  {/each}
 </nav>
 
 <style>
   nav {
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
     display: flex;
-    align-items: center;
+    gap: 1rem;
     user-select: none;
-    z-index: 10;
   }
-  nav::before {
-    content: '';
+  nav span {
+    display: block;
+    cursor: pointer;
+  }
+  .nav-item {
+    border-radius: var(--size-2);
+  }
+  .nav-item:hover  {
+    background-color: var(--night-2);
+  }
+  .nav-dropdown {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: var(--night-3-08);
-    backdrop-filter: blur(4px);
-  }
-  .sec {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: none;
+    flex-direction: column;
+    gap: var(--size-2);
+    background-color: var(--night-3);
+    border-radius: var(--size-2);
   }
   a {
-    position: relative;
+    border-radius: var(--size-2);
+  }
+  .nav-dropdown a:hover {
+    background-color: var(--night-1);
+  }
+  .nav-dropdown-active {
     display: flex;
-    align-items: center;
-    gap: .25rem;
-    background: var(--night-2);
-    color: var(--day-1);
-    text-decoration: none;
-    border-radius: 60em;
-    transition: all .25s linear;
-  }
-  a:hover {
-    background: var(--night-1);
-  }
-  svg {
-    height: 1rem;
   }
 </style>

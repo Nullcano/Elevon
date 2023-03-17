@@ -1,5 +1,4 @@
-<div class="h5">
-  <a class="px4 py3" href="/">
+  <a class="p3" href="/">
     <svg class="logo" viewBox="0 0 32 14" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M12 0C10 0 8 2 8 4H28L30 2L32 0H12Z" />
       <path d="M8 5C6 5 4 7 4 9H28L30 7L32 5H8Z" />
@@ -7,13 +6,8 @@
     </svg>
     <span>Elevon <sup>BETA</sup></span>
   </a>
-</div>
 
 <style>
-  div {
-    display: grid;
-    align-items: center;
-  }
   a {
     display: flex;
     align-items: center;

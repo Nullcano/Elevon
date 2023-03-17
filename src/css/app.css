@@ -1,7 +1,7 @@
 @import "https://api.fontshare.com/v2/css?f[]=archivo@701,401,700,500,501,400,600,601&f[]=tabular@400&display=swap";
 
 body {
-  background-color: var(--night-3);
+  background-color: var(--night-4);
   color: var(--day-1);
   font-family: "Archivo", sans-serif;
 }
@@ -17,58 +17,4 @@ a:hover {
 .code,
 code {
   font-family: "Tabular", monospace;
-}
-
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--size-5);
-}
-.intro h1 {
-  margin-bottom: 1rem;
-}
-.right {
-  display: flex;
-  align-items: center;
-}
-.illustration {
-  width: 100%;
-  height: 0;
-  position: relative;
-  padding-bottom: 100%;
-  border-radius: 1rem;
-  overflow: hidden;
-}
-.illustration img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-}
-.category-links {
-  margin: var(--size-3) 0;
-  font-size: 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--size-3);
-}
-.category-links .category {
-  border: 1px solid var(--night-1);
-  border-radius: 1.5rem;
-}
-.category h2 {
-  font-weight: normal;
-}
-
-@media (max-width: 60em) {
-  .grid-2 {
-    grid-template-columns: 1fr;
-  }
-  .illustration {
-    display: none;
-  }
 }

@@ -5,8 +5,8 @@
 	import '../css/app.css'
 
 	import { nightMode } from '$lib/stores'
-	import AppNav from '$lib/app/AppNav.svelte'
-	import AppAside from '$lib/app/AppAside.svelte'
+	import AppHeader from '$lib/app/AppHeader.svelte'
+	import ScrollTop from '$lib/app/ScrollTop.svelte'
 	import SearchModal from '$lib/app/SearchModal.svelte'
 </script>
 
@@ -21,14 +21,8 @@
 </svelte:head>
 
 <div data-theme={$nightMode ? 'night' : 'day'}>
-	<AppNav />
-	<AppAside />
+	<AppHeader />
 	<slot />
 </div>
+<ScrollTop />
 <SearchModal />
-
-<style>
-	div {
-		padding-inline-start: 18rem;
-	}
-</style>
