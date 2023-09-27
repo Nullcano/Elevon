@@ -5,21 +5,19 @@
   import ThemeSelector from './ThemeSelector.svelte';
 </script>
 
-<header class="h7">
-  <div class="px4 py3 sec">
-    <Logo />
-    <AppNav />
-    <SearchButton />
-    <div class="wrap">
-      <ThemeSelector />
-      <a class="px3 py1" role="button" href="/get">
-        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M0 20H4V28H28V20H32V32H0V20Z" fill="currentColor"/>
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M14 16V0H18V16L22 12L25 15L16 24L6.99999 15L9.99999 12L14 16Z" fill="currentColor"/>
-        </svg>
-        <span>Get</span>
-      </a>
-    </div>
+<header class="sticky top-0 left-0 w-100 h3 flex items-center justify-between bg-black-50 z-5">
+  <Logo />
+  <AppNav />
+  <SearchButton />
+  <div class="wrap">
+    <ThemeSelector />
+    <a class="px3 py1" role="button" href="/get">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 20H4V28H28V20H32V32H0V20Z" fill="currentColor"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M14 16V0H18V16L22 12L25 15L16 24L6.99999 15L9.99999 12L14 16Z" fill="currentColor"/>
+      </svg>
+      <span>Get</span>
+    </a>
   </div>
 </header>
 
@@ -30,28 +28,7 @@
     gap: var(--size-3);
   }
   header {
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    z-index: 10;
-  }
-  header::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: var(--night-4-08);
     backdrop-filter: blur(4px);
-  }
-  .sec {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
   a {
     position: relative;

@@ -53,12 +53,12 @@
 
 <nav>
   {#each categories as category, index}
-    <div class="nav-item nav-item-{index}" on:click={() => toggleDropdown(index)}>
-      <span class="px3 py2">{category.title}</span>
+    <div class="nav-item nav-item-{index} br-pill" on:click={() => toggleDropdown(index)}>
+      <span class="ph3 pv2 ">{category.title}</span>
       {#if openDropdown === index}
-        <div class="nav-dropdown nav-dropdown-active w11 p2 bg-night-3">
+        <div class="nav-dropdown nav-dropdown-active w5 pa2 bg-black-50">
           {#each category.links as link}
-            <a class="px3 py2" href="{`/${link.slug}`}">{link.title}</a>
+            <a class="ph3 pv2" href="{`/${link.slug}`}">{link.title}</a>
           {/each}
         </div>
       {/if}
@@ -75,9 +75,6 @@
   nav span {
     display: block;
     cursor: pointer;
-  }
-  .nav-item {
-    border-radius: var(--size-2);
   }
   .nav-item:hover  {
     background-color: var(--night-2);
